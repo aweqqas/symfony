@@ -7954,6 +7954,182 @@ function() {
         }
     })
 }(),
+        
+/********** locations ********/
+function() {
+    var e = Gum.BaseComponentMVCClass.extend({
+        Name: "LocationSelector",
+        selector: "[data-location-selector]",
+        options: {
+            defaultCategory: "All Categories",
+            defaultCategoryValue: "all"
+        },
+        value: "",
+        url: Gum.domain.buyer + "/ajax/category/children",
+        fullUrl: Gum.domain.buyer + "/ajax/category/dropdown",
+        fullModel: null,
+        timeout: 1e3,
+        template: "tmpl-category-dropdown.html",
+        fullTemplate: "tmpl-category-dropdown-full.html",
+        init: function() {
+            this._super(), this.selector = this.el.getElementsByClassName("location-selector")[0], this.selectorOptions = this.selector.getElementsByTagName("li"), this.level1Categories = this.selector.getElementsByClassName("category-level-1"), this.level2Categories = this.selector.getElementsByClassName("category-level-2"), this.level3Categories = this.selector.getElementsByClassName("category-level-3"), this.level4Categories = this.selector.getElementsByClassName("category-level-4"), this.level5Categories = this.selector.getElementsByClassName("category-level-5"), this.defaultOption = this.selector.getElementsByClassName("categories-all"), this.text = this.el.getElementsByClassName("text-only")[0], this.field = this.el.getElementsByTagName("input")[0], this.headerBottom = document.getElementById("header-bottom"), this.initView(), this.addEvents(), this.model.RADIO.on("success", this.view.render), this.fullModel.RADIO.on("success", this.view.renderFull), Gum.RADIO.on("dropdown.close", this.close), Gum.RADIO.on("toggle-search", this.close)
+        },
+        initModel: function() {
+            this.model = new Gum.LocationSelectorModel({
+                url: this.url,
+                timeout: this.timeout
+            }), this.fullModel = new Gum.LocationSelectorModel({
+                url: this.fullUrl,
+                timeout: this.timeout
+            })
+        },
+        initView: function() {
+            this.view = new Gum.LocationSelectorView, this.view.template = Gum.Templates[this.template], this.view.fullTemplate = Gum.Templates[this.fullTemplate], this.view.controller = this
+        },
+        render: function() {},
+        renderFull: function() {},
+        addEvents: function() {
+            Gum.native.addEventListener(this.el, "click", this.toggle), Gum.native.addEventListener(this.selectorOptions, "click", this.select)
+        },
+        removeEvents: function() {
+            Gum.native.removeEventListener(this.el, "click", this.toggle), Gum.native.removeEventListener(this.selectorOptions, "click", this.select)
+        },
+        toggle: function(e) {
+            this.isOpen ? this.close() : this.open(e)
+        },
+        scrollTo: function() {
+            Gum.util.isElementInViewport(this.el) || window.scrollTo(0, 0)
+        },
+        close: function() {
+            this.isOpen && (Gum.native.removeClass(this.selector, "is-showing"), Gum.native.removeClass(this.headerBottom, "typeahead-open"), Gum.native.removeClass(Gum.body, "is-showing-category"), this.view.removeHeight(), this.isOpen = !1, Gum.native.removeEventListener(document, "click", this.close))
+        },
+        open: function(e) {
+            e && (e.preventDefault ? (e.preventDefault(), e.stopPropagation()) : (e.returnValue = !1, e.cancelBubble = !0), e.gesture && (e.gesture.stopPropagation(), e.gesture.preventDefault())), this.update(), this.position(), Gum.native.addClass(this.headerBottom, "typeahead-open"), Gum.native.addClass(this.selector, "is-showing"), Gum.native.addClass(Gum.body, "is-showing-category"), this.view.setHeight(), Gum.native.addEventListener(this.selectorOptions, "click", this.select), Gum.native.addEventListener(document, "click", this.close), this.isOpen = !0
+        },
+        update: function() {
+            var e = $('[data-q="header-location-select"] .is-selected'),
+                t = e.data("category-url"),
+                n = $(this.field).val();
+            t !== n && this.fullModel.fetch({
+                seoName: n
+            })
+        },
+        select: function(e) {
+            this.isOpen = !0, Gum.native.addEventListener(this.selectorOptions, "click", this.select);
+            if (e) {
+                var t = e.currentTarget;
+                if (Gum.native.hasClass(t, "locations-loading")) return;
+                e.preventDefault ? (e.preventDefault(), e.stopPropagation()) : (e.returnValue = !1, e.cancelBubble = !0), e.gesture && (e.gesture.stopPropagation(), e.gesture.preventDefault());
+                var n = Gum.native.getDataSet(t, "categoryId");
+                this.depth = parseInt(Gum.native.getDataSet(t, "categoryDepth"), 10), this.currentCategory = {
+                    seoName: Gum.native.getDataSet(t, "categoryUrl"),
+                    name: Gum.native.getDataSet(t, "categoryName"),
+                    id: Gum.native.getDataSet(t, "categoryid")
+                };
+                if (Gum.native.hasClass(t, "show-more-button")) {
+                    $(t).parent().find(".is-hidden").removeClass("is-hidden"), Gum.native.addClass(t, "is-hidden"), this.view.setHeight();
+                    return
+                }
+                Gum.native.hasClass(t, "has-children") ? (this.view.appendEl = t, this.model.fetch({
+                    input: n
+                }), this.addState(t)) : this.setValue(t);
+                var r = Gum.native.getDataSet(t, "categoryUrl"),
+                    i = Gum.native.getDataSet(t, "categoryName"),
+                    s = $('[data-location-selector] input[name="search_location"] '),
+                    o = $("[data-location-selector] .text-only ");
+                s.data("current-location", r), o.data("current-location-name", i)
+            }
+            return this.scrollTo(), !1
+        },
+        addState: function(e) {
+            var t = Gum.native.hasClass(e, "is-drilled");
+            Gum.native.toggleClass(e, "is-drilled"), Gum.native.removeClass(this.selectorOptions, "is-selected"), Gum.native.hasClass(e, "category-level-1") && (t && (Gum.native.removeClass(this.selectorOptions, "is-drilled"), Gum.native.removeClass(this.selector, "level-2-selected"), Gum.native.removeClass(this.selector, "level-3-selected"), Gum.native.removeClass(this.selector, "level-4-selected"), Gum.native.removeClass(this.selector, "level-5-selected"), this.setDefaults()), Gum.native.toggleClass(this.selector, "level-1-selected"));
+            if (Gum.native.hasClass(e, "category-level-2")) {
+                if (t || !Gum.native.hasClass("has-children")) Gum.native.removeClass(this.level2Categories, "is-drilled"), Gum.native.removeClass(this.level3Categories, "is-drilled"), Gum.native.removeClass(this.level4Categories, "is-drilled"), Gum.native.removeClass(this.selector, "level-3-selected"), Gum.native.removeClass(this.selector, "level-4-selected"), Gum.native.removeClass(this.selector, "level-5-selected"), this.setDefaults();
+                Gum.native.toggleClass(this.selector, "level-2-selected")
+            }
+            if (Gum.native.hasClass(e, "category-level-3")) {
+                if (t || !Gum.native.hasClass("has-children")) Gum.native.removeClass(this.level3Categories, "is-drilled"), Gum.native.removeClass(this.level4Categories, "is-drilled"), Gum.native.removeClass(this.selector, "level-4-selected"), Gum.native.removeClass(this.selector, "level-5-selected"), this.setDefaults();
+                Gum.native.toggleClass(this.selector, "level-3-selected")
+            }
+            if (Gum.native.hasClass(e, "category-level-4")) {
+                if (t || !Gum.native.hasClass("has-children")) Gum.native.removeClass(this.level4Categories, "is-drilled"), Gum.native.removeClass(this.level5Categories, "is-drilled"), Gum.native.removeClass(this.selector, "level-5-selected"), this.setDefaults();
+                Gum.native.toggleClass(this.selector, "level-4-selected")
+            }
+            if (Gum.native.hasClass(e, "category-level-5")) {
+                if (t || !Gum.native.hasClass("has-children")) Gum.native.removeClass(this.level5Categories, "is-drilled"), this.setDefaults();
+                Gum.native.toggleClass(this.selector, "level-5-selected")
+            }
+        },
+        setValue: function(e) {
+            Gum.native.removeClass(this.selectorOptions, "is-selected"), Gum.native.addClass(e, "is-selected"), this.text.innerHTML = Gum.native.getDataSet(e, "category-name"), Gum.native.setDataSet(this.text, "categoryUrl", Gum.native.getDataSet(e, "category-url")), this.field.value = Gum.native.getDataSet(e, "category-url"), this.close()
+        },
+        setDefaults: function() {
+            Gum.native.addClass(this.defaultOption, "is-selected"), this.text.innerHTML = this.options.defaultCategory, this.field.value = this.options.defaultCategoryValue
+        },
+        position: function() {
+            this.selector.style.top = this.el.clientHeight + this.options.topBuffer + "px", this.options.width && (this.selector.style.width = this.options.width + "px")
+        }
+    });
+    Gum.Components.LocationSelector = e
+}(),
+function() {
+    Gum.LocationSelectorModel = Gum.Model.extend({
+        Name: "LocationSelectorModel",
+        success: function(e) {
+            this.store(e), this.RADIO.trigger("success", e), Gum.RADIO.trigger("XHR.success", e)
+        },
+        store: function(e) {
+            this.attrs = e, this.RADIO.trigger("stored")
+        }
+    })
+}(),
+function() {
+    Gum.LocationSelectorView = Gum.View.extend({
+        Name: "LocationSelectorView",
+        render: function(e) {
+            this.controller.removeEvents(), $(this.appendEl).find(".category-injected").remove();
+            var t = this.template({
+                categories: e,
+                position: this.controller.depth + 1,
+                current: this.controller.currentCategory
+            });
+            $(this.appendEl).append(t), this.setHeight(), this.controller.addEvents()
+        },
+        renderFull: function(e) {
+            var t = $('[data-q="header-location-select"]'),
+                n = this.fullTemplate({
+                    list: e.categories
+                });
+            t.html(n);
+            var r = $('[data-q="header-location-select-container"]');
+            r.removeClass("level-1-selected"), r.removeClass("level-2-selected"), r.removeClass("level-3-selected"), r.removeClass("level-4-selected"), r.removeClass("level-5-selected");
+            for (var i = 1; i <= e.depth; i++) r.addClass("level-" + i + "-selected");
+            this.controller.addEvents()
+        },
+        getHeight: function() {
+            var e = $(this.controller.selector).height();
+            return e + 150
+        },
+        setHeight: function() {
+            this.removeHeight();
+            var e = this.getHeight();
+            $(Gum.body).css({
+                minHeight: e
+            })
+        },
+        removeHeight: function() {
+            $(Gum.body).removeAttr("style")
+        }
+    })
+}(),
+
+
+
+
+
+
+/********* end **********/
 function() {
     var e = Gum.BaseComponentClass.extend({
         Name: "ContentClone",
