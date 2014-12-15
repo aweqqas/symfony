@@ -1,17 +1,32 @@
-{% extends "AcmeDemoBundle::layout.html.twig" %}
+{% extends "AcmeDemoBundle::base.html.twig" %}
 
 {% block head %}
-    <link rel="icon" sizes="16x16" href="{{ asset('favicon.ico') }}" />
-
+    <link rel="icon" sizes="16x16" href="{{ asset('bundles/acmedemo/images/ca/favicon.ico') }}" />
 {% endblock %}
 
 {% block title 'CA Bundle' %}
 
 {% block body %}
+<div id="fb-root"></div>
 
+<div class="letterbox ">
+    <div class="viewport" data-broadcast="channel:my-gumtree,method:deactivate,preventDefaultEvent:false">
+        <div class="viewport-mask" data-broadcast="[{channel:refine-panel,method:deactivate},{channel:side-menu,method:deactivate}]"></div>    
+    {% block content_notif %}{% endblock %}
+    
     {% block content_header %}{% endblock %}
+    
+    {% block content_nav %}{% endblock %}
     
     {% block content %}{% endblock %}
     
     {% block content_footer %}{% endblock %}    
+    </div>
+</div>
+<script>
+    Gum.domain = {
+        buyer: "https://www.gumtree.com"
+    };
+</script>
+<script type="text/javascript" src="{{ asset('bundles/acmedemo/js/ca/gumtree.js') }}"></script>
 {% endblock %}

@@ -1,83 +1,92 @@
 {% extends 'AcmeDemoBundle::layout.html.twig' %}
 
-{% block title %}Symfony - Welcome{% endblock %}
+{% block title %}Symfony - login{% endblock %}
+{% block head %}
+    {{ parent() }}
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
 
-{% block content_header '' %}
+    <link rel="shortcut icon" href="{{ asset('bundles/acmedemo/images/ca/favicon.ico') }}">
+    <link rel="apple-touch-icon" href="{{ asset('bundles/acmedemo/images/ca/apple-touch-icon-57x57.png') }}">
+    <link rel="apple-touch-icon" sizes="57x57" href="{{ asset('bundles/acmedemo/images/ca/apple-touch-icon-57x57.png') }}">
+    <link rel="apple-touch-icon" sizes="72x72" href="{{ asset('bundles/acmedemo/images/ca/apple-touch-icon-72x72.png') }}">
+
+
+    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/acmedemo/css/ca/main.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/acmedemo/css/ca/seller.css') }}">
+
+    <!--[if lte IE 9]>
+    <link rel="stylesheet" href="{{ asset('bundles/acmedemo/css/ca/ie.css') }}"/>
+    <![endif]-->
+
+    <script type="text/javascript" src="{{ asset('bundles/acmedemo/js/ca/header.js') }}"></script>
+{% endblock %}
+{% block content_notif %}
+    {% include "AcmeDemoBundle:Welcome:notification.html.twig" %}
+{% endblock %}
+
+{% block content_header %}
+    {% include "AcmeDemoBundle:Welcome:header.html.twig" %}
+{% endblock %}
+
+{% block content_nav %}
+    {% include "AcmeDemoBundle:Welcome:nav.html.twig" %}
+{% endblock %}
 
 {% block content %}
-    {% set version = constant('Symfony\\Component\\HttpKernel\\Kernel::MAJOR_VERSION') ~ '.' ~ constant('Symfony\\Component\\HttpKernel\\Kernel::MINOR_VERSION')%}
-
-    <h1 class="title">Welcome!</h1>
-
-    <p>Congratulations! You have successfully installed a new Symfony application.</p>
-
-    <div class="symfony-blocks-welcome">
-        <div class="block-quick-tour">
-            <div class="illustration">
-                <img src="{{ asset('bundles/acmedemo/images/welcome-quick-tour.gif') }}" alt="Quick tour" />
-            </div>
-            <a href="http://symfony.com/doc/{{ version }}/quick_tour/index.html" class="sf-button sf-button-selected">
-                <span class="border-l">
-                    <span class="border-r">
-                        <span class="btn-bg">Read the Quick Tour</span>
-                    </span>
-                </span>
-            </a>
-        </div>
-        {% if app.environment == 'dev' %}
-            <div class="block-configure">
-                <div class="illustration">
-                    <img src="{{ asset('bundles/acmedemo/images/welcome-configure.gif') }}" alt="Configure your application" />
+<div class="grid-container main">
+    <main role="main" class="grid-row space-ptm">
+        <div class="space-mvxl grid-col-12 grid-col-s-10 grid-col-m-6 grid-col-xl-4 grid-col-s-offset-1 grid-col-m-offset-3 grid-col-xl-offset-4">
+            <section id="login-form">
+                <div class="box box-padding space-mbm">
+                    <h1>Please login</h1>
+                    <form class="form" name="login-form" novalidate="novalidate" action="/" method="POST" autocomplete="on">
+                        <fieldset class="grid-row">
+                            <legend class="hide-visually">Your login details</legend>
+                            <div class="grid-col-12 form-element space-mbm">
+                                <label class="space-mbxs" for="email">
+                                    <span class="label-text txt-emphasis">Email Address</span>
+                                </label>
+                                <span class="clear-input-wrapper"><input type="email" id="email" name="username" value="" aria-required="true" required="required"><span class="icn-clear txt-quaternary clear-input"></span></span>
+                            </div>
+                            <div class="grid-col-12 space-mbm">
+                                <label>
+                                    <span class="label-text txt-emphasis">Do you have a Gumtree password?</span>
+                                </label>
+                            </div>
+                            <div class="grid-col-12 space-mbxs form-element">
+                                <input type="radio" id="newUser" name="newUser" value="true" autocomplete="false" required="required" class="radio-switch" data-validation-isnotempty-error="Please select an option">
+                                <label for="newUser">No, I am new to Gumtree</label>
+                            </div>
+                            <div class="grid-col-12 grid-col-s-6 space-mbxs form-element">
+                                <input type="radio" id="existingUser" name="newUser" value="false" autocomplete="false" class="radio-switch" checked="checked">
+                                <label for="existingUser">Yes, my password is:</label>
+                            </div>
+                            <div class="grid-col-12 grid-col-s-6 form-element">
+                                <span class="clear-input-wrapper">
+                                    <input type="password" id="fld-password" name="password" value="" aria-required="true" required="required" data-validation-isnotempty-error="Please enter your password" data-validation-disableonvalue="newUser,true" autocomplete="off">
+                                    <span class="icn-clear txt-quaternary clear-input"></span>
+                                </span>
+                            </div>
+                            <div class="grid-col-12 space-mvs">
+                                <span class="set-right">
+                                    <a href="https://my.gumtree.com/forgotten-password">Forgot password?</a>
+                                </span>
+                            </div>
+                            <div class="grid-col-12 grid-col-s-4">
+                                <button class="btn-primary btn-full-width" type="submit">Continue</button>
+                            </div>
+                        </fieldset>
+                    </form>
                 </div>
-                <a href="{{ path('_configurator_home') }}" class="sf-button sf-button-selected">
-                    <span class="border-l">
-                        <span class="border-r">
-                            <span class="btn-bg">Configure</span>
-                        </span>
-                    </span>
-                </a>
-            </div>
-        {% endif %}
-        <div class="block-demo">
-            <div class="illustration">
-                <img src="{{ asset('bundles/acmedemo/images/welcome-demo.gif') }}" alt="Demo" />
-            </div>
-            <a href="{{ path('_demo') }}" class="sf-button sf-button-selected">
-                <span class="border-l">
-                    <span class="border-r">
-                        <span class="btn-bg">Run The Demo</span>
-                    </span>
-                </span>
-            </a>
+            </section>
         </div>
-    </div>
+    </main>
+</div>
+{% endblock %}
 
-    <div class="symfony-blocks-help">
-        <div class="block-documentation">
-            <ul>
-                <li><strong>Documentation</strong></li>
-                <li><a href="http://symfony.com/doc/{{ version }}/book/index.html">The Book</a></li>
-                <li><a href="http://symfony.com/doc/{{ version }}/cookbook/index.html">The Cookbook</a></li>
-                <li><a href="http://symfony.com/doc/{{ version }}/components/index.html">The Components</a></li>
-                <li><a href="http://symfony.com/doc/{{ version }}/reference/index.html">Reference</a></li>
-                <li><a href="http://symfony.com/doc/{{ version }}/glossary.html">Glossary</a></li>
-            </ul>
-        </div>
-        <div class="block-documentation-more">
-            <ul>
-                <li><strong>Sensio</strong></li>
-                <li><a href="http://trainings.sensiolabs.com">Trainings</a></li>
-                <li><a href="http://books.sensiolabs.com">Books</a></li>
-            </ul>
-        </div>
-        <div class="block-community">
-            <ul>
-                <li><strong>Community</strong></li>
-                <li><a href="http://symfony.com/irc">IRC channel</a></li>
-                <li><a href="http://symfony.com/mailing-lists">Mailing lists</a></li>
-                <li><a href="http://forum.symfony-project.org">Forum</a></li>
-                <li><a href="http://symfony.com/doc/{{ version }}/contributing/index.html">Contributing</a></li>
-            </ul>
-        </div>
-    </div>
+{% block content_footer %}
+    {% include "AcmeDemoBundle:Welcome:footer.html.twig" %}
 {% endblock %}
