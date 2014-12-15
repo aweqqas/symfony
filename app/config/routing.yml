@@ -1,0 +1,12 @@
+mrmiles_admin:
+    resource: "@mrmilesAdminBundle/Resources/config/routing.yml"
+    prefix:   /
+
+mrmiles_user:
+    resource: "@mrmilesUserBundle/Resources/config/routing.yml"
+    prefix:   /
+
+mrmiles_content:
+    resource: "@mrmilesContentBundle/Resources/config/routing.yml"
+    prefix:   /
+

@@ -1,0 +1,7 @@
+parameters:
+#    mrmiles_admin.example.class: mrmiles\AdminBundle\Example
+
+services:
+#    mrmiles_admin.example:
+#        class: %mrmiles_admin.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
