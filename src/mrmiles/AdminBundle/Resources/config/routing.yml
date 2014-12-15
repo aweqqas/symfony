@@ -1,3 +1,0 @@
-mrmiles_admin_homepage:
-    pattern:  /hello/{name}
-    defaults: { _controller: mrmilesAdminBundle:Default:index }

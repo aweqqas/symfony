@@ -1,7 +1,0 @@
-parameters:
-#    mrmiles_user.example.class: mrmiles\UserBundle\Example
-
-services:
-#    mrmiles_user.example:
-#        class: %mrmiles_user.example.class%
-#        arguments: [@service_id, "plain_value", %parameter%]
