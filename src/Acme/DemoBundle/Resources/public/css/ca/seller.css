@@ -10744,20 +10744,20 @@ html:not(.ie9) .social-media-buttons>li:hover {
 .location-selector.is-showing {
     display: block
 }
-.location-selector .location-name {
+.location-selector .category-name {
     color: #333;
     display: block;
     padding: 7px 46px 7px 20px;
     background-color: #fff;
     cursor: pointer
 }
-.location-selector .location-name:hover {
+.location-selector .category-name:hover {
     background-color: #fcfcfc
 }
 .location-selector .is-hidden {
     display: none!important
 }
-.location-selector .has-icon>.location-name {
+.location-selector .has-icon>.category-name {
     padding: 4px 10px
 }
 .location-selector .location-icon {
@@ -10783,33 +10783,33 @@ html:not(.ie9) .social-media-buttons>li:hover {
 .location-selector .selected-icons {
     display: none
 }
-.location-selector .select-all>.location-name {
+.location-selector .select-all>.category-name {
     -webkit-box-shadow: inset 0 1px 2px 0 rgba(50, 50, 50, .1);
     box-shadow: inset 0 1px 2px 0 rgba(50, 50, 50, .1)
 }
-.location-selector .is-selected>.location-name .selected-icons {
+.location-selector .is-selected>.category-name .selected-icons {
     display: block
 }
 .location-selector .is-selected .icon-selected {
     color: #ef5112
 }
-.location-selector .is-drilled>.location-name {
+.location-selector .is-drilled>.category-name {
     padding-left: 10px
 }
 .location-selector .is-drilled.has-children {
     display: block!important
 }
-.location-selector .is-drilled.has-children>.location-name {
+.location-selector .is-drilled.has-children>.category-name {
     background-color: #eaeaea;
     border-bottom: 1px solid #d6d6d6
 }
-.location-selector .is-drilled.has-children>.location-name .closed-icon {
+.location-selector .is-drilled.has-children>.category-name .closed-icon {
     display: none
 }
-.location-selector .is-drilled.has-children>.location-name .open-icon {
+.location-selector .is-drilled.has-children>.category-name .open-icon {
     display: block
 }
-.location-selector .is-drilled.has-children>.location-name:hover {
+.location-selector .is-drilled.has-children>.category-name:hover {
     background-color: #e2e2e2
 }
 .location-selector.level-1-selected .location-level-1 {

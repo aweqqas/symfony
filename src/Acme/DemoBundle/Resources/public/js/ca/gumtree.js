@@ -8241,6 +8241,33 @@ function() {
         }
     })
 }(),
+        /************ location **********/
+function() {
+    Gum.DtlModel = Gum.Model.extend({
+        Name: "LocationSelectorModel",
+        success: function(e) {
+            this.postProcess(e), this.RADIO.trigger("success", e), Gum.RADIO.trigger("XHR.success", e)
+        },
+        fetch: function(e) {
+            this.method = "POST", this.ajax(e)
+        },
+        postProcess: function(e) {
+            e.formBean = e.formBean ? e.formBean : {}, this.store(e)
+        },
+        ajax: function(e) {
+            this.xhr && this.xhr.abort(), this.xhr = $.ajax({
+                type: "POST",
+                url: this.url,
+                data: e ? JSON.stringify(e) : JSON.stringify({}),
+                contentType: "application/json; charset=utf-8",
+                timeout: this.timeout,
+                success: this.success,
+                error: this.error
+            })
+        }
+    })
+}(),
+         /********** end *************/
 function() {
     var e = function(e, t) {
         var n = typeof t == "object" ? t : {};
@@ -9606,6 +9633,19 @@ function() {
                     }
                 }
             },
+            updateLocation: function(e) {
+                var t = $(e).index();
+                if (this.results.suggestions !== undefined) {
+                    var n = this.results.suggestions[t],
+                        r = n.categoryId !== undefined;
+                    if (r) $('input[name="search_location"] ').val(n.locationSeoName), $("[data-location-selector] .text-only ").html(n.categoryName);
+                    else {
+                        var i = $('input[name="search_location"] '),
+                            s = $("[data-location-selector] .text-only ");
+                        i.val(i.data("current-location")), s.html(s.data("current-location-name"))
+                    }
+                }
+            },            
             updateTracking: function(e) {
                 var t = Gum.native.getDataSet(e, "tracking"),
                     n = document.getElementById(this.trackingElId);
