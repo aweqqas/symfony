@@ -34,5 +34,21 @@ class WelcomeController extends Controller
     public function resultAction()
     {
         return array();
+    } 
+    
+    /**
+     * @Route("/ajax/location/dropdown", name="ajax_classified_location_dropdown")
+     */
+    public function locationDropdownAction()
+    {
+        return array();
+    } 
+    
+    /**
+     * @Route("/ajax/location/children", name="ajax_classifiedlocation_children")
+     */
+    public function locationChildrenAction()
+    {
+        return array();
     }        
 }
