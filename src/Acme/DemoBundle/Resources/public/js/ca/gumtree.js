@@ -6457,7 +6457,7 @@ function() {
             r === "before" ? t.insertBefore(e, n) : t.appendChild(e)
         },
         setCookie: function(e, t, n, r) {
-            r = r ? r : ".gumtree.com";
+            r = r ? r : ".soukjdid.com";
             var i = new Date;
             i.setTime(i.getTime() + n * 24 * 60 * 60 * 1e3);
             var s = "expires=" + i.toGMTString();
@@ -7010,7 +7010,7 @@ function() {
             var f = e.drilled,
                 l = e.selected,
                 c = e.children;
-            n += '\n        <li\n            class="category-level-' + ((t = r) == null ? "" : t) + "" + ((t = e.seoName == "all" ? " categories-all" : "") == null ? "" : t), s && (n += "  has-icon "), a || (n += " is-hidden "), c ? (n += " has-children", f && (n += " is-drilled ")) : l && (n += " is-selected "), n += '"\n            data-category-name="' + ((t = e.name) == null ? "" : t) + '"\n            data-category-url="' + ((t = e.seoName) == null ? "" : t) + '"\n            data-category-id="' + ((t = e.id) == null ? "" : t) + '"\n            data-category-depth="' + ((t = r) == null ? "" : t) + '">\n                        <span class="category-name">\n                            ', r == 1 && (n += '\n                                <span\n                                        class="category-icon icn-' + ((t = e.seoName != "all" ? e.seoName : "gumtree") == null ? "" : t) + ' txt-highlight"></span>\n                            '), n += "\n                            " + ((t = e.name) == null ? "" : t) + "\n                            ", c ? n += '\n                                <span class="open-closed-icons">\n                                            <span class="icn-plus txt-highlight closed-icon"></span>\n                                            <span class="icn-minus txt-highlight open-icon"></span>\n                                </span>\n                            ' : n += '\n                                <span class="selected-icons">\n                                    <span class="icn-check txt-selected"></span>\n                                </span>\n                            ', n += "\n                        </span>\n\n            ", c && f && (n += "\n            <ul class='category-injected'>\n                <li class=\"category-level-" + ((t = r + 1) == null ? "" : t) + " select-all\n                    ", l && (n += " is-selected "), n += '\n                                "\n                    data-category-name="' + ((t = e.name) == null ? "" : t) + '"\n                    data-category-url="' + ((t = e.seoName) == null ? "" : t) + '">\n                                <span class="category-name">\n                                    <strong>Search all in ' + ((t = e.name) == null ? "" : t) + '</strong>\n                                    <span class="selected-icons">\n                                        <span class="icn-check txt-selected"></span>\n                                    </span>\n                                </span>\n                </li>\n                ', o(e.childrenItems, r + 1), n += "\n            </ul>\n            "), n += "\n        </li>\n        ", u > 20 && a && (n += '\n            <li class="category-level-' + ((t = r) == null ? "" : t) + ' show-more-button">\n                        <span class="category-name">View More\n                            <span class="show-more-icons">\n                                <span class="ico-chevron-d txt-selected"></span>\n                            </span>\n                        </span>\n            </li>\n            ', a = !1), u++
+            n += '\n        <li\n            class="category-level-' + ((t = r) == null ? "" : t) + "" + ((t = e.seoName == "all" ? " categories-all" : "") == null ? "" : t), s && (n += "  has-icon "), a || (n += " is-hidden "), c ? (n += " has-children", f && (n += " is-drilled ")) : l && (n += " is-selected "), n += '"\n            data-category-name="' + ((t = e.name) == null ? "" : t) + '"\n            data-category-url="' + ((t = e.seoName) == null ? "" : t) + '"\n            data-category-id="' + ((t = e.id) == null ? "" : t) + '"\n            data-category-depth="' + ((t = r) == null ? "" : t) + '">\n                        <span class="category-name">\n                            ', r == 1 && (n += '\n                                <span\n                                        class="category-icon icn-' + ((t = e.seoName != "all" ? e.seoName : "soukjdid") == null ? "" : t) + ' txt-highlight"></span>\n                            '), n += "\n                            " + ((t = e.name) == null ? "" : t) + "\n                            ", c ? n += '\n                                <span class="open-closed-icons">\n                                            <span class="icn-plus txt-highlight closed-icon"></span>\n                                            <span class="icn-minus txt-highlight open-icon"></span>\n                                </span>\n                            ' : n += '\n                                <span class="selected-icons">\n                                    <span class="icn-check txt-selected"></span>\n                                </span>\n                            ', n += "\n                        </span>\n\n            ", c && f && (n += "\n            <ul class='category-injected'>\n                <li class=\"category-level-" + ((t = r + 1) == null ? "" : t) + " select-all\n                    ", l && (n += " is-selected "), n += '\n                                "\n                    data-category-name="' + ((t = e.name) == null ? "" : t) + '"\n                    data-category-url="' + ((t = e.seoName) == null ? "" : t) + '">\n                                <span class="category-name">\n                                    <strong>Search all in ' + ((t = e.name) == null ? "" : t) + '</strong>\n                                    <span class="selected-icons">\n                                        <span class="icn-check txt-selected"></span>\n                                    </span>\n                                </span>\n                </li>\n                ', o(e.childrenItems, r + 1), n += "\n            </ul>\n            "), n += "\n        </li>\n        ", u > 20 && a && (n += '\n            <li class="category-level-' + ((t = r) == null ? "" : t) + ' show-more-button">\n                        <span class="category-name">View More\n                            <span class="show-more-icons">\n                                <span class="ico-chevron-d txt-selected"></span>\n                            </span>\n                        </span>\n            </li>\n            ', a = !1), u++
         })
     }
     var t, n = "",
@@ -7359,7 +7359,7 @@ function() {
                 noTitleUnderline: !0,
                 width: "99.9%",
                 adjustableLineHeight: 0,
-                adIconUrl: "http://afs.googleusercontent.com/gumtree-com/noimage_thumbnail_120x92_v2.png",
+                adIconUrl: "http://afs.googleusercontent.com/soukjdid-com/noimage_thumbnail_120x92_v2.png",
                 titleBold: !0,
                 clickableBackgrounds: !0,
                 lines: 3,
@@ -7386,7 +7386,7 @@ function() {
                 longerHeadlines: !0
             },
             mobile: {
-                adIconUrl: "http://afs.googleusercontent.com/gumtree-com/noimage_thumbnail_100x77_v2.png",
+                adIconUrl: "http://afs.googleusercontent.com/soukjdid-com/noimage_thumbnail_100x77_v2.png",
                 adIconWidth: 100,
                 adIconHeight: 77,
                 attributionSpacingBelow: 10,
@@ -8883,9 +8883,9 @@ function(e) {
     var t = function(e, t) {
         this.map = undefined, this.marker = undefined, this.el = e, this.unique = _.uniqueId("googlemap_"), this.options = _.extend({}, this.DEFAULTS, t), this.googlemapExt = undefined, this.url = {
             baseURL: "//maps.googleapis.com/maps/api/js",
-            client: "?client=gme-marktplaats",
+            client: "?client=sj-marktplaats",
             sensor: "&sensor=true",
-            callback: "&callback=Gum.components.googlemap." + this.unique + ".addMap"
+            callback: "&callback=sj.components.googlemap." + this.unique + ".addMap"
         }, this.init.apply(this, arguments)
     };
     t.prototype.DEFAULTS = {
@@ -8929,7 +8929,7 @@ function() {
     var e = function(e) {
         this.el = e;
         var t = Gum.native.getDataSet(this.el, "history-back");
-        this.condition = typeof t == "undefined" || t === "" ? "gumtree.com" : t, this.referrer = document.referrer, this.href = this.el.getAttribute("href"), this.doesMatch = !1, this.init.apply(this, arguments)
+        this.condition = typeof t == "undefined" || t === "" ? "soukjdid.com" : t, this.referrer = document.referrer, this.href = this.el.getAttribute("href"), this.doesMatch = !1, this.init.apply(this, arguments)
     };
     e.prototype.init = function() {
         _.bindAll(this), Gum.native.addEventListener(this.el, "click", this.onClick)
