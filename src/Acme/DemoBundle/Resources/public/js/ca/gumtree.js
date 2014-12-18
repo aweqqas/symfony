@@ -6457,7 +6457,7 @@ function() {
             r === "before" ? t.insertBefore(e, n) : t.appendChild(e)
         },
         setCookie: function(e, t, n, r) {
-            r = r ? r : ".gumtree.com";
+            r = r ? r : ".soukjdid.com";
             var i = new Date;
             i.setTime(i.getTime() + n * 24 * 60 * 60 * 1e3);
             var s = "expires=" + i.toGMTString();
@@ -7010,7 +7010,7 @@ function() {
             var f = e.drilled,
                 l = e.selected,
                 c = e.children;
-            n += '\n        <li\n            class="category-level-' + ((t = r) == null ? "" : t) + "" + ((t = e.seoName == "all" ? " categories-all" : "") == null ? "" : t), s && (n += "  has-icon "), a || (n += " is-hidden "), c ? (n += " has-children", f && (n += " is-drilled ")) : l && (n += " is-selected "), n += '"\n            data-category-name="' + ((t = e.name) == null ? "" : t) + '"\n            data-category-url="' + ((t = e.seoName) == null ? "" : t) + '"\n            data-category-id="' + ((t = e.id) == null ? "" : t) + '"\n            data-category-depth="' + ((t = r) == null ? "" : t) + '">\n                        <span class="category-name">\n                            ', r == 1 && (n += '\n                                <span\n                                        class="category-icon icn-' + ((t = e.seoName != "all" ? e.seoName : "gumtree") == null ? "" : t) + ' txt-highlight"></span>\n                            '), n += "\n                            " + ((t = e.name) == null ? "" : t) + "\n                            ", c ? n += '\n                                <span class="open-closed-icons">\n                                            <span class="icn-plus txt-highlight closed-icon"></span>\n                                            <span class="icn-minus txt-highlight open-icon"></span>\n                                </span>\n                            ' : n += '\n                                <span class="selected-icons">\n                                    <span class="icn-check txt-selected"></span>\n                                </span>\n                            ', n += "\n                        </span>\n\n            ", c && f && (n += "\n            <ul class='category-injected'>\n                <li class=\"category-level-" + ((t = r + 1) == null ? "" : t) + " select-all\n                    ", l && (n += " is-selected "), n += '\n                                "\n                    data-category-name="' + ((t = e.name) == null ? "" : t) + '"\n                    data-category-url="' + ((t = e.seoName) == null ? "" : t) + '">\n                                <span class="category-name">\n                                    <strong>Search all in ' + ((t = e.name) == null ? "" : t) + '</strong>\n                                    <span class="selected-icons">\n                                        <span class="icn-check txt-selected"></span>\n                                    </span>\n                                </span>\n                </li>\n                ', o(e.childrenItems, r + 1), n += "\n            </ul>\n            "), n += "\n        </li>\n        ", u > 20 && a && (n += '\n            <li class="category-level-' + ((t = r) == null ? "" : t) + ' show-more-button">\n                        <span class="category-name">View More\n                            <span class="show-more-icons">\n                                <span class="ico-chevron-d txt-selected"></span>\n                            </span>\n                        </span>\n            </li>\n            ', a = !1), u++
+            n += '\n        <li\n            class="category-level-' + ((t = r) == null ? "" : t) + "" + ((t = e.seoName == "all" ? " categories-all" : "") == null ? "" : t), s && (n += "  has-icon "), a || (n += " is-hidden "), c ? (n += " has-children", f && (n += " is-drilled ")) : l && (n += " is-selected "), n += '"\n            data-category-name="' + ((t = e.name) == null ? "" : t) + '"\n            data-category-url="' + ((t = e.seoName) == null ? "" : t) + '"\n            data-category-id="' + ((t = e.id) == null ? "" : t) + '"\n            data-category-depth="' + ((t = r) == null ? "" : t) + '">\n                        <span class="category-name">\n                            ', r == 1 && (n += '\n                                <span\n                                        class="category-icon icn-' + ((t = e.seoName != "all" ? e.seoName : "soukjdid") == null ? "" : t) + ' txt-highlight"></span>\n                            '), n += "\n                            " + ((t = e.name) == null ? "" : t) + "\n                            ", c ? n += '\n                                <span class="open-closed-icons">\n                                            <span class="icn-plus txt-highlight closed-icon"></span>\n                                            <span class="icn-minus txt-highlight open-icon"></span>\n                                </span>\n                            ' : n += '\n                                <span class="selected-icons">\n                                    <span class="icn-check txt-selected"></span>\n                                </span>\n                            ', n += "\n                        </span>\n\n            ", c && f && (n += "\n            <ul class='category-injected'>\n                <li class=\"category-level-" + ((t = r + 1) == null ? "" : t) + " select-all\n                    ", l && (n += " is-selected "), n += '\n                                "\n                    data-category-name="' + ((t = e.name) == null ? "" : t) + '"\n                    data-category-url="' + ((t = e.seoName) == null ? "" : t) + '">\n                                <span class="category-name">\n                                    <strong>Search all in ' + ((t = e.name) == null ? "" : t) + '</strong>\n                                    <span class="selected-icons">\n                                        <span class="icn-check txt-selected"></span>\n                                    </span>\n                                </span>\n                </li>\n                ', o(e.childrenItems, r + 1), n += "\n            </ul>\n            "), n += "\n        </li>\n        ", u > 20 && a && (n += '\n            <li class="category-level-' + ((t = r) == null ? "" : t) + ' show-more-button">\n                        <span class="category-name">View More\n                            <span class="show-more-icons">\n                                <span class="ico-chevron-d txt-selected"></span>\n                            </span>\n                        </span>\n            </li>\n            ', a = !1), u++
         })
     }
     var t, n = "",
@@ -7029,6 +7029,41 @@ function() {
         u = 20;
     return n += '\n    <li class="category-level-' + ((t = e.position) == null ? "" : t) + ' select-all"\n        data-category-name="' + ((t = e.current.name) == null ? "" : t) + '"\n        data-category-url="' + ((t = e.current.seoName) == null ? "" : t) + '">\n                    <span class="category-name">\n                        <strong>Search all in ' + ((t = e.current.name) == null ? "" : t) + '</strong>\n                        <span class="selected-icons">\n                            <span class="icn-check txt-selected"></span>\n                        </span>\n                    </span>\n    </li>\n    ', _.each(e.categories, function(r) {
         n += "\n    ", o++, n += '\n\n    <li\n            class="category-level-' + ((t = e.position) == null ? "" : t) + "  ", r.children && (n += "has-children"), n += " ", o > u && (n += "is-hidden"), n += '"\n            data-category-name="' + ((t = r.name) == null ? "" : t) + '"\n            data-category-url="' + ((t = r.seoName) == null ? "" : t) + '"\n            data-category-id="' + ((t = r.id) == null ? "" : t) + '"\n            data-category-depth="' + ((t = e.position) == null ? "" : t) + '">\n            <span class="category-name">\n                ' + ((t = r.name) == null ? "" : t) + "\n                ", r.children ? n += '\n                    <span class="open-closed-icons">\n                        <span class="icn-plus txt-highlight closed-icon"></span>\n                        <span class="icn-minus txt-highlight open-icon"></span>\n                    </span>\n                ' : n += '\n                    <span class="selected-icons">\n                        <span class="icn-check txt-selected"></span>\n                    </span>\n                ', n += "\n            </span>\n    </li>\n    ", o === u && (n += '\n    <li class="category-level-' + ((t = e.position) == null ? "" : t) + ' show-more-button">\n        <span class="category-name">View More\n            <span class="show-more-icons">\n                <span class="icn-chevron-d txt-selected"></span>\n            </span>\n        </span>\n    </li>\n    '), n += "\n    "
+    }), n += "\n</ul>", n
+},  this.Gum.Templates["tmpl-location-dropdown-full.html"] = function(e) {
+    function s() {
+        n += i.call(arguments, "")
+    }
+
+    function o(e, r, i, s) {
+        r = typeof r != "undefined" ? r : 1, i = typeof i != "undefined" ? i : !0, s = typeof s != "undefined" ? s : !0;
+        var u = 0,
+            a = !0;
+        _.each(e, function(e) {
+            var s = !1;
+            i && r == 1 && (s = !0);
+            var f = e.drilled,
+                l = e.selected,
+                c = e.children;
+            n += '\n        <li\n            class="location-level-' + ((t = r) == null ? "" : t) + "" + ((t = e.seoName == "all" ? " categories-all" : "") == null ? "" : t), s && (n += " "), a || (n += " is-hidden "), c ? (n += " has-children", f && (n += " is-drilled ")) : l && (n += " is-selected "), n += '"\n            data-category-name="' + ((t = e.name) == null ? "" : t) + '"\n            data-category-url="' + ((t = e.seoName) == null ? "" : t) + '"\n            data-category-id="' + ((t = e.id) == null ? "" : t) + '"\n            data-category-depth="' + ((t = r) == null ? "" : t) + '">\n                        <span class="location-name">\n                            ', r == 1 && (n += '\n                                <span\n                                        class="category-icon txt-highlight"></span>\n                            '), n += "\n                            " + ((t = e.name) == null ? "" : t) + "\n                            ", c ? n += '\n                                <span class="open-closed-icons">\n                                            <span class="icn-plus txt-highlight closed-icon"></span>\n                                            <span class="icn-minus txt-highlight open-icon"></span>\n                                </span>\n                            ' : n += '\n                                <span class="selected-icons">\n                                    <span class="icn-check txt-selected"></span>\n                                </span>\n                            ', n += "\n                        </span>\n\n            ", c && f && (n += "\n            <ul class='location-injected'>\n                <li class=\"location-level-" + ((t = r + 1) == null ? "" : t) + " select-all\n                    ", l && (n += " is-selected "), n += '\n                                "\n                    data-category-name="' + ((t = e.name) == null ? "" : t) + '"\n                    data-category-url="' + ((t = e.seoName) == null ? "" : t) + '">\n                                <span class="location-name">\n                                    <strong>Search all in ' + ((t = e.name) == null ? "" : t) + '</strong>\n                                    <span class="selected-icons">\n                                        <span class="icn-check txt-selected"></span>\n                                    </span>\n                                </span>\n                </li>\n                ', o(e.childrenItems, r + 1), n += "\n            </ul>\n            "), n += "\n        </li>\n        ", u > 20 && a && (n += '\n            <li class="location-level-' + ((t = r) == null ? "" : t) + ' show-more-button">\n                        <span class="location-name">View More\n                            <span class="show-more-icons">\n                                <span class="ico-chevron-d txt-selected"></span>\n                            </span>\n                        </span>\n            </li>\n            ', a = !1), u++
+        })
+    }
+    var t, n = "",
+        r = _.escape,
+        i = Array.prototype.join;
+    return o(e.list), n += "\n", n
+}, this.Gum.Templates["tmpl-location-dropdown.html"] = function(e) {
+    function s() {
+        n += i.call(arguments, "")
+    }
+    var t, n = "",
+        r = _.escape,
+        i = Array.prototype.join;
+    n += '<ul class="location-injected">\n    ';
+    var o = 0,
+        u = 20;
+    return n += '\n    <li class="location-level-' + ((t = e.position) == null ? "" : t) + ' select-all"\n        data-category-name="' + ((t = e.current.name) == null ? "" : t) + '"\n        data-category-url="' + ((t = e.current.seoName) == null ? "" : t) + '">\n                    <span class="location-name">\n                        <strong>Search all in ' + ((t = e.current.name) == null ? "" : t) + '</strong>\n                        <span class="selected-icons">\n                            <span class="icn-check txt-selected"></span>\n                        </span>\n                    </span>\n    </li>\n    ', _.each(e.categories, function(r) {
+        n += "\n    ", o++, n += '\n\n    <li\n            class="location-level-' + ((t = e.position) == null ? "" : t) + "  ", r.children && (n += "has-children"), n += " ", o > u && (n += "is-hidden"), n += '"\n            data-category-name="' + ((t = r.name) == null ? "" : t) + '"\n            data-category-url="' + ((t = r.seoName) == null ? "" : t) + '"\n            data-category-id="' + ((t = r.id) == null ? "" : t) + '"\n            data-category-depth="' + ((t = e.position) == null ? "" : t) + '">\n            <span class="location-name">\n                ' + ((t = r.name) == null ? "" : t) + "\n                ", r.children ? n += '\n                    <span class="open-closed-icons">\n                        <span class="icn-plus txt-highlight closed-icon"></span>\n                        <span class="icn-minus txt-highlight open-icon"></span>\n                    </span>\n                ' : n += '\n                    <span class="selected-icons">\n                        <span class="icn-check txt-selected"></span>\n                    </span>\n                ', n += "\n            </span>\n    </li>\n    ", o === u && (n += '\n    <li class="location-level-' + ((t = e.position) == null ? "" : t) + ' show-more-button">\n        <span class="location-name">View More\n            <span class="show-more-icons">\n                <span class="icn-chevron-d txt-selected"></span>\n            </span>\n        </span>\n    </li>\n    '), n += "\n    "
     }), n += "\n</ul>", n
 }, this.Gum.Templates["tmpl-formelement-errors.html"] = function(e) {
     function s() {
@@ -7324,7 +7359,7 @@ function() {
                 noTitleUnderline: !0,
                 width: "99.9%",
                 adjustableLineHeight: 0,
-                adIconUrl: "http://afs.googleusercontent.com/gumtree-com/noimage_thumbnail_120x92_v2.png",
+                adIconUrl: "http://afs.googleusercontent.com/soukjdid-com/noimage_thumbnail_120x92_v2.png",
                 titleBold: !0,
                 clickableBackgrounds: !0,
                 lines: 3,
@@ -7351,7 +7386,7 @@ function() {
                 longerHeadlines: !0
             },
             mobile: {
-                adIconUrl: "http://afs.googleusercontent.com/gumtree-com/noimage_thumbnail_100x77_v2.png",
+                adIconUrl: "http://afs.googleusercontent.com/soukjdid-com/noimage_thumbnail_100x77_v2.png",
                 adIconWidth: 100,
                 adIconHeight: 77,
                 attributionSpacingBelow: 10,
@@ -7954,6 +7989,182 @@ function() {
         }
     })
 }(),
+        
+/********** locations ********/
+function() {
+    var e = Gum.BaseComponentMVCClass.extend({
+        Name: "LocationSelector",
+        selector: "[data-location-selector]",
+        options: {
+            defaultLocation: "All Locations",
+            defaultLocationValue: "all"
+        },
+        value: "",
+        url: Gum.domain.buyer + "/ajax/location/children",
+        fullUrl: Gum.domain.buyer + "/ajax/location/dropdown",
+        fullModel: null,
+        timeout: 1e3,
+        template: "tmpl-location-dropdown.html",
+        fullTemplate: "tmpl-location-dropdown-full.html",
+        init: function() {
+            this._super(), this.selector = this.el.getElementsByClassName("location-selector")[0], this.selectorOptions = this.selector.getElementsByTagName("li"), this.level1Categories = this.selector.getElementsByClassName("location-level-1"), this.level2Categories = this.selector.getElementsByClassName("location-level-2"), this.level3Categories = this.selector.getElementsByClassName("location-level-3"), this.level4Categories = this.selector.getElementsByClassName("location-level-4"), this.level5Categories = this.selector.getElementsByClassName("location-level-5"), this.defaultOption = this.selector.getElementsByClassName("locations-all"), this.text = this.el.getElementsByClassName("text-only")[0], this.field = this.el.getElementsByTagName("input")[0], this.headerBottom = document.getElementById("header-bottom"), this.initView(), this.addEvents(), this.model.RADIO.on("success", this.view.render), this.fullModel.RADIO.on("success", this.view.renderFull), Gum.RADIO.on("dropdown.close", this.close), Gum.RADIO.on("toggle-search", this.close)
+        },
+        initModel: function() {
+            this.model = new Gum.LocationSelectorModel({
+                url: this.url,
+                timeout: this.timeout
+            }), this.fullModel = new Gum.LocationSelectorModel({
+                url: this.fullUrl,
+                timeout: this.timeout
+            })
+        },
+        initView: function() {
+            this.view = new Gum.LocationSelectorView, this.view.template = Gum.Templates[this.template], this.view.fullTemplate = Gum.Templates[this.fullTemplate], this.view.controller = this
+        },
+        render: function() {},
+        renderFull: function() {},
+        addEvents: function() {
+            Gum.native.addEventListener(this.el, "click", this.toggle), Gum.native.addEventListener(this.selectorOptions, "click", this.select)
+        },
+        removeEvents: function() {
+            Gum.native.removeEventListener(this.el, "click", this.toggle), Gum.native.removeEventListener(this.selectorOptions, "click", this.select)
+        },
+        toggle: function(e) {
+            this.isOpen ? this.close() : this.open(e)
+        },
+        scrollTo: function() {
+            Gum.util.isElementInViewport(this.el) || window.scrollTo(0, 0)
+        },
+        close: function() {
+            this.isOpen && (Gum.native.removeClass(this.selector, "is-showing"), Gum.native.removeClass(this.headerBottom, "typeahead-open"), Gum.native.removeClass(Gum.body, "is-showing-location"), this.view.removeHeight(), this.isOpen = !1, Gum.native.removeEventListener(document, "click", this.close))
+        },
+        open: function(e) {
+            e && (e.preventDefault ? (e.preventDefault(), e.stopPropagation()) : (e.returnValue = !1, e.cancelBubble = !0), e.gesture && (e.gesture.stopPropagation(), e.gesture.preventDefault())), this.update(), this.position(), Gum.native.addClass(this.headerBottom, "typeahead-open"), Gum.native.addClass(this.selector, "is-showing"), Gum.native.addClass(Gum.body, "is-showing-location"), this.view.setHeight(), Gum.native.addEventListener(this.selectorOptions, "click", this.select), Gum.native.addEventListener(document, "click", this.close), this.isOpen = !0
+        },
+        update: function() {
+            var e = $('[data-q="header-location-select"] .is-selected'),
+                t = e.data("category-url"),
+                n = $(this.field).val();
+            t !== n && this.fullModel.fetch({
+                seoName: n
+            })
+        },
+        select: function(e) {
+            this.isOpen = !0, Gum.native.addEventListener(this.selectorOptions, "click", this.select);
+            if (e) {
+                var t = e.currentTarget;
+                if (Gum.native.hasClass(t, "locations-loading")) return;
+                e.preventDefault ? (e.preventDefault(), e.stopPropagation()) : (e.returnValue = !1, e.cancelBubble = !0), e.gesture && (e.gesture.stopPropagation(), e.gesture.preventDefault());
+                var n = Gum.native.getDataSet(t, "categoryId");
+                this.depth = parseInt(Gum.native.getDataSet(t, "categoryDepth"), 10), this.currentLocation = {
+                    seoName: Gum.native.getDataSet(t, "categoryUrl"),
+                    name: Gum.native.getDataSet(t, "categoryName"),
+                    id: Gum.native.getDataSet(t, "categoryid")
+                };
+                if (Gum.native.hasClass(t, "show-more-button")) {
+                    $(t).parent().find(".is-hidden").removeClass("is-hidden"), Gum.native.addClass(t, "is-hidden"), this.view.setHeight();
+                    return
+                }
+                Gum.native.hasClass(t, "has-children") ? (this.view.appendEl = t, this.model.fetch({
+                    input: n
+                }), this.addState(t)) : this.setValue(t);
+                var r = Gum.native.getDataSet(t, "categoryUrl"),
+                    i = Gum.native.getDataSet(t, "categoryName"),
+                    s = $('[data-location-selector] input[name="search_location"] '),
+                    o = $("[data-location-selector] .text-only ");
+                s.data("current-location", r), o.data("current-location-name", i)
+            }
+            return this.scrollTo(), !1
+        },
+        addState: function(e) {
+            var t = Gum.native.hasClass(e, "is-drilled");
+            Gum.native.toggleClass(e, "is-drilled"), Gum.native.removeClass(this.selectorOptions, "is-selected"), Gum.native.hasClass(e, "location-level-1") && (t && (Gum.native.removeClass(this.selectorOptions, "is-drilled"), Gum.native.removeClass(this.selector, "level-2-selected"), Gum.native.removeClass(this.selector, "level-3-selected"), Gum.native.removeClass(this.selector, "level-4-selected"), Gum.native.removeClass(this.selector, "level-5-selected"), this.setDefaults()), Gum.native.toggleClass(this.selector, "level-1-selected"));
+            if (Gum.native.hasClass(e, "location-level-2")) {
+                if (t || !Gum.native.hasClass("has-children")) Gum.native.removeClass(this.level2Categories, "is-drilled"), Gum.native.removeClass(this.level3Categories, "is-drilled"), Gum.native.removeClass(this.level4Categories, "is-drilled"), Gum.native.removeClass(this.selector, "level-3-selected"), Gum.native.removeClass(this.selector, "level-4-selected"), Gum.native.removeClass(this.selector, "level-5-selected"), this.setDefaults();
+                Gum.native.toggleClass(this.selector, "level-2-selected")
+            }
+            if (Gum.native.hasClass(e, "location-level-3")) {
+                if (t || !Gum.native.hasClass("has-children")) Gum.native.removeClass(this.level3Categories, "is-drilled"), Gum.native.removeClass(this.level4Categories, "is-drilled"), Gum.native.removeClass(this.selector, "level-4-selected"), Gum.native.removeClass(this.selector, "level-5-selected"), this.setDefaults();
+                Gum.native.toggleClass(this.selector, "level-3-selected")
+            }
+            if (Gum.native.hasClass(e, "location-level-4")) {
+                if (t || !Gum.native.hasClass("has-children")) Gum.native.removeClass(this.level4Categories, "is-drilled"), Gum.native.removeClass(this.level5Categories, "is-drilled"), Gum.native.removeClass(this.selector, "level-5-selected"), this.setDefaults();
+                Gum.native.toggleClass(this.selector, "level-4-selected")
+            }
+            if (Gum.native.hasClass(e, "location-level-5")) {
+                if (t || !Gum.native.hasClass("has-children")) Gum.native.removeClass(this.level5Categories, "is-drilled"), this.setDefaults();
+                Gum.native.toggleClass(this.selector, "level-5-selected")
+            }
+        },
+        setValue: function(e) {
+            Gum.native.removeClass(this.selectorOptions, "is-selected"), Gum.native.addClass(e, "is-selected"), this.text.innerHTML = Gum.native.getDataSet(e, "category-name"), Gum.native.setDataSet(this.text, "categoryUrl", Gum.native.getDataSet(e, "category-url")), this.field.value = Gum.native.getDataSet(e, "category-url"), this.close()
+        },
+        setDefaults: function() {
+            Gum.native.addClass(this.defaultOption, "is-selected"), this.text.innerHTML = this.options.defaultLocation, this.field.value = this.options.defaultLocationValue
+        },
+        position: function() {
+            this.selector.style.top = this.el.clientHeight + this.options.topBuffer + "px", this.options.width && (this.selector.style.width = this.options.width + "px")
+        }
+    });
+    Gum.Components.LocationSelector = e
+}(),
+function() {
+    Gum.LocationSelectorModel = Gum.Model.extend({
+        Name: "LocationSelectorModel",
+        success: function(e) {
+            this.store(e), this.RADIO.trigger("success", e), Gum.RADIO.trigger("XHR.success", e)
+        },
+        store: function(e) {
+            this.attrs = e, this.RADIO.trigger("stored")
+        }
+    })
+}(),
+function() {
+    Gum.LocationSelectorView = Gum.View.extend({
+        Name: "LocationSelectorView",
+        render: function(e) {
+            this.controller.removeEvents(), $(this.appendEl).find(".location-injected").remove();
+            var t = this.template({
+                categories: e,
+                position: this.controller.depth + 1,
+                current: this.controller.currentLocation
+            });
+            $(this.appendEl).append(t), this.setHeight(), this.controller.addEvents()
+        },
+        renderFull: function(e) {
+            var t = $('[data-q="header-location-select"]'),
+                n = this.fullTemplate({
+                    list: e.categories
+                });
+            t.html(n);
+            var r = $('[data-q="header-location-select-container"]');
+            r.removeClass("level-1-selected"), r.removeClass("level-2-selected"), r.removeClass("level-3-selected"), r.removeClass("level-4-selected"), r.removeClass("level-5-selected");
+            for (var i = 1; i <= e.depth; i++) r.addClass("level-" + i + "-selected");
+            this.controller.addEvents()
+        },
+        getHeight: function() {
+            var e = $(this.controller.selector).height();
+            return e + 150
+        },
+        setHeight: function() {
+            this.removeHeight();
+            var e = this.getHeight();
+            $(Gum.body).css({
+                minHeight: e
+            })
+        },
+        removeHeight: function() {
+            $(Gum.body).removeAttr("style")
+        }
+    })
+}(),
+
+
+
+
+
+
+/********* end **********/
 function() {
     var e = Gum.BaseComponentClass.extend({
         Name: "ContentClone",
@@ -8065,6 +8276,33 @@ function() {
         }
     })
 }(),
+        /************ location **********/
+function() {
+    Gum.DtlModel = Gum.Model.extend({
+        Name: "LocationSelectorModel",
+        success: function(e) {
+            this.postProcess(e), this.RADIO.trigger("success", e), Gum.RADIO.trigger("XHR.success", e)
+        },
+        fetch: function(e) {
+            this.method = "POST", this.ajax(e)
+        },
+        postProcess: function(e) {
+            e.formBean = e.formBean ? e.formBean : {}, this.store(e)
+        },
+        ajax: function(e) {
+            this.xhr && this.xhr.abort(), this.xhr = $.ajax({
+                type: "POST",
+                url: this.url,
+                data: e ? JSON.stringify(e) : JSON.stringify({}),
+                contentType: "application/json; charset=utf-8",
+                timeout: this.timeout,
+                success: this.success,
+                error: this.error
+            })
+        }
+    })
+}(),
+         /********** end *************/
 function() {
     var e = function(e, t) {
         var n = typeof t == "object" ? t : {};
@@ -8645,9 +8883,9 @@ function(e) {
     var t = function(e, t) {
         this.map = undefined, this.marker = undefined, this.el = e, this.unique = _.uniqueId("googlemap_"), this.options = _.extend({}, this.DEFAULTS, t), this.googlemapExt = undefined, this.url = {
             baseURL: "//maps.googleapis.com/maps/api/js",
-            client: "?client=gme-marktplaats",
+            client: "?client=sj-marktplaats",
             sensor: "&sensor=true",
-            callback: "&callback=Gum.components.googlemap." + this.unique + ".addMap"
+            callback: "&callback=sj.components.googlemap." + this.unique + ".addMap"
         }, this.init.apply(this, arguments)
     };
     t.prototype.DEFAULTS = {
@@ -8691,7 +8929,7 @@ function() {
     var e = function(e) {
         this.el = e;
         var t = Gum.native.getDataSet(this.el, "history-back");
-        this.condition = typeof t == "undefined" || t === "" ? "gumtree.com" : t, this.referrer = document.referrer, this.href = this.el.getAttribute("href"), this.doesMatch = !1, this.init.apply(this, arguments)
+        this.condition = typeof t == "undefined" || t === "" ? "soukjdid.com" : t, this.referrer = document.referrer, this.href = this.el.getAttribute("href"), this.doesMatch = !1, this.init.apply(this, arguments)
     };
     e.prototype.init = function() {
         _.bindAll(this), Gum.native.addEventListener(this.el, "click", this.onClick)
@@ -9422,7 +9660,7 @@ function() {
                 if (this.results.suggestions !== undefined) {
                     var n = this.results.suggestions[t],
                         r = n.categoryId !== undefined;
-                    if (r) $('input[name="search_category"] ').val(n.categorySeoName), $("[data-category-selector] .text-only ").html(n.categoryName);
+                    if (r) $('input[name="search_category"] ').val(n.categoryId), $("[data-category-selector] .text-only ").html(n.categoryName);
                     else {
                         var i = $('input[name="search_category"] '),
                             s = $("[data-category-selector] .text-only ");
@@ -9430,6 +9668,19 @@ function() {
                     }
                 }
             },
+            updateLocation: function(e) {
+                var t = $(e).index();
+                if (this.results.suggestions !== undefined) {
+                    var n = this.results.suggestions[t],
+                        r = n.categoryId !== undefined;
+                    if (r) $('input[name="search_location"] ').val(n.locationId), $("[data-location-selector] .text-only ").html(n.categoryName);
+                    else {
+                        var i = $('input[name="search_location"] '),
+                            s = $("[data-location-selector] .text-only ");
+                        i.val(i.data("current-location")), s.html(s.data("current-location-name"))
+                    }
+                }
+            },            
             updateTracking: function(e) {
                 var t = Gum.native.getDataSet(e, "tracking"),
                     n = document.getElementById(this.trackingElId);
@@ -9454,7 +9705,7 @@ function() {
         });
     Gum.Components.TypeAhead = t
 }(),
-function(e) {
+/*function(e) {
     var t = function() {
         this.url = (e.location.protocol === "https:" ? "https://ssl.widgets.webengage.com" : "http://cdn.widgets.webengage.com") + "/js/widget/webengage-min-v-4.0.js", this.unique = _.uniqueId("webengage_"), this.timeout = 1500, this.init.apply(this, arguments)
     };
@@ -9469,7 +9720,7 @@ function(e) {
             charset: "utf-8"
         }, this.timeout)
     }, Gum.Components.WebEngage = t
-}(window),
+}(window),*/
 function(e) {
     Gum.Page = function() {}, Gum.Page.prototype.init = function() {
         _.bindAll(this), this.mq(Gum.util.getScreenWidth()), this.events(), this.adManager = new Gum.Components.AdManager, this.componentManager = new Gum.ComponentManager, this.componentManager.load(), Gum.RADIO.trigger("WINDOW.LOADED"), Gum.RADIO.trigger("GUM.PAGE.LOADED")

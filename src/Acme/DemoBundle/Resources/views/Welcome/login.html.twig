@@ -1,27 +1,9 @@
 {% extends 'AcmeDemoBundle::layout.html.twig' %}
 
 {% block title %}Symfony - login{% endblock %}
-{% block head %}
+{% block head_link %}
     {{ parent() }}
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <meta name="format-detection" content="telephone=no">
-    <meta name="msapplication-tap-highlight" content="no">
-
-    <link rel="shortcut icon" href="{{ asset('bundles/acmedemo/images/ca/favicon.ico') }}">
-    <link rel="apple-touch-icon" href="{{ asset('bundles/acmedemo/images/ca/apple-touch-icon-57x57.png') }}">
-    <link rel="apple-touch-icon" sizes="57x57" href="{{ asset('bundles/acmedemo/images/ca/apple-touch-icon-57x57.png') }}">
-    <link rel="apple-touch-icon" sizes="72x72" href="{{ asset('bundles/acmedemo/images/ca/apple-touch-icon-72x72.png') }}">
-
-
-    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/acmedemo/css/ca/main.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('bundles/acmedemo/css/ca/seller.css') }}">
-
-    <!--[if lte IE 9]>
-    <link rel="stylesheet" href="{{ asset('bundles/acmedemo/css/ca/ie.css') }}"/>
-    <![endif]-->
-
-    <script type="text/javascript" src="{{ asset('bundles/acmedemo/js/ca/header.js') }}"></script>
 {% endblock %}
 {% block content_notif %}
     {% include "AcmeDemoBundle:Welcome:notification.html.twig" %}
@@ -53,12 +35,12 @@
                             </div>
                             <div class="grid-col-12 space-mbm">
                                 <label>
-                                    <span class="label-text txt-emphasis">Do you have a Gumtree password?</span>
+                                    <span class="label-text txt-emphasis">Do you have a SoukJdid password?</span>
                                 </label>
                             </div>
                             <div class="grid-col-12 space-mbxs form-element">
                                 <input type="radio" id="newUser" name="newUser" value="true" autocomplete="false" required="required" class="radio-switch" data-validation-isnotempty-error="Please select an option">
-                                <label for="newUser">No, I am new to Gumtree</label>
+                                <label for="newUser">No, I am new to SoukJdid</label>
                             </div>
                             <div class="grid-col-12 grid-col-s-6 space-mbxs form-element">
                                 <input type="radio" id="existingUser" name="newUser" value="false" autocomplete="false" class="radio-switch" checked="checked">
@@ -72,7 +54,7 @@
                             </div>
                             <div class="grid-col-12 space-mvs">
                                 <span class="set-right">
-                                    <a href="https://my.gumtree.com/forgotten-password">Forgot password?</a>
+                                    <a href="https://my.soukjdid.com/forgotten-password">Forgot password?</a>
                                 </span>
                             </div>
                             <div class="grid-col-12 grid-col-s-4">

@@ -1,4 +1,4 @@
-acme_demo_welcom:
+acme_demo_welcome:
     resource: @AcmeDemoBundle/Controller/WelcomeController.php
     type:     annotation
     prefix:   /ca
@@ -11,3 +11,8 @@ _demo:
     resource: "@AcmeDemoBundle/Controller/DemoController.php"
     type:     annotation
     prefix:   /demo
+    
+acme_demo_ajax:
+    resource: @AcmeDemoBundle/Controller/AjaxController.php
+    type:     annotation
+    prefix:   /ajax
