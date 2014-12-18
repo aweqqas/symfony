@@ -32,7 +32,9 @@
 
 {% block body %}
 <div id="fb-root"></div>
-
+<!--[if lt IE 9]>
+<p class="browserupgrade">We currently do not support IE8 and below. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
 <div class="letterbox ">
     <div class="viewport" data-broadcast="channel:my-gumtree,method:deactivate,preventDefaultEvent:false">
         <div class="viewport-mask" data-broadcast="[{channel:refine-panel,method:deactivate},{channel:side-menu,method:deactivate}]"></div>    
@@ -47,10 +49,13 @@
     {% block content_footer %}{% endblock %}    
     </div>
 </div>
+{% block content_js %}
 <script>
     Gum.domain = {
         buyer: "http://classifieds.local"
     };
 </script>
 <script type="text/javascript" src="{{ asset('bundles/acmedemo/js/ca/gumtree.js') }}"></script>
+{% endblock %}    
+
 {% endblock %}

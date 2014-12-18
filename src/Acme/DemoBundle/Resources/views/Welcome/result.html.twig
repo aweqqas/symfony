@@ -3,14 +3,49 @@
 {% block title %}Symfony - result{% endblock %}
 {% block head_link %}
     {{ parent() }}
-    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/acmedemo/css/ca/seller.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/acmedemo/css/ca/buyer.css') }}">
 {% endblock %}
 {% block content_notif %}
     {% include "AcmeDemoBundle:Welcome:notification.html.twig" %}
 {% endblock %}
 
 {% block content_header %}
-    {% include "AcmeDemoBundle:Welcome:header.html.twig" %}
+<header class="header" role="banner">
+    {% include "AcmeDemoBundle:Welcome:header_nav.html.twig" %}
+    <div id="header-bottom" class="header-bottom">
+        <div class="grid-container-from-m">
+            <div class="header-inner">
+                 {% include "AcmeDemoBundle:Welcome:header_form.html.twig" %}
+                <div class="grid-container header-popular-searches hide-fully-to-m">
+                    <ol class="row-list">
+                        <li class="space-mrs">Or try</li>
+                        <li class="space-mrs">
+                            <a href="/cars/uk/honda">honda</a>
+                        </li>
+                        <li class="space-mrs">
+                            <a href="/cars/uk/nissan">nissan</a>
+                        </li>
+                        <li class="space-mrs">
+                            <a href="/cars/uk/toyota+corolla">toyota corolla</a>
+                        </li>
+                        <li class="space-mrs hide-fully-to-s">
+                            <a href="/cars/uk/mazda">mazda</a>
+                        </li>
+                        <li class="space-mrs hide-fully-to-s">
+                            <a href="/cars/uk/toyota+yaris">toyota yaris</a>
+                        </li>
+                        <li class="space-mrs hide-fully-to-m">
+                            <a href="/cars/uk/toyota+avensis">toyota avensis</a>
+                        </li>
+                        <li class="space-mrs hide-fully-to-m">
+                            <a href="/cars/uk/audi">audi</a>
+                        </li>
+                    </ol>
+                </div>       
+            </div>
+        </div>
+    </div>
+</header>     
 {% endblock %}
 
 {% block content_nav %}
@@ -18,15 +53,3100 @@
 {% endblock %}
 
 {% block content %}
-<div class="grid-container main">
-    <main role="main" class="grid-row space-ptm">
-        <div class="space-mvxl grid-col-12 grid-col-s-10 grid-col-m-6 grid-col-xl-4 grid-col-s-offset-1 grid-col-m-offset-3 grid-col-xl-offset-4">
-            
+    
+    <section class="grid-container space-pts">
+    <aside class="hide-fully-to-m" role="complementary">
+        <div class="txt-center space-mbm ad-banner-placeholder" id="tBanner" data-display-ad=""><div style="border: 0pt none;" id="google_ads_iframe_/5144/gtr.cars/cars_0__container__"><iframe src="javascript:&quot;<html><body style='background:transparent'></body></html>&quot;" style="border: 0px none; vertical-align: bottom;" marginheight="0" marginwidth="0" scrolling="no" name="google_ads_iframe_/5144/gtr.cars/cars_0" id="google_ads_iframe_/5144/gtr.cars/cars_0" frameborder="0" height="90" width="728"></iframe></div><iframe src="javascript:&quot;<html><body style='background:transparent'></body></html>&quot;" style="border: 0px none; vertical-align: bottom; visibility: hidden; display: none;" marginheight="0" marginwidth="0" scrolling="no" name="google_ads_iframe_/5144/gtr.cars/cars_0__hidden__" id="google_ads_iframe_/5144/gtr.cars/cars_0__hidden__" frameborder="0" height="0" width="0"></iframe></div>
+    </aside>
+    <main role="main" id="fullListings">
+    <div class="media">
+    <aside class="media-img-ext" role="complementary">
+        <div class="ad-mpufixed hide-fully-to-xl">
+        <div class="" style="width: 300px;" id="rSkyT" data-display-ad="" data-affix="channel:rSkyT,className:is-affixed,match:fullListings"><div style="border: 0pt none;" id="google_ads_iframe_/5144/gtr.cars/cars_2__container__"><iframe src="javascript:&quot;<html><body style='background:transparent'></body></html>&quot;" style="border: 0px none; vertical-align: bottom;" marginheight="0" marginwidth="0" scrolling="no" name="google_ads_iframe_/5144/gtr.cars/cars_2" id="google_ads_iframe_/5144/gtr.cars/cars_2" frameborder="0" height="250" width="300"></iframe></div><iframe src="javascript:&quot;<html><body style='background:transparent'></body></html>&quot;" style="border: 0px none; vertical-align: bottom; visibility: hidden; display: none;" marginheight="0" marginwidth="0" scrolling="no" name="google_ads_iframe_/5144/gtr.cars/cars_2__hidden__" id="google_ads_iframe_/5144/gtr.cars/cars_2__hidden__" frameborder="0" height="0" width="0"></iframe></div>
         </div>
+    </aside>
+    <div class="media-body-overflow">
+    <div class="grid-row">
+    <header class="grid-col-12 control-bar clearfix">
+        <h1 class="abundance truncate-line txt-normal h2">4,600 ads for toyota in Cars for Sale, United Kingdom</h1>
+        <menu type="toolbar" role="menubar" class="toolbar">
+            <ul>
+                <li class="hide-fully-from-l btn-toolbar start-of-row void-prev-sibling-to-m">
+                    <span class="btn-secondary space-plxs space-prs" data-broadcast="channel:refine-panel,method:activate">
+                        <span class="icn-magnifying-glass iconu-s"></span>
+                        Refine
+                    </span>
+                </li>
+                <li class="btn-toolbar end-of-row">
+                    <form action="/my-account/saved-searches/add" data-save-search="" method="post" name="save-search" novalidate="novalidate" role="form">
+                        <input name="photos_filter" value="false" type="hidden">
+                        <input name="urgent_filter" value="false" type="hidden">
+                        <input name="distance" value="0.0001" type="hidden">
+                        <input name="search_scope" value="false" type="hidden">
+                        <input name="page" value="1" type="hidden">
+                        <input name="q" value="toyota" type="hidden">
+                        <input name="search_location" value="uk" type="hidden">
+                        <input name="featured_filter" value="false" type="hidden">
+                        <input name="search_category" value="cars" type="hidden">
+                        <button type="submit" class="btn-secondary space-prs space-plxs" aria-haspopup="true" aria-controls="email-alerts" name="save-search" data-autosubmit="true" data-submit-ignore="">
+                            <span class="icn-disk" aria-hidden="true" data-btn="save-search"></span>
+                            Save<span class="hide-fully-to-m"> search</span>
+                        </button>
+                    </form>
+                </li>
+                <li class="btn-toolbar void-next-sibling-from-m hide-fully-no-js">
+                    <form action="#" name="frm-sort" data-form-master="refine-panel">
+                        <span class="select-wrapper transparent-select">
+                            <span class="hide-fully-from-m label-transparent-select">Sort</span>
+                            <span class="hide-fully-to-m label-transparent-select">Most recent first</span>
+                            <select name="sort" data-autosubmit="">
+                                <option value="date" selected="selected">Most recent first</option>
+                                <option value="price_lowest_first">Price: Low to High</option>
+                                <option value="price_highest_first">Price: High to Low</option>
+                            </select>
+                        </span>
+                        <input name="page" value="1" type="hidden">
+                    </form>
+                </li>
+            </ul>
+        </menu>
+        <div class="box box-padding box-toggle email-alerts hide-fully-no-js" data-toggle="channel:email-alerts,selfBroadcast:false" aria-expanded="false" id="email-alerts">
+            <div data-success-content="saved-search" aria-hidden="true" class="hide-fully">
+                <h2>Your search is saved!</h2>
+                <p>Manage your <a href="/my-account/saved-searches" data-q="my-gumtree-saved-searches">saved searches</a>.</p>
+                <div class="box-pullout box-padding">
+                    <form action="/my-account/saved-searches/&lt;%search.id%&gt;/alert" name="email-alert" novalidate="novalidate" role="form" data-ajax-submit="true">
+                        <div class="form-element">
+                            <input id="checkbox-on-off-email-alert" class="checkbox-on-off-reverse" name="emailAlert" value="on" checked="checked" data-unchecked="off" data-autosubmit="true" type="checkbox">
+                            <label for="checkbox-on-off-email-alert" class="space-mbs">
+                                <span class="txt-emphasis">Daily email alerts</span>
+                            </label>
+                        </div>
+                        <input class="btn-primary space-mtm hide-fully-js" value="Update email alerts" type="submit">
+                    </form>
+                    <span>You'll receive an alert if we find new ads that match your search.</span>
+                </div>
+            </div>
+            <div data-error-content="saved-search" aria-hidden="true" class="hide-fully">
+                <div class="notification-message space-mbs space-pam">
+                    <div>
+                        <span class="icn-circ-alert txt-quaternary" aria-hidden="true"></span>
+                        <span class="txt-emphasis">Sorry, we could not save your search.</span><br>
+                        You have the maximum number of searches already saved. To save a new search,
+                        please delete one or your <a href="/my-account/saved-searches" data-q="my-gumtree-saved-searches">
+                        saved searches</a>.
+                    </div>
+                </div>
+            </div>
+            <button class="btn-primary btn-full-width" data-close="email-alerts">Done</button>
+        </div>
+    </header>
+    <nav class="refine-panel grid-col-l-3" data-sidepanel="channel:refine-panel,bodyClass:is-offset-right,resetResize:4,selfBroadcast:false,heightResizeChannel:side-menu.resize">
+    <div class="background-filler">
+    <div class="box">
+    <form action="/search" name="refine-panel" data-refine="channel:refine-submit,heightResize:sideMenu" data-form="hasValidation:false,clear:true">
+    <div class="box-section space-pvxs">
+        <ul class="grid-row grid-row-gutter-s">
+            <li class="grid-col-6">
+                <h2 class="space-mvn space-mtxs"><span class="icn-magnifying-glass"></span> Refine </h2>
+            </li>
+            <li class="grid-col-6">
+                <button name="clear-refine" class="set-right btn-secondary" type="reset" data-submit-ignore="">Clear  </button>
+            </li>
+        </ul>
+    </div>
+    <input value="true" name="responsive" type="hidden">
+    <input value="date" name="sort" type="hidden">
+    <input value="1" name="page" type="hidden">
+    <input name="search_location" value="" type="hidden">
+    <input name="search_category" value="cars" type="hidden">
+    <input name="distance" value="0" type="hidden">
+    <div id="refine-submit-affix-anchor">
+    <div class="box-section refine-submit refine-submit-clear" data-refine-submit-container="">
+        <button name="refine" class="btn-secondary is-disabled btn-full-width" type="submit" data-submit-ignore="">Update my results</button>
+    </div>
+    <div class="box-section refine-accordion">
+        <div class="refine-accordion-trigger space-mbn has-popup grid-row" aria-haspopup="true" aria-controls="refine-keyword" data-toggle="channel:refine-keyword,successChannel:side-menu.resize">
+            <h3 class="grid-col-6 refine-subtitle">Keyword</h3>
+            <div class="grid-col-6 refine-teaser">
+                <span class="content-clone" data-content-clone="channel:cc-q,puppet:true">toyota</span>
+                <span class="refine-accordion-chevron active">
+                    <span class="icn-chevron-u"></span>
+                    <span class="icn-chevron-r"></span>
+                </span>
+            </div>
+        </div>
+        <div class="refine-accordion-content is-closed" data-toggle="channel:refine-keyword,className:is-closed,selfBroadcast:false" aria-expanded="true">
+            <div class="type-ahead-container space-mtxs">
+                <span class="clear-input-wrapper has-clear"><input name="q" id="refine-q" title="Refine by keyword" value="toyota" placeholder="I'm looking for..." autocomplete="off" aria-autocomplete="list" aria-owns="refine-q-type-ahead" data-type-ahead="channel:search" data-content-clone="channel:cc-q" type="text"><span class="icn-clear txt-quaternary clear-input is-visible"></span></span>
+            </div>
+            <input id="refine.scope" name="search_scope" class="checkbox-switch" value="true" type="checkbox">
+            <label class="space-mtxs" for="refine.scope">Search title &amp; description</label>
+        </div>
+    </div>
+    <div class="box-section refine-accordion">
+        <div class="refine-accordion-trigger space-mbn has-popup grid-row" aria-haspopup="true" aria-controls="refine-vehicle_make" data-toggle="channel:refine-vehicle_make,successChannel:side-menu.resize">
+            <h3 class="grid-col-6 refine-subtitle">Make</h3>
+            <div class="grid-col-6 refine-teaser">
+                <span class="content-clone" data-content-clone="channel:cc-vehicle_make,puppet:true"></span>
+                <span class="refine-accordion-chevron">
+                    <span class="icn-chevron-u"></span>
+                    <span class="icn-chevron-r"></span>
+                </span>
+            </div>
+        </div>
+        <div class="refine-accordion-content refine-accordion-content-vehicle_make refine-scroll is-closed" data-toggle="channel:refine-vehicle_make,className:is-closed,selfBroadcast:false" aria-expanded="false">
+            <div>
+                <input id="vehicle_make-any" name="vehicle_make" value="" class="radio-switch" data-content-clone="channel:cc-vehicle_make" data-label="" checked="checked" type="radio">
+                <label for="vehicle_make-any" data-broadcast="channel:refine-vehicle_make,className:is-closed,preventDefaultEvent:false">Any</label>
+            </div>
+            <div>
+                <input id="vehicle_make-alfa_romeo" name="vehicle_make" value="alfa_romeo" class="radio-switch" data-content-clone="channel:cc-vehicle_make" data-label="Alfa Romeo" type="radio">
+                <label for="vehicle_make-alfa_romeo" data-broadcast="channel:refine-vehicle_make,className:is-closed,preventDefaultEvent:false">Alfa Romeo </label>
+            </div>
+            <div>
+                <input id="vehicle_make-aixam" name="vehicle_make" value="aixam" class="radio-switch" data-content-clone="channel:cc-vehicle_make" data-label="Aixam" type="radio">
+                <label for="vehicle_make-aixam" data-broadcast="channel:refine-vehicle_make,className:is-closed,preventDefaultEvent:false">Aixam </label>
+            </div>
+            <div>
+                <input id="vehicle_make-aston_martin" name="vehicle_make" value="aston_martin" class="radio-switch" data-content-clone="channel:cc-vehicle_make" data-label="Aston Martin" type="radio">
+                <label for="vehicle_make-aston_martin" data-broadcast="channel:refine-vehicle_make,className:is-closed,preventDefaultEvent:false">Aston Martin </label>
+            </div>
+            <div>
+                <input id="vehicle_make-audi" name="vehicle_make" value="audi" class="radio-switch" data-content-clone="channel:cc-vehicle_make" data-label="Audi" type="radio">
+                <label for="vehicle_make-audi" data-broadcast="channel:refine-vehicle_make,className:is-closed,preventDefaultEvent:false">Audi </label>
+            </div>
+            <div>
+                <input id="vehicle_make-bentley" name="vehicle_make" value="bentley" class="radio-switch" data-content-clone="channel:cc-vehicle_make" data-label="Bentley" type="radio">
+                <label for="vehicle_make-bentley" data-broadcast="channel:refine-vehicle_make,className:is-closed,preventDefaultEvent:false">Bentley </label>
+            </div>
+            <div>
+                <input id="vehicle_make-bmw" name="vehicle_make" value="bmw" class="radio-switch" data-content-clone="channel:cc-vehicle_make" data-label="BMW" type="radio">
+                <label for="vehicle_make-bmw" data-broadcast="channel:refine-vehicle_make,className:is-closed,preventDefaultEvent:false">BMW </label>
+            </div>
+            <div>
+                <input id="vehicle_make-cadillac" name="vehicle_make" value="cadillac" class="radio-switch" data-content-clone="channel:cc-vehicle_make" data-label="Cadillac" type="radio">
+                <label for="vehicle_make-cadillac" data-broadcast="channel:refine-vehicle_make,className:is-closed,preventDefaultEvent:false">Cadillac </label>
+            </div>
+            <div>
+                <input id="vehicle_make-other_manufacturer" name="vehicle_make" value="other_manufacturer" class="radio-switch" data-content-clone="channel:cc-vehicle_make" data-label="Other" type="radio">
+                <label for="vehicle_make-other_manufacturer" data-broadcast="channel:refine-vehicle_make,className:is-closed,preventDefaultEvent:false">Other </label>
+            </div>
+        </div>
+    </div>
+    <div class="box-section refine-accordion">
+        <div class="refine-accordion-trigger space-mbn has-popup grid-row" aria-haspopup="true" aria-controls="refine-vehicle_model" data-toggle="channel:refine-vehicle_model,successChannel:side-menu.resize">
+            <h3 class="grid-col-6 refine-subtitle">Model</h3>
+            <div class="grid-col-6 refine-teaser">
+                <span class="content-clone" data-content-clone="channel:cc-vehicle_model,puppet:true"> </span>
+                <span class="refine-accordion-chevron">
+                    <span class="icn-chevron-u"></span>
+                    <span class="icn-chevron-r"></span>
+                </span>
+            </div>
+        </div>
+        <div class="refine-accordion-content refine-accordion-content-vehicle_model refine-scroll is-closed" data-toggle="channel:refine-vehicle_model,className:is-closed,selfBroadcast:false" aria-expanded="false"><div><input data-label="" id="vehicle_model-" class="radio-switch" name="vehicle_model" value="" checked="checked" type="radio"><label for="vehicle_model-">Any</label></div></div>
+    </div>
+    <div class="box-section refine-accordion">
+    <div class="refine-accordion-trigger space-mbn has-popup grid-row" aria-haspopup="true" aria-controls="refine-vehicle_registration_year" data-toggle="channel:refine-vehicle_registration_year,successChannel:side-menu.resize">
+        <h3 class="grid-col-6 refine-subtitle">Year</h3>
+        <div class="grid-col-6 refine-teaser">
+            <span class="content-clone" data-content-clone="channel:cc-vehicle_registration_year,puppet:true"></span>
+            <span class="refine-accordion-chevron">
+                <span class="icn-chevron-u"></span>
+                <span class="icn-chevron-r"></span>
+            </span>
+        </div>
+    </div>
+    <div class="refine-accordion-content refine-accordion-content-vehicle_registration_year
+    refine-scroll is-closed" data-toggle="channel:refine-vehicle_registration_year,className:is-closed,selfBroadcast:false" aria-expanded="false">
+    <div>
+    <input id="vehicle_registration_year-any" name="vehicle_registration_year" value="" class="radio-switch" data-content-clone="channel:cc-vehicle_registration_year" data-label="" checked="checked" type="radio">
+    <label for="vehicle_registration_year-any" data-broadcast="channel:refine-vehicle_registration_year,className:is-closed,preventDefaultEvent:false">Any</label>
+    </div>
+    <div>
+    <input id="vehicle_registration_year-up_to_1" name="vehicle_registration_year" value="up_to_1" class="radio-switch" data-content-clone="channel:cc-vehicle_registration_year" data-label="Up to 1 year" type="radio">
+    <label for="vehicle_registration_year-up_to_1" data-broadcast="channel:refine-vehicle_registration_year,className:is-closed,preventDefaultEvent:false">Up to 1 year
+    </label>
+    </div>
+    <div>
+    <input id="vehicle_registration_year-up_to_2" name="vehicle_registration_year" value="up_to_2" class="radio-switch" data-content-clone="channel:cc-vehicle_registration_year" data-label="Up to 2 years" type="radio">
+    <label for="vehicle_registration_year-up_to_2" data-broadcast="channel:refine-vehicle_registration_year,className:is-closed,preventDefaultEvent:false">Up to 2 years
+    </label>
+    </div>
+    <div>
+    <input id="vehicle_registration_year-up_to_3" name="vehicle_registration_year" value="up_to_3" class="radio-switch" data-content-clone="channel:cc-vehicle_registration_year" data-label="Up to 3 years" type="radio">
+    <label for="vehicle_registration_year-up_to_3" data-broadcast="channel:refine-vehicle_registration_year,className:is-closed,preventDefaultEvent:false">Up to 3 years
+    </label>
+    </div>
+    <div>
+    <input id="vehicle_registration_year-up_to_4" name="vehicle_registration_year" value="up_to_4" class="radio-switch" data-content-clone="channel:cc-vehicle_registration_year" data-label="Up to 4 years" type="radio">
+    <label for="vehicle_registration_year-up_to_4" data-broadcast="channel:refine-vehicle_registration_year,className:is-closed,preventDefaultEvent:false">Up to 4 years
+    </label>
+    </div>
+    <div>
+    <input id="vehicle_registration_year-up_to_5" name="vehicle_registration_year" value="up_to_5" class="radio-switch" data-content-clone="channel:cc-vehicle_registration_year" data-label="Up to 5 years" type="radio">
+    <label for="vehicle_registration_year-up_to_5" data-broadcast="channel:refine-vehicle_registration_year,className:is-closed,preventDefaultEvent:false">Up to 5 years
+    </label>
+    </div>
+    <div>
+    <input id="vehicle_registration_year-up_to_6" name="vehicle_registration_year" value="up_to_6" class="radio-switch" data-content-clone="channel:cc-vehicle_registration_year" data-label="Up to 6 years" type="radio">
+    <label for="vehicle_registration_year-up_to_6" data-broadcast="channel:refine-vehicle_registration_year,className:is-closed,preventDefaultEvent:false">Up to 6 years
+    </label>
+    </div>
+    <div>
+    <input id="vehicle_registration_year-up_to_7" name="vehicle_registration_year" value="up_to_7" class="radio-switch" data-content-clone="channel:cc-vehicle_registration_year" data-label="Up to 7 years" type="radio">
+    <label for="vehicle_registration_year-up_to_7" data-broadcast="channel:refine-vehicle_registration_year,className:is-closed,preventDefaultEvent:false">Up to 7 years
+    </label>
+    </div>
+    <div>
+    <input id="vehicle_registration_year-up_to_8" name="vehicle_registration_year" value="up_to_8" class="radio-switch" data-content-clone="channel:cc-vehicle_registration_year" data-label="Up to 8 years" type="radio">
+    <label for="vehicle_registration_year-up_to_8" data-broadcast="channel:refine-vehicle_registration_year,className:is-closed,preventDefaultEvent:false">Up to 8 years
+    </label>
+    </div>
+    <div>
+    <input id="vehicle_registration_year-up_to_9" name="vehicle_registration_year" value="up_to_9" class="radio-switch" data-content-clone="channel:cc-vehicle_registration_year" data-label="Up to 9 years" type="radio">
+    <label for="vehicle_registration_year-up_to_9" data-broadcast="channel:refine-vehicle_registration_year,className:is-closed,preventDefaultEvent:false">Up to 9 years
+    </label>
+    </div>
+    <div>
+    <input id="vehicle_registration_year-up_to_10" name="vehicle_registration_year" value="up_to_10" class="radio-switch" data-content-clone="channel:cc-vehicle_registration_year" data-label="Up to 10 years" type="radio">
+    <label for="vehicle_registration_year-up_to_10" data-broadcast="channel:refine-vehicle_registration_year,className:is-closed,preventDefaultEvent:false">Up to 10 years
+    </label>
+    </div>
+    <div>
+    <input id="vehicle_registration_year-over_10" name="vehicle_registration_year" value="over_10" class="radio-switch" data-content-clone="channel:cc-vehicle_registration_year" data-label="Over 10 years" type="radio">
+    <label for="vehicle_registration_year-over_10" data-broadcast="channel:refine-vehicle_registration_year,className:is-closed,preventDefaultEvent:false">Over 10 years
+    </label>
+    </div>
+    </div>
+    </div>
+    <div class="box-section refine-accordion">
+    <div class="refine-accordion-trigger space-mbn has-popup grid-row" aria-haspopup="true" aria-controls="refine-vehicle_mileage" data-toggle="channel:refine-vehicle_mileage,successChannel:side-menu.resize">
+    <h3 class="grid-col-6 refine-subtitle">Mileage</h3>
+    <div class="grid-col-6 refine-teaser">
+    <span class="content-clone" data-content-clone="channel:cc-vehicle_mileage,puppet:true">
+    </span>
+    <span class="refine-accordion-chevron">
+    <span class="icn-chevron-u"></span>
+    <span class="icn-chevron-r"></span>
+    </span>
+    </div>
+    </div>
+    <div class="refine-accordion-content refine-accordion-content-vehicle_mileage
+    refine-scroll is-closed" data-toggle="channel:refine-vehicle_mileage,className:is-closed,selfBroadcast:false" aria-expanded="false">
+    <div>
+    <input id="vehicle_mileage-any" name="vehicle_mileage" value="" class="radio-switch" data-content-clone="channel:cc-vehicle_mileage" data-label="" checked="checked" type="radio">
+    <label for="vehicle_mileage-any" data-broadcast="channel:refine-vehicle_mileage,className:is-closed,preventDefaultEvent:false">Any</label>
+    </div>
+    <div>
+    <input id="vehicle_mileage-up_to_15000" name="vehicle_mileage" value="up_to_15000" class="radio-switch" data-content-clone="channel:cc-vehicle_mileage" data-label="Up to 15,000 miles" type="radio">
+    <label for="vehicle_mileage-up_to_15000" data-broadcast="channel:refine-vehicle_mileage,className:is-closed,preventDefaultEvent:false">Up to 15,000 miles
+    </label>
+    </div>
+    <div>
+    <input id="vehicle_mileage-up_to_30000" name="vehicle_mileage" value="up_to_30000" class="radio-switch" data-content-clone="channel:cc-vehicle_mileage" data-label="Up to 30,000 miles" type="radio">
+    <label for="vehicle_mileage-up_to_30000" data-broadcast="channel:refine-vehicle_mileage,className:is-closed,preventDefaultEvent:false">Up to 30,000 miles
+    </label>
+    </div>
+    <div>
+    <input id="vehicle_mileage-up_to_60000" name="vehicle_mileage" value="up_to_60000" class="radio-switch" data-content-clone="channel:cc-vehicle_mileage" data-label="Up to 60,000 miles" type="radio">
+    <label for="vehicle_mileage-up_to_60000" data-broadcast="channel:refine-vehicle_mileage,className:is-closed,preventDefaultEvent:false">Up to 60,000 miles
+    </label>
+    </div>
+    <div>
+    <input id="vehicle_mileage-up_to_80000" name="vehicle_mileage" value="up_to_80000" class="radio-switch" data-content-clone="channel:cc-vehicle_mileage" data-label="Up to 80,000 miles" type="radio">
+    <label for="vehicle_mileage-up_to_80000" data-broadcast="channel:refine-vehicle_mileage,className:is-closed,preventDefaultEvent:false">Up to 80,000 miles
+    </label>
+    </div>
+    <div>
+    <input id="vehicle_mileage-over_80000" name="vehicle_mileage" value="over_80000" class="radio-switch" data-content-clone="channel:cc-vehicle_mileage" data-label="Over 80,000 miles" type="radio">
+    <label for="vehicle_mileage-over_80000" data-broadcast="channel:refine-vehicle_mileage,className:is-closed,preventDefaultEvent:false">Over 80,000 miles
+    </label>
+    </div>
+    </div>
+    </div>
+    <div class="box-section refine-accordion">
+    <div class="refine-accordion-trigger space-mbn has-popup grid-row" aria-haspopup="true" aria-controls="refine-seller_type" data-toggle="channel:refine-seller_type,successChannel:side-menu.resize">
+    <h3 class="grid-col-6 refine-subtitle">Seller type</h3>
+    <div class="grid-col-6 refine-teaser">
+    <span class="content-clone" data-content-clone="channel:cc-seller_type,puppet:true">
+    </span>
+    <span class="refine-accordion-chevron">
+    <span class="icn-chevron-u"></span>
+    <span class="icn-chevron-r"></span>
+    </span>
+    </div>
+    </div>
+    <div class="refine-accordion-content refine-accordion-content-seller_type
+    refine-scroll is-closed" data-toggle="channel:refine-seller_type,className:is-closed,selfBroadcast:false" aria-expanded="false">
+    <div>
+    <input id="seller_type-any" name="seller_type" value="" class="radio-switch" data-content-clone="channel:cc-seller_type" data-label="" checked="checked" type="radio">
+    <label for="seller_type-any" data-broadcast="channel:refine-seller_type,className:is-closed,preventDefaultEvent:false">Any</label>
+    </div>
+    <div>
+    <input id="seller_type-trade" name="seller_type" value="trade" class="radio-switch" data-content-clone="channel:cc-seller_type" data-label="Trade" type="radio">
+    <label for="seller_type-trade" data-broadcast="channel:refine-seller_type,className:is-closed,preventDefaultEvent:false">Trade
+    </label>
+    </div>
+    <div>
+    <input id="seller_type-private" name="seller_type" value="private" class="radio-switch" data-content-clone="channel:cc-seller_type" data-label="Private" type="radio">
+    <label for="seller_type-private" data-broadcast="channel:refine-seller_type,className:is-closed,preventDefaultEvent:false">Private
+    </label>
+    </div>
+    </div>
+    </div>
+    <div class="box-section refine-accordion">
+    <div class="refine-accordion-trigger space-mbn has-popup grid-row" aria-haspopup="true" aria-controls="refine-vehicle_body_type" data-toggle="channel:refine-vehicle_body_type,successChannel:side-menu.resize">
+    <h3 class="grid-col-6 refine-subtitle">Body type</h3>
+    <div class="grid-col-6 refine-teaser">
+    <span class="content-clone" data-content-clone="channel:cc-vehicle_body_type,puppet:true">
+    </span>
+    <span class="refine-accordion-chevron">
+    <span class="icn-chevron-u"></span>
+    <span class="icn-chevron-r"></span>
+    </span>
+    </div>
+    </div>
+    <div class="refine-accordion-content refine-accordion-content-vehicle_body_type
+    refine-scroll is-closed" data-toggle="channel:refine-vehicle_body_type,className:is-closed,selfBroadcast:false" aria-expanded="false">
+    <div>
+    <input id="vehicle_body_type-any" name="vehicle_body_type" value="" class="radio-switch" data-content-clone="channel:cc-vehicle_body_type" data-label="" checked="checked" type="radio">
+    <label for="vehicle_body_type-any" data-broadcast="channel:refine-vehicle_body_type,className:is-closed,preventDefaultEvent:false">Any</label>
+    </div>
+    <div>
+    <input id="vehicle_body_type-2_door_saloon" name="vehicle_body_type" value="2_door_saloon" class="radio-switch" data-content-clone="channel:cc-vehicle_body_type" data-label="2 Door Saloon" type="radio">
+    <label for="vehicle_body_type-2_door_saloon" data-broadcast="channel:refine-vehicle_body_type,className:is-closed,preventDefaultEvent:false">2 Door Saloon
+    </label>
+    </div>
+    <div>
+    <input id="vehicle_body_type-4_door_saloon" name="vehicle_body_type" value="4_door_saloon" class="radio-switch" data-content-clone="channel:cc-vehicle_body_type" data-label="4 Door Saloon" type="radio">
+    <label for="vehicle_body_type-4_door_saloon" data-broadcast="channel:refine-vehicle_body_type,className:is-closed,preventDefaultEvent:false">4 Door Saloon
+    </label>
+    </div>
+    <div>
+    <input id="vehicle_body_type-saloon" name="vehicle_body_type" value="saloon" class="radio-switch" data-content-clone="channel:cc-vehicle_body_type" data-label="Saloon" type="radio">
+    <label for="vehicle_body_type-saloon" data-broadcast="channel:refine-vehicle_body_type,className:is-closed,preventDefaultEvent:false">Saloon
+    </label>
+    </div>
+    <div>
+    <input id="vehicle_body_type-convertible" name="vehicle_body_type" value="convertible" class="radio-switch" data-content-clone="channel:cc-vehicle_body_type" data-label="Convertible" type="radio">
+    <label for="vehicle_body_type-convertible" data-broadcast="channel:refine-vehicle_body_type,className:is-closed,preventDefaultEvent:false">Convertible
+    </label>
+    </div>
+    <div>
+    <input id="vehicle_body_type-coupe" name="vehicle_body_type" value="coupe" class="radio-switch" data-content-clone="channel:cc-vehicle_body_type" data-label="Coupe" type="radio">
+    <label for="vehicle_body_type-coupe" data-broadcast="channel:refine-vehicle_body_type,className:is-closed,preventDefaultEvent:false">Coupe
+    </label>
+    </div>
+    <div>
+    <input id="vehicle_body_type-estate" name="vehicle_body_type" value="estate" class="radio-switch" data-content-clone="channel:cc-vehicle_body_type" data-label="Estate" type="radio">
+    <label for="vehicle_body_type-estate" data-broadcast="channel:refine-vehicle_body_type,className:is-closed,preventDefaultEvent:false">Estate
+    </label>
+    </div>
+    <div>
+    <input id="vehicle_body_type-3_door_hatchback" name="vehicle_body_type" value="3_door_hatchback" class="radio-switch" data-content-clone="channel:cc-vehicle_body_type" data-label="3 Door Hatchback" type="radio">
+    <label for="vehicle_body_type-3_door_hatchback" data-broadcast="channel:refine-vehicle_body_type,className:is-closed,preventDefaultEvent:false">3 Door Hatchback
+    </label>
+    </div>
+    <div>
+    <input id="vehicle_body_type-5_door_hatchback" name="vehicle_body_type" value="5_door_hatchback" class="radio-switch" data-content-clone="channel:cc-vehicle_body_type" data-label="5 Door Hatchback" type="radio">
+    <label for="vehicle_body_type-5_door_hatchback" data-broadcast="channel:refine-vehicle_body_type,className:is-closed,preventDefaultEvent:false">5 Door Hatchback
+    </label>
+    </div>
+    <div>
+    <input id="vehicle_body_type-sports" name="vehicle_body_type" value="sports" class="radio-switch" data-content-clone="channel:cc-vehicle_body_type" data-label="Sports" type="radio">
+    <label for="vehicle_body_type-sports" data-broadcast="channel:refine-vehicle_body_type,className:is-closed,preventDefaultEvent:false">Sports
+    </label>
+    </div>
+    <div>
+    <input id="vehicle_body_type-light_4x4_utility" name="vehicle_body_type" value="light_4x4_utility" class="radio-switch" data-content-clone="channel:cc-vehicle_body_type" data-label="Light 4x4 Utility" type="radio">
+    <label for="vehicle_body_type-light_4x4_utility" data-broadcast="channel:refine-vehicle_body_type,className:is-closed,preventDefaultEvent:false">Light 4x4 Utility
+    </label>
+    </div>
+    <div>
+    <input id="vehicle_body_type-mpv" name="vehicle_body_type" value="mpv" class="radio-switch" data-content-clone="channel:cc-vehicle_body_type" data-label="MPV" type="radio">
+    <label for="vehicle_body_type-mpv" data-broadcast="channel:refine-vehicle_body_type,className:is-closed,preventDefaultEvent:false">MPV
+    </label>
+    </div>
+    <div>
+    <input id="vehicle_body_type-other" name="vehicle_body_type" value="other" class="radio-switch" data-content-clone="channel:cc-vehicle_body_type" data-label="Other" type="radio">
+    <label for="vehicle_body_type-other" data-broadcast="channel:refine-vehicle_body_type,className:is-closed,preventDefaultEvent:false">Other
+    </label>
+    </div>
+    </div>
+    </div>
+    <div class="box-section refine-accordion">
+    <div class="refine-accordion-trigger space-mbn has-popup grid-row" aria-haspopup="true" aria-controls="refine-vehicle_fuel_type" data-toggle="channel:refine-vehicle_fuel_type,successChannel:side-menu.resize">
+    <h3 class="grid-col-6 refine-subtitle">Fuel type</h3>
+    <div class="grid-col-6 refine-teaser">
+    <span class="content-clone" data-content-clone="channel:cc-vehicle_fuel_type,puppet:true">
+    </span>
+    <span class="refine-accordion-chevron">
+    <span class="icn-chevron-u"></span>
+    <span class="icn-chevron-r"></span>
+    </span>
+    </div>
+    </div>
+    <div class="refine-accordion-content refine-accordion-content-vehicle_fuel_type
+    refine-scroll is-closed" data-toggle="channel:refine-vehicle_fuel_type,className:is-closed,selfBroadcast:false" aria-expanded="false">
+    <div>
+    <input id="vehicle_fuel_type-any" name="vehicle_fuel_type" value="" class="radio-switch" data-content-clone="channel:cc-vehicle_fuel_type" data-label="" checked="checked" type="radio">
+    <label for="vehicle_fuel_type-any" data-broadcast="channel:refine-vehicle_fuel_type,className:is-closed,preventDefaultEvent:false">Any</label>
+    </div>
+    <div>
+    <input id="vehicle_fuel_type-petrol" name="vehicle_fuel_type" value="petrol" class="radio-switch" data-content-clone="channel:cc-vehicle_fuel_type" data-label="Petrol" type="radio">
+    <label for="vehicle_fuel_type-petrol" data-broadcast="channel:refine-vehicle_fuel_type,className:is-closed,preventDefaultEvent:false">Petrol
+    </label>
+    </div>
+    <div>
+    <input id="vehicle_fuel_type-diesel" name="vehicle_fuel_type" value="diesel" class="radio-switch" data-content-clone="channel:cc-vehicle_fuel_type" data-label="Diesel" type="radio">
+    <label for="vehicle_fuel_type-diesel" data-broadcast="channel:refine-vehicle_fuel_type,className:is-closed,preventDefaultEvent:false">Diesel
+    </label>
+    </div>
+    <div>
+    <input id="vehicle_fuel_type-other" name="vehicle_fuel_type" value="other" class="radio-switch" data-content-clone="channel:cc-vehicle_fuel_type" data-label="Other" type="radio">
+    <label for="vehicle_fuel_type-other" data-broadcast="channel:refine-vehicle_fuel_type,className:is-closed,preventDefaultEvent:false">Other
+    </label>
+    </div>
+    </div>
+    </div>
+    <div class="box-section refine-accordion">
+    <div class="refine-accordion-trigger space-mbn has-popup grid-row" aria-haspopup="true" aria-controls="refine-vehicle_transmission" data-toggle="channel:refine-vehicle_transmission,successChannel:side-menu.resize">
+    <h3 class="grid-col-6 refine-subtitle">Transmission</h3>
+    <div class="grid-col-6 refine-teaser">
+    <span class="content-clone" data-content-clone="channel:cc-vehicle_transmission,puppet:true">
+    </span>
+    <span class="refine-accordion-chevron">
+    <span class="icn-chevron-u"></span>
+    <span class="icn-chevron-r"></span>
+    </span>
+    </div>
+    </div>
+    <div class="refine-accordion-content refine-accordion-content-vehicle_transmission
+    refine-scroll is-closed" data-toggle="channel:refine-vehicle_transmission,className:is-closed,selfBroadcast:false" aria-expanded="false">
+    <div>
+    <input id="vehicle_transmission-any" name="vehicle_transmission" value="" class="radio-switch" data-content-clone="channel:cc-vehicle_transmission" data-label="" checked="checked" type="radio">
+    <label for="vehicle_transmission-any" data-broadcast="channel:refine-vehicle_transmission,className:is-closed,preventDefaultEvent:false">Any</label>
+    </div>
+    <div>
+    <input id="vehicle_transmission-manual" name="vehicle_transmission" value="manual" class="radio-switch" data-content-clone="channel:cc-vehicle_transmission" data-label="Manual" type="radio">
+    <label for="vehicle_transmission-manual" data-broadcast="channel:refine-vehicle_transmission,className:is-closed,preventDefaultEvent:false">Manual
+    </label>
+    </div>
+    <div>
+    <input id="vehicle_transmission-automatic" name="vehicle_transmission" value="automatic" class="radio-switch" data-content-clone="channel:cc-vehicle_transmission" data-label="Automatic" type="radio">
+    <label for="vehicle_transmission-automatic" data-broadcast="channel:refine-vehicle_transmission,className:is-closed,preventDefaultEvent:false">Automatic
+    </label>
+    </div>
+    <div>
+    <input id="vehicle_transmission-other" name="vehicle_transmission" value="other" class="radio-switch" data-content-clone="channel:cc-vehicle_transmission" data-label="Other" type="radio">
+    <label for="vehicle_transmission-other" data-broadcast="channel:refine-vehicle_transmission,className:is-closed,preventDefaultEvent:false">Other
+    </label>
+    </div>
+    </div>
+    </div>
+    <div class="box-section refine-accordion">
+    <div class="refine-accordion-trigger space-mbn has-popup grid-row" aria-haspopup="true" aria-controls="refine-vehicle_engine_size" data-toggle="channel:refine-vehicle_engine_size,successChannel:side-menu.resize">
+    <h3 class="grid-col-6 refine-subtitle">Engine size</h3>
+    <div class="grid-col-6 refine-teaser">
+    <span class="content-clone" data-content-clone="channel:cc-vehicle_engine_size,puppet:true">
+    </span>
+    <span class="refine-accordion-chevron">
+    <span class="icn-chevron-u"></span>
+    <span class="icn-chevron-r"></span>
+    </span>
+    </div>
+    </div>
+    <div class="refine-accordion-content refine-accordion-content-vehicle_engine_size
+    refine-scroll is-closed" data-toggle="channel:refine-vehicle_engine_size,className:is-closed,selfBroadcast:false" aria-expanded="false">
+    <div>
+    <input id="vehicle_engine_size-any" name="vehicle_engine_size" value="" class="radio-switch" data-content-clone="channel:cc-vehicle_engine_size" data-label="" checked="checked" type="radio">
+    <label for="vehicle_engine_size-any" data-broadcast="channel:refine-vehicle_engine_size,className:is-closed,preventDefaultEvent:false">Any</label>
+    </div>
+    <div>
+    <input id="vehicle_engine_size-up_to_999" name="vehicle_engine_size" value="up_to_999" class="radio-switch" data-content-clone="channel:cc-vehicle_engine_size" data-label="Up to 999 cc" type="radio">
+    <label for="vehicle_engine_size-up_to_999" data-broadcast="channel:refine-vehicle_engine_size,className:is-closed,preventDefaultEvent:false">Up to 999 cc
+    </label>
+    </div>
+    <div>
+    <input id="vehicle_engine_size-1000_to_1999" name="vehicle_engine_size" value="1000_to_1999" class="radio-switch" data-content-clone="channel:cc-vehicle_engine_size" data-label="1,000 - 1,999 cc" type="radio">
+    <label for="vehicle_engine_size-1000_to_1999" data-broadcast="channel:refine-vehicle_engine_size,className:is-closed,preventDefaultEvent:false">1,000 - 1,999 cc
+    </label>
+    </div>
+    <div>
+    <input id="vehicle_engine_size-2000_to_2999" name="vehicle_engine_size" value="2000_to_2999" class="radio-switch" data-content-clone="channel:cc-vehicle_engine_size" data-label="2,000 - 2,999 cc" type="radio">
+    <label for="vehicle_engine_size-2000_to_2999" data-broadcast="channel:refine-vehicle_engine_size,className:is-closed,preventDefaultEvent:false">2,000 - 2,999 cc
+    </label>
+    </div>
+    <div>
+    <input id="vehicle_engine_size-3000_to_3999" name="vehicle_engine_size" value="3000_to_3999" class="radio-switch" data-content-clone="channel:cc-vehicle_engine_size" data-label="3,000 - 3,999 cc" type="radio">
+    <label for="vehicle_engine_size-3000_to_3999" data-broadcast="channel:refine-vehicle_engine_size,className:is-closed,preventDefaultEvent:false">3,000 - 3,999 cc
+    </label>
+    </div>
+    <div>
+    <input id="vehicle_engine_size-4000_to_4999" name="vehicle_engine_size" value="4000_to_4999" class="radio-switch" data-content-clone="channel:cc-vehicle_engine_size" data-label="4,000 - 4,999 cc" type="radio">
+    <label for="vehicle_engine_size-4000_to_4999" data-broadcast="channel:refine-vehicle_engine_size,className:is-closed,preventDefaultEvent:false">4,000 - 4,999 cc
+    </label>
+    </div>
+    <div>
+    <input id="vehicle_engine_size-over_4999" name="vehicle_engine_size" value="over_4999" class="radio-switch" data-content-clone="channel:cc-vehicle_engine_size" data-label="Over 4,999 cc" type="radio">
+    <label for="vehicle_engine_size-over_4999" data-broadcast="channel:refine-vehicle_engine_size,className:is-closed,preventDefaultEvent:false">Over 4,999 cc
+    </label>
+    </div>
+    </div>
+    </div>
+    <div class="box-section refine-accordion">
+    <div class="refine-accordion-trigger space-mbn has-popup grid-row" aria-haspopup="true" aria-controls="refine-price" data-toggle="channel:refine-price,successChannel:side-menu.resize">
+    <h3 class="grid-col-6 refine-subtitle">Price</h3>
+    <div class="grid-col-6 refine-teaser">
+    <span class="content-clone" data-content-clone="channel:cc-min_price,puppet:true">
+    </span>
+    <span class="refine-accordion-chevron">
+    <span class="icn-chevron-u"></span>
+    <span class="icn-chevron-r"></span>
+    </span>
+    </div>
+    </div>
+    <div class="refine-accordion-content is-closed" data-toggle="channel:refine-price,className:is-closed,
+    selfBroadcast:false" aria-expanded="true">
+    <div class="grid-row" data-min-max="">
+    <div class="grid-col-6">
+    <div class="textbox-prefix-pound">
+    <span class="clear-input-wrapper"><input title="Min price" placeholder="Min" name="min_price" data-number-type="gbp" data-content-clone="channel:cc-min_price" data-min-max-type="min" type="number"><span class="icn-clear txt-quaternary clear-input"></span></span>
+    </div>
+    </div>
+    <div class="grid-col-6">
+    <div class="textbox-prefix-pound">
+    <span class="clear-input-wrapper"><input title="Max price" placeholder="Max" name="max_price" data-min-max-type="max" type="number"><span class="icn-clear txt-quaternary clear-input"></span></span>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="box-section" data-tsl="search-only-box">
+    <div class="space-mbn has-popup">
+    <h3 class="refine-subtitle">Search only:</h3>
+    </div>
+    <div class="refine-accordion-content space-mtxs">
+    <div class="space-mtxs" data-tsl="refine-filter">
+    <input id="urgent_filter" name="urgent_filter" class="checkbox-switch" value="true" type="checkbox">
+    <label class="space-mtxs" for="urgent_filter">Urgent ads
+    </label>
+    </div>
+    <div class="space-mtxs" data-tsl="refine-filter">
+    <input id="featured_filter" name="featured_filter" class="checkbox-switch" value="true" type="checkbox">
+    <label class="space-mtxs" for="featured_filter">Feature ads
+    </label>
+    </div>
+    <div class="space-mtxs" data-tsl="refine-filter">
+    <input id="photos_filter" name="photos_filter" class="checkbox-switch" value="true" type="checkbox">
+    <label class="space-mtxs" for="photos_filter">Ads with pictures
+    </label>
+    </div>
+    </div>
+    </div>
+    <div class="box-section">
+    <button name="refine" class="btn-secondary is-disabled btn-full-width" type="submit" data-submit-ignore="">Update my results
+    </button>
+    </div>
+    </div>
+    </form>
+    </div>
+    <div class="box">
+    <div class="box-section refine-accordion-catloc">
+    <div class="refine-accordion-trigger space-pbn">
+    <h3 class="refine-subtitle">Category</h3>
+    </div>
+    <div class="refine-accordion-content space-pan">
+    <nav class="box-section last-item nav-filter is-shrunk" data-toggle="channel:filter-,selfBroadcast:false,className:is-shrunk">
+    <h3 class="h2 filter-title"></h3>
+    <ul class="browse-list">
+    <li class="">
+    <a class="" href="/all/uk/toyota/">All Categories </a>
+    <ul class="">
+    <li class="">
+    <a class="" href="/cars-vans-motorbikes/uk/toyota/">Motors <span class="icn-clear"></span></a>
+    <ul class="">
+    <li class="">
+    <a class="is-selected" href="/all/uk/toyota/">Cars <span class="icn-clear"></span></a>
+    <ul class="">
+    <li class="">
+    <a class="" href="/aixam/uk/toyota/">Aixam <span class="icn-clear"></span></a>
+    </li>
+    <li class="">
+    <a class="" href="/alfa-romeo/uk/toyota/">Alfa Romeo <span class="icn-clear"></span></a>
+    </li>
+    <li class="">
+    <a class="" href="/aston-martin/uk/toyota/">Aston Martin <span class="icn-clear"></span></a>
+    </li>
+    <li class="">
+    <a class="" href="/audi/uk/toyota/">Audi <span class="icn-clear"></span></a>
+    </li>
+    <li class="">
+    <a class="" href="/bentley/uk/toyota/">Bentley <span class="icn-clear"></span></a>
+    </li>
+    <li>
+    <a class="read-more" href="#" data-broadcast="filter-,SCREEN.HEIGHT">View More</a>
+    </li>
+    <li class="is-hidden">
+    <a class="" href="/bmw/uk/toyota/">BMW <span class="icn-clear"></span></a>
+    </li>
+    <li class="is-hidden">
+    <a class="" href="/cadillac/uk/toyota/">Cadillac <span class="icn-clear"></span></a>
+    </li>
+    <li class="is-hidden">
+    <a class="" href="/chevrolet/uk/toyota/">Chevrolet <span class="icn-clear"></span></a>
+    </li>
+    <li class="is-hidden">
+    <a class="" href="/chrysler/uk/toyota/">Chrysler <span class="icn-clear"></span></a>
+    </li>
+    <li class="is-hidden">
+    <a class="" href="/citroen/uk/toyota/">Citroen <span class="icn-clear"></span></a>
+    </li>
+    <li class="is-hidden">
+    <a class="" href="/dacia/uk/toyota/">Dacia <span class="icn-clear"></span></a>
+    </li>
+    <li class="is-hidden">
+    <a class="" href="/daewoo/uk/toyota/">Daewoo <span class="icn-clear"></span></a>
+    </li>
+    <li class="is-hidden">
+    <a class="" href="/daihatsu/uk/toyota/">Daihatsu <span class="icn-clear"></span></a>
+    </li>
+    <li class="is-hidden">
+    <a class="" href="/daimler/uk/toyota/">Daimler <span class="icn-clear"></span></a>
+    </li>
+    <li class="is-hidden">
+    <a class="" href="/dodge/uk/toyota/">Dodge <span class="icn-clear"></span></a>
+    </li>
+    <li class="is-hidden">
+    <a class="" href="/ferrari/uk/toyota/">Ferrari <span class="icn-clear"></span></a>
+    </li>
+    <li class="is-hidden">
+    <a class="" href="/fiat/uk/toyota/">Fiat <span class="icn-clear"></span></a>
+    </li>
+    <li class="is-hidden">
+    <a class="" href="/ford/uk/toyota/">Ford <span class="icn-clear"></span></a>
+    </li>
+    <li class="is-hidden">
+    <a class="" href="/honda/uk/toyota/">Honda <span class="icn-clear"></span></a>
+    </li>
+    <li class="is-hidden">
+    <a class="" href="/hummer/uk/toyota/">Hummer <span class="icn-clear"></span></a>
+    </li>
+    <li class="is-hidden">
+    <a class="" href="/hyundai/uk/toyota/">Hyundai <span class="icn-clear"></span></a>
+    </li>
+    <li class="is-hidden">
+    <a class="" href="/isuzu/uk/toyota/">Isuzu <span class="icn-clear"></span></a>
+    </li>
+    <li class="is-hidden">
+    <a class="" href="/jaguar/uk/toyota/">Jaguar <span class="icn-clear"></span></a>
+    </li>
+    <li class="is-hidden">
+    <a class="" href="/jeep/uk/toyota/">Jeep <span class="icn-clear"></span></a>
+    </li>
+    <li class="is-hidden">
+    <a class="" href="/kia/uk/toyota/">Kia <span class="icn-clear"></span></a>
+    </li>
+    <li class="is-hidden">
+    <a class="" href="/lada/uk/toyota/">Lada <span class="icn-clear"></span></a>
+    </li>
+    <li class="is-hidden">
+    <a class="" href="/lamborghini/uk/toyota/">Lamborghini <span class="icn-clear"></span></a>
+    </li>
+    <li class="is-hidden">
+    <a class="" href="/lancia/uk/toyota/">Lancia <span class="icn-clear"></span></a>
+    </li>
+    <li class="is-hidden">
+    <a class="" href="/land-rover/uk/toyota/">Land Rover <span class="icn-clear"></span></a>
+    </li>
+    <li class="is-hidden">
+    <a class="" href="/lexus/uk/toyota/">Lexus <span class="icn-clear"></span></a>
+    </li>
+    <li class="is-hidden">
+    <a class="" href="/lotus/uk/toyota/">Lotus <span class="icn-clear"></span></a>
+    </li>
+    <li class="is-hidden">
+    <a class="" href="/maserati/uk/toyota/">Maserati <span class="icn-clear"></span></a>
+    </li>
+    <li class="is-hidden">
+    <a class="" href="/mazda/uk/toyota/">Mazda <span class="icn-clear"></span></a>
+    </li>
+    <li class="is-hidden">
+    <a class="" href="/mercedes-benz/uk/toyota/">Mercedes-Benz <span class="icn-clear"></span></a>
+    </li>
+    <li class="is-hidden">
+    <a class="" href="/mg/uk/toyota/">MG <span class="icn-clear"></span></a>
+    </li>
+    <li class="is-hidden">
+    <a class="" href="/microcar/uk/toyota/">Microcar <span class="icn-clear"></span></a>
+    </li>
+    <li class="is-hidden">
+    <a class="" href="/mini/uk/toyota/">Mini <span class="icn-clear"></span></a>
+    </li>
+    <li class="is-hidden">
+    <a class="" href="/mitsubishi/uk/toyota/">Mitsubishi <span class="icn-clear"></span></a>
+    </li>
+    <li class="is-hidden">
+    <a class="" href="/nissan/uk/toyota/">Nissan <span class="icn-clear"></span></a>
+    </li>
+    <li class="is-hidden">
+    <a class="" href="/opel/uk/toyota/">Opel <span class="icn-clear"></span></a>
+    </li>
+    <li class="is-hidden">
+    <a class="" href="/perodua/uk/toyota/">Perodua <span class="icn-clear"></span></a>
+    </li>
+    <li class="is-hidden">
+    <a class="" href="/peugeot/uk/toyota/">Peugeot <span class="icn-clear"></span></a>
+    </li>
+    <li class="is-hidden">
+    <a class="" href="/porsche/uk/toyota/">Porsche <span class="icn-clear"></span></a>
+    </li>
+    <li class="is-hidden">
+    <a class="" href="/proton/uk/toyota/">Proton <span class="icn-clear"></span></a>
+    </li>
+    <li class="is-hidden">
+    <a class="" href="/reliant/uk/toyota/">Reliant <span class="icn-clear"></span></a>
+    </li>
+    <li class="is-hidden">
+    <a class="" href="/renault/uk/toyota/">Renault <span class="icn-clear"></span></a>
+    </li>
+    <li class="is-hidden">
+    <a class="" href="/rolls-royce/uk/toyota/">Rolls Royce <span class="icn-clear"></span></a>
+    </li>
+    <li class="is-hidden">
+    <a class="" href="/rover/uk/toyota/">Rover <span class="icn-clear"></span></a>
+    </li>
+    <li class="is-hidden">
+    <a class="" href="/saab/uk/toyota/">Saab <span class="icn-clear"></span></a>
+    </li>
+    <li class="is-hidden">
+    <a class="" href="/seat/uk/toyota/">Seat <span class="icn-clear"></span></a>
+    </li>
+    <li class="is-hidden">
+    <a class="" href="/skoda/uk/toyota/">Skoda <span class="icn-clear"></span></a>
+    </li>
+    <li class="is-hidden">
+    <a class="" href="/smart/uk/toyota/">Smart <span class="icn-clear"></span></a>
+    </li>
+    <li class="is-hidden">
+    <a class="" href="/ssangyong/uk/toyota/">Ssangyong <span class="icn-clear"></span></a>
+    </li>
+    <li class="is-hidden">
+    <a class="" href="/subaru/uk/toyota/">Subaru <span class="icn-clear"></span></a>
+    </li>
+    <li class="is-hidden">
+    <a class="" href="/suzuki/uk/toyota/">Suzuki <span class="icn-clear"></span></a>
+    </li>
+    <li class="is-hidden">
+    <a class="" href="/tata/uk/toyota/">Tata <span class="icn-clear"></span></a>
+    </li>
+    <li class="is-hidden">
+    <a class="" href="/toyota/uk/toyota/">Toyota <span class="icn-clear"></span></a>
+    </li>
+    <li class="is-hidden">
+    <a class="" href="/vauxhall/uk/toyota/">Vauxhall <span class="icn-clear"></span></a>
+    </li>
+    <li class="is-hidden">
+    <a class="" href="/volkswagen/uk/toyota/">Volkswagen <span class="icn-clear"></span></a>
+    </li>
+    <li class="is-hidden">
+    <a class="" href="/volvo/uk/toyota/">Volvo <span class="icn-clear"></span></a>
+    </li>
+    <li class="is-hidden">
+    <a class="" href="/other-cars/uk/toyota/">Other <span class="icn-clear"></span></a>
+    </li>
+    </ul>
+    </li>
+    </ul>
+    </li>
+    </ul>
+    </li>
+    </ul>
+    </nav>
+    </div>
+    </div>
+    <div class="box-section refine-accordion-catloc">
+    <div class="refine-accordion-trigger space-pbn">
+    <h3 class="refine-subtitle">Locations</h3>
+    </div>
+    <div class="refine-accordion-content space-pan">
+    <nav class="box-section nav-filter ">
+    <h3 class="h2 filter-title"></h3>
+    <ul class="browse-list">
+    <li class="">
+    <a class="" href="/cars/england/toyota">England <span class="icn-clear"></span></a>
+    </li>
+    <li class="">
+    <a class="" href="/cars/wales/toyota">Wales <span class="icn-clear"></span></a>
+    </li>
+    <li class="">
+    <a class="" href="/cars/scotland/toyota">Scotland <span class="icn-clear"></span></a>
+    </li>
+    <li class="">
+    <a class="" href="/cars/northern-ireland/toyota">Northern Ireland <span class="icn-clear"></span></a>
+    </li>
+    <li class="">
+    <a class="" href="/cars/guernsey/toyota">Guernsey <span class="icn-clear"></span></a>
+    </li>
+    <li class="">
+    <a class="" href="/cars/isle-of-man/toyota">Isle Of Man <span class="icn-clear"></span></a>
+    </li>
+    <li class="is-hidden">
+    <a class="" href="/cars/jersey/toyota">Jersey <span class="icn-clear"></span></a>
+    </li>
+    <li>
+    <a class="read-more" href="#" data-broadcast="filter-,SCREEN.HEIGHT">View More</a>
+    </li>
+    </ul>
+
+    </nav>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="txt-center space-mbm hide-fully-to-l" id="lSkyT" data-display-ad=""><div style="border: 0pt none;" id="google_ads_iframe_/5144/gtr.cars/cars_3__container__"><iframe src="javascript:&quot;<html><body style='background:transparent'></body></html>&quot;" style="border: 0px none; vertical-align: bottom;" marginheight="0" marginwidth="0" scrolling="no" name="google_ads_iframe_/5144/gtr.cars/cars_3" id="google_ads_iframe_/5144/gtr.cars/cars_3" frameborder="0" height="600" width="160"></iframe></div><iframe src="javascript:&quot;<html><body style='background:transparent'></body></html>&quot;" style="border: 0px none; vertical-align: bottom; visibility: hidden; display: none;" marginheight="0" marginwidth="0" scrolling="no" name="google_ads_iframe_/5144/gtr.cars/cars_3__hidden__" id="google_ads_iframe_/5144/gtr.cars/cars_3__hidden__" frameborder="0" height="0" width="0"></iframe></div>
+    <div class="txt-center space-mbm hide-fully-to-l" id="lSkyB" data-display-ad=""><div style="border: 0pt none;" id="google_ads_iframe_/5144/gtr.cars/cars_5__container__"><iframe src="javascript:&quot;<html><body style='background:transparent'></body></html>&quot;" style="border: 0px none; vertical-align: bottom;" marginheight="0" marginwidth="0" scrolling="no" name="google_ads_iframe_/5144/gtr.cars/cars_5" id="google_ads_iframe_/5144/gtr.cars/cars_5" frameborder="0" height="600" width="160"></iframe></div><iframe src="javascript:&quot;<html><body style='background:transparent'></body></html>&quot;" style="border: 0px none; vertical-align: bottom; visibility: hidden; display: none;" marginheight="0" marginwidth="0" scrolling="no" name="google_ads_iframe_/5144/gtr.cars/cars_5__hidden__" id="google_ads_iframe_/5144/gtr.cars/cars_5__hidden__" frameborder="0" height="0" width="0"></iframe></div>
+    </nav>
+    <div class="grid-col-12 grid-col-l-9">
+    <div class="grid-row">
+    <aside class="grid-col-12 hide-fully-to-m" role="complementary">
+    <div class="ad-text-link space-mbxs" id="textLink" data-display-ad=""><div style="border: 0pt none;" id="google_ads_iframe_/5144/gtr.cars/cars_1__container__"><iframe src="javascript:&quot;<html><body style='background:transparent'></body></html>&quot;" style="border: 0px none; vertical-align: bottom;" marginheight="0" marginwidth="0" scrolling="no" name="google_ads_iframe_/5144/gtr.cars/cars_1" id="google_ads_iframe_/5144/gtr.cars/cars_1" frameborder="0" height="35" width="665"></iframe></div><iframe src="javascript:&quot;<html><body style='background:transparent'></body></html>&quot;" style="border: 0px none; vertical-align: bottom; visibility: hidden; display: none;" marginheight="0" marginwidth="0" scrolling="no" name="google_ads_iframe_/5144/gtr.cars/cars_1__hidden__" id="google_ads_iframe_/5144/gtr.cars/cars_1__hidden__" frameborder="0" height="0" width="0"></iframe></div>
+    </aside>
+    <div class="grid-col-12" role="complementary">
+    <h3 class="sponsored-title">Sponsored Links</h3>
+    <div>
+    <div id="slot12" class="adsense-srp"></div>
+    </div>
+    </div>
+    <div class="grid-col-12 space-mbxs">
+    <h3 class="listings-title">Ads posted, Monday 15th December</h3>
+    <ul class="clearfix border-t">
+    <li>
+    <article class="listing-maxi" itemscope="" itemtype="http://schema.org/Product" id="ad-featured-1092208336">
+    <a class="listing-link" href="/p/toyota/2001-toyota-yaris-1.0-s-3dr-12-mths-miles-67000-mot-30-11-2015-690-/1092208336" itemprop="url">
+    <div class="listing-side">
+    <div class="listing-thumbnail ">
+    <img src="{{ asset('bundles/acmedemo/images/result/_26_002.JPG')}}" alt="" itemprop="image" class="hide-fully-no-js">
+    <noscript>
+    <img src="http://i.ebayimg.com/00/s/NzY4WDEwMjQ=/z/C4oAAOSwuMFUieDC/$_26.JPG" alt="" itemprop="image"/>
+    </noscript>
+    <span class="ribbon-featured">
+    <strong class="ribbon" data-q="featuredProduct"><span class="hide-visually">This ad is</span>Featured</strong>
+    </span>
+    </div>
+    <div class="listing-meta">
+    <ul class="inline-list txt-center">
+    <li>8<span class="hide-visually"> images</span>
+    <span class="icn-camera txt-quaternary" aria-hidden="true"></span>
+    </li>
+    </ul>
+    </div>
+    </div>
+    <div class="listing-content">
+    <h2 class="listing-title" itemprop="name">
+    2001 Toyota Yaris 1.0 S 3dr, 12 Mths, Miles 67000, MOT -30-11-2015 !!!!!!!!! 690!!!!!!!!
+    </h2>
+    <p class="listing-description truncate-paragraph
+    hide-fully-to-m" itemprop="description">
+    2001 Toyota yaris 1.0 petrol , 3 Door ,Power Steering, immobiliser, 
+    Red,67000 Miles, MOT-30-11-2015,2001 Toyota yaris 1.0 petrol , 67000 
+    Miles, MOT-30-11-2015 £ 690 , Mob 07920325556
+    </p>
+    <ul class="listing-attributes inline-list hide-fully-to-m">
+    <li>
+    <span class="hide-visually">Year</span><span itemprop="releaseDate">2001</span>
+    </li>
+    <li>
+    <span class="hide-visually">Mileage</span><span itemprop="vehicleMileage">67,000 miles</span>
+    </li>
+    <li>
+    <span class="hide-visually">Engine size</span><span itemprop="vehicleEngineSize">1,000 cc</span>
+    </li>
+    <li>
+    <span class="hide-visually">Fuel type</span><span itemprop="vehicleFuelType">Petrol</span>
+    </li>
+    </ul>
+    <div class="listing-location" itemscope="" itemtype="http://schema.org/Place">
+    <span class="truncate-line" itemprop="name">
+    Rusholme, Manchester
+    </span>
+    </div>
+    <strong class="listing-price txt-emphasis" itemprop="price">£690</strong>
+    </div>
+    </a>
+    <span class="save-ad listing-save-ad" data-savead="channel:savead-1092208336">
+    <span class="hide-visually">Save this ad</span>
+    <span class="icn-star iconu-m txt-quaternary" aria-hidden="true"></span>
+    </span>
+    </article>
+    </li>
+    <li>
+    <article class="listing-maxi" itemscope="" itemtype="http://schema.org/Product" id="ad-featured-1088775236">
+    <a class="listing-link" href="/p/toyota/2001-ford-galaxy-automatic........spare-or-repair/1088775236" itemprop="url">
+    <div class="listing-side">
+    <div class="listing-thumbnail ">
+    <img src="{{ asset('bundles/acmedemo/images/result/_26_006.JPG') }}" alt="" itemprop="image" class="hide-fully-no-js">
+    <noscript>
+    <img src="http://i.ebayimg.com/00/s/NTc2WDEwMjQ=/z/NAEAAOSwQJhUge-m/$_26.JPG" alt="" itemprop="image"/>
+    </noscript>
+    <span class="ribbon-featured">
+    <strong class="ribbon" data-q="featuredProduct"><span class="hide-visually">This ad is</span>Featured</strong>
+    </span>
+    </div>
+    <div class="listing-meta">
+    <ul class="inline-list txt-center">
+    <li>6<span class="hide-visually"> images</span>
+    <span class="icn-camera txt-quaternary" aria-hidden="true"></span>
+    </li>
+    </ul>
+    </div>
+    </div>
+    <div class="listing-content">
+    <h2 class="listing-title" itemprop="name">
+    2001 FORD GALAXY AUTOMATIC........spare or repair
+    </h2>
+    <p class="listing-description truncate-paragraph
+    hide-fully-to-m" itemprop="description">
+    This is a seven seater Ford Galaxy the engine and gearbox is absolutely fantastic on the car LONG MOT
+    Got STATER MOTOR problem it won't start maybe is a easy fix
+    Bargain!!!!!!!!!
+    </p>
+    <ul class="listing-attributes inline-list hide-fully-to-m">
+    <li>
+    <span class="hide-visually">Year</span><span itemprop="releaseDate">2001</span>
+    </li>
+    <li>
+    <span class="hide-visually">Mileage</span><span itemprop="vehicleMileage">109,000 miles</span>
+    </li>
+    <li>
+    <span class="hide-visually">Engine size</span><span itemprop="vehicleEngineSize">2,300 cc</span>
+    </li>
+    <li>
+    <span class="hide-visually">Fuel type</span><span itemprop="vehicleFuelType">Petrol</span>
+    </li>
+    </ul>
+    <div class="listing-location" itemscope="" itemtype="http://schema.org/Place">
+    <span class="truncate-line" itemprop="name">
+    Hackney, London
+    </span>
+    </div>
+    <strong class="listing-price txt-emphasis" itemprop="price">£390</strong>
+    </div>
+    </a>
+    <span class="save-ad listing-save-ad" data-savead="channel:savead-1088775236">
+    <span class="hide-visually">Save this ad</span>
+    <span class="icn-star iconu-m txt-quaternary" aria-hidden="true"></span>
+    </span>
+    </article>
+    </li>
+    <li>
+    <article class="listing-maxi" itemscope="" itemtype="http://schema.org/Product" id="ad-featured-1092330319">
+    <a class="listing-link" href="/p/toyota/lovely-silver-corolla-1.4-vvti-gs-with-low-mileage/1092330319" itemprop="url">
+    <div class="listing-side">
+    <div class="listing-thumbnail ">
+    <img src="{{ asset('bundles/acmedemo/images/result/_26_029.JPG') }}" alt="" itemprop="image" class="hide-fully-no-js">
+    <noscript>
+    <img src="http://i.ebayimg.com/00/s/NTc2WDEwMjQ=/z/uE8AAOSwj0NUhxqh/$_26.JPG" alt="" itemprop="image"/>
+    </noscript>
+    <span class="ribbon-featured">
+    <strong class="ribbon" data-q="featuredProduct"><span class="hide-visually">This ad is</span>Featured</strong>
+    </span>
+    </div>
+    <div class="listing-meta">
+    <ul class="inline-list txt-center">
+    <li>9<span class="hide-visually"> images</span>
+    <span class="icn-camera txt-quaternary" aria-hidden="true"></span>
+    </li>
+    </ul>
+    </div>
+    </div>
+    <div class="listing-content">
+    <h2 class="listing-title" itemprop="name">
+    LOVELY SILVER COROLLA 1.4 VVTI GS WITH LOW MILEAGE
+    </h2>
+    <p class="listing-description truncate-paragraph
+    hide-fully-to-m" itemprop="description">
+    HI,HERE IS A LOVELY 2001(Y) SILVER COLOUR TOYOTA COROLLA 1.4 VVTI GS
+    12 MONTH M.O.T
+    ELECTRIC FRONT WINDOW
+    CENTRAL LOCKING
+    PAS
+    IT A MANUAL CAR
+    ALLOY WHEEL
+    PETROL
+    3 PREVIOUS OWNER'S
+    GOOD BODY CONDITIONS
+    IT ONE OF THOSE CAR FIRST TO SEE W
+    </p>
+    <ul class="listing-attributes inline-list hide-fully-to-m">
+    <li>
+    <span class="hide-visually">Year</span><span itemprop="releaseDate">2001</span>
+    </li>
+    <li>
+    <span class="hide-visually">Mileage</span><span itemprop="vehicleMileage">63,000 miles</span>
+    </li>
+    <li>
+    <span class="hide-visually">Engine size</span><span itemprop="vehicleEngineSize">1,398 cc</span>
+    </li>
+    <li>
+    <span class="hide-visually">Fuel type</span><span itemprop="vehicleFuelType">Petrol</span>
+    </li>
+    </ul>
+    <div class="listing-location" itemscope="" itemtype="http://schema.org/Place">
+    <span class="truncate-line" itemprop="name">
+    Brick Lane, London
+    </span>
+    </div>
+    <strong class="listing-price txt-emphasis" itemprop="price">£970</strong>
+    </div>
+    </a>
+    <span class="save-ad listing-save-ad" data-savead="channel:savead-1092330319">
+    <span class="hide-visually">Save this ad</span>
+    <span class="icn-star iconu-m txt-quaternary" aria-hidden="true"></span>
+    </span>
+    </article>
+    </li>
+    <li>
+    <article class="listing-maxi" itemscope="" itemtype="http://schema.org/Product" id="ad-featured-1091467913">
+    <a class="listing-link" href="/p/land-rover/-lhd-left-hand-drive-td4-automatic-land-rover-freelander-not-toyota-honda-nissan-mercedes/1091467913" itemprop="url">
+    <div class="listing-side">
+    <div class="listing-thumbnail ">
+    <img src="{{ asset('bundles/acmedemo/images/result/_26_028.JPG') }}" alt="" itemprop="image" class="hide-fully-no-js">
+    <noscript>
+    <img src="http://i.ebayimg.com/00/s/NzY4WDEwMjQ=/z/ohEAAOSwD0lUfaWC/$_26.JPG" alt="" itemprop="image"/>
+    </noscript>
+    <span class="ribbon-featured">
+    <strong class="ribbon" data-q="featuredProduct"><span class="hide-visually">This ad is</span>Featured</strong>
+    </span>
+    </div>
+    <div class="listing-meta">
+    <ul class="inline-list txt-center">
+    <li>8<span class="hide-visually"> images</span>
+    <span class="icn-camera txt-quaternary" aria-hidden="true"></span>
+    </li>
+    </ul>
+    </div>
+    </div>
+    <div class="listing-content">
+    <h2 class="listing-title" itemprop="name">
+    ***LHD**LEFT HAND DRIVE***TD4***AUTOMATIC***LAND ROVER FREELANDER NOT TOYOTA,HONDA,NISSAN,MERCEDES
+    </h2>
+    <p class="listing-description truncate-paragraph
+    hide-fully-to-m" itemprop="description">
+    ***LEFT HAND DRIVE***LHD***, Next MOT due 30/09/2015, Sunroof Electric, 
+    Air-Conditioning, Seats Heated, Alarm, Side steps, Tow bar, Alloy 
+    Wheels, Electric Windows, Electric door mirrors, Child locks &amp; 
+    Isofix system, Folding rear seats, Remote central
+    </p>
+    <ul class="listing-attributes inline-list hide-fully-to-m">
+    <li>
+    <span class="hide-visually">Year</span><span itemprop="releaseDate">2001</span>
+    </li>
+    <li>
+    <span class="hide-visually">Mileage</span><span itemprop="vehicleMileage">126,800 miles</span>
+    </li>
+    <li>
+    <span class="hide-visually">Engine size</span><span itemprop="vehicleEngineSize">1,951 cc</span>
+    </li>
+    <li>
+    <span class="hide-visually">Fuel type</span><span itemprop="vehicleFuelType">Diesel</span>
+    </li>
+    <li>
+    <span class="hide-visually">Seller type</span><span>Trade</span>
+    </li>
+    </ul>
+    <div class="listing-location" itemscope="" itemtype="http://schema.org/Place">
+    <span class="truncate-line" itemprop="name">
+    Buckingham, Buckinghamshire
+    </span>
+    </div>
+    <strong class="listing-price txt-emphasis" itemprop="price">£2,350</strong>
+    </div>
+    </a>
+    <span class="save-ad listing-save-ad" data-savead="channel:savead-1091467913">
+    <span class="hide-visually">Save this ad</span>
+    <span class="icn-star iconu-m txt-quaternary" aria-hidden="true"></span>
+    </span>
+    </article>
+    </li>
+    <li>
+    <article class="listing-maxi" itemscope="" itemtype="http://schema.org/Product" id="ad-featured-1091949117">
+    <a class="listing-link" href="/p/toyota/toyota-prius-spirit-satnav-reverse-camera-61-plate/1091949117" itemprop="url">
+    <div class="listing-side">
+    <div class="listing-thumbnail ">
+    <img src="{{ asset('bundles/acmedemo/images/result/_26_016.JPG') }}" alt="" itemprop="image" class="hide-fully-no-js">
+    <noscript>
+    <img src="http://i.ebayimg.com/00/s/NzY4WDEwMjQ=/z/FJ8AAOSw2XFUguJX/$_26.JPG" alt="" itemprop="image"/>
+    </noscript>
+    <span class="ribbon-featured">
+    <strong class="ribbon" data-q="featuredProduct"><span class="hide-visually">This ad is</span>Featured</strong>
+    </span>
+    </div>
+    <div class="listing-meta">
+    <ul class="inline-list txt-center">
+    <li>9<span class="hide-visually"> images</span>
+    <span class="icn-camera txt-quaternary" aria-hidden="true"></span>
+    </li>
+    </ul>
+    </div>
+    </div>
+    <div class="listing-content">
+    <h2 class="listing-title" itemprop="name">
+    TOYOTA PRIUS SPIRIT SATNAV REVERSE CAMERA 61 PLATE
+    </h2>
+    <p class="listing-description truncate-paragraph
+    hide-fully-to-m" itemprop="description">
+    2011 61 plate. SATNAV AND REVERSE CAMERA. Mot and Tax. 1 Former keeper. 
+    Full Service history. T SPIRIT. Alloys electric windows, mirrors , 
+    cruise control. Climate control. Front fogs. This Toyota is hybrid very 
+    cheap to run and no cost for tax. Pleas
+    </p>
+    <ul class="listing-attributes inline-list hide-fully-to-m">
+    <li>
+    <span class="hide-visually">Year</span><span itemprop="releaseDate">2011</span>
+    </li>
+    <li>
+    <span class="hide-visually">Mileage</span><span itemprop="vehicleMileage">91,000 miles</span>
+    </li>
+    <li>
+    <span class="hide-visually">Engine size</span><span itemprop="vehicleEngineSize">1,797 cc</span>
+    </li>
+    <li>
+    <span class="hide-visually">Fuel type</span><span itemprop="vehicleFuelType">Petrol</span>
+    </li>
+    </ul>
+    <div class="listing-location" itemscope="" itemtype="http://schema.org/Place">
+    <span class="truncate-line" itemprop="name">
+    Grays, Essex
+    </span>
+    </div>
+    <strong class="listing-price txt-emphasis" itemprop="price">£11,995</strong>
+    </div>
+    </a>
+    <span class="save-ad listing-save-ad" data-savead="channel:savead-1091949117">
+    <span class="hide-visually">Save this ad</span>
+    <span class="icn-star iconu-m txt-quaternary" aria-hidden="true"></span>
+    </span>
+    </article>
+    </li>
+    </ul>
+    <ul class="clearfix list-listing-mini primary-listings ">
+    <li>
+    <article class="listing-maxi" itemscope="" itemtype="http://schema.org/Product" id="ad-featured-1093081160">
+    <a class="listing-link" href="/p/toyota/guaranteed-car-finance-bad-credit-toyota-verso-diesel-7-seater-2.2-sr-car-loans/1093081160" itemprop="url">
+    <div class="listing-side">
+    <div class="listing-thumbnail ">
+    <img src="{{ asset('bundles/acmedemo/images/result/_26.JPG') }}" data-lazy="http://i.ebayimg.com/00/s/NDY5WDYxNw==/z/PzYAAOSwD0lUjsh9/$_26.JPG" alt="" itemprop="image" class="hide-fully-no-js">
+    <noscript>
+    <img src="http://i.ebayimg.com/00/s/NDY5WDYxNw==/z/PzYAAOSwD0lUjsh9/$_26.JPG" alt="" itemprop="image"/>
+    </noscript>
+    </div>
+    <div class="listing-meta">
+    <ul class="inline-list txt-center">
+    <li>9<span class="hide-visually"> images</span>
+    <span class="icn-camera txt-quaternary" aria-hidden="true"></span>
+    </li>
+    </ul>
+    </div>
+    </div>
+    <div class="listing-content">
+    <h2 class="listing-title" itemprop="name">
+    GUARANTEED CAR FINANCE BAD CREDIT? TOYOTA VERSO DIESEL 7 SEATER 2.2 SR CAR LOANS
+    </h2>
+    <p class="listing-description truncate-paragraph
+    hide-fully-to-m" itemprop="description">
+    WE ARE CAR FINANCE EXPERTS AND CAN HELP REGARDLESS OF YOUR PAST OR 
+    PRESENT CREDIT PROBLEMS. PLEASE CALL 01527 559110 OR APPLY ONLINE AND WE
+     ARE OPEN 7 DAYS A WEEK.
+    </p>
+    <ul class="listing-attributes inline-list hide-fully-to-m">
+    <li>
+    <span class="hide-visually">Year</span><span itemprop="releaseDate">2007</span>
+    </li>
+    <li>
+    <span class="hide-visually">Mileage</span><span itemprop="vehicleMileage">74,000 miles</span>
+    </li>
+    <li>
+    <span class="hide-visually">Engine size</span><span itemprop="vehicleEngineSize">2,231 cc</span>
+    </li>
+    <li>
+    <span class="hide-visually">Fuel type</span><span itemprop="vehicleFuelType">Diesel</span>
+    </li>
+    <li>
+    <span class="hide-visually">Seller type</span><span>Trade</span>
+    </li>
+    </ul>
+    <div class="listing-location" itemscope="" itemtype="http://schema.org/Place">
+    <span class="truncate-line" itemprop="name">
+    Bromsgrove, Worcestershire
+    </span>
+    </div>
+    <strong class="listing-price txt-emphasis" itemprop="price">£6,499</strong>
+    <strong class="listing-posted-date txt-normal truncate-line" itemprop="adAge">
+    <span class="hide-visually">Ad posted </span>
+    Just now
+    </strong>
+    </div>
+    </a>
+    <span class="save-ad listing-save-ad" data-savead="channel:savead-1093081160">
+    <span class="hide-visually">Save this ad</span>
+    <span class="icn-star iconu-m txt-quaternary" aria-hidden="true"></span>
+    </span>
+    </article>
+    </li>
+    <li>
+    <article class="listing-maxi" itemscope="" itemtype="http://schema.org/Product" id="ad-featured-1093081066">
+    <a class="listing-link" href="/p/toyota/toyota-aygo-1.0-platinum-5dr-%C2%A320-tax-a-year-with-plate/1093081066" itemprop="url">
+    <div class="listing-side">
+    <div class="listing-thumbnail ">
+    <img src="{{ asset('bundles/acmedemo/images/result/_26_007.JPG') }}" data-lazy="http://i.ebayimg.com/00/s/NDgwWDY0MA==/z/vGQAAOSw0vBUjsjS/$_26.JPG" alt="" itemprop="image" class="hide-fully-no-js">
+    <noscript>
+    <img src="http://i.ebayimg.com/00/s/NDgwWDY0MA==/z/vGQAAOSw0vBUjsjS/$_26.JPG" alt="" itemprop="image"/>
+    </noscript>
+    </div>
+    <div class="listing-meta">
+    <ul class="inline-list txt-center">
+    <li>9<span class="hide-visually"> images</span>
+    <span class="icn-camera txt-quaternary" aria-hidden="true"></span>
+    </li>
+    </ul>
+    </div>
+    </div>
+    <div class="listing-content">
+    <h2 class="listing-title" itemprop="name">
+    Toyota Aygo 1.0 Platinum 5dr £20 TAX A YEAR , WITH PLATE
+    </h2>
+    <p class="listing-description truncate-paragraph
+    hide-fully-to-m" itemprop="description">
+    SILVER, Only 20 tax a year,1 Former owner,4 months mot,2 months 
+    tax,genuine miles with vosa mot history,any inspection welcome,hpi clear
+     with report,, Adjustable Steering Column/Wheel, Air Bag Driver, Air Bag
+     Passenger, Air Bag Side, Alloy Wheels, Ce
+    </p>
+    <ul class="listing-attributes inline-list hide-fully-to-m">
+    <li>
+    <span class="hide-visually">Year</span><span itemprop="releaseDate">2008</span>
+    </li>
+    <li>
+    <span class="hide-visually">Mileage</span><span itemprop="vehicleMileage">80,000 miles</span>
+    </li>
+    <li>
+    <span class="hide-visually">Engine size</span><span itemprop="vehicleEngineSize">998 cc</span>
+    </li>
+    <li>
+    <span class="hide-visually">Fuel type</span><span itemprop="vehicleFuelType">Petrol</span>
+    </li>
+    <li>
+    <span class="hide-visually">Seller type</span><span>Trade</span>
+    </li>
+    </ul>
+    <div class="listing-location" itemscope="" itemtype="http://schema.org/Place">
+    <span class="truncate-line" itemprop="name">
+    Birmingham, West Midlands
+    </span>
+    </div>
+    <strong class="listing-price txt-emphasis" itemprop="price">£2,599</strong>
+    <strong class="listing-posted-date txt-normal truncate-line" itemprop="adAge">
+    <span class="hide-visually">Ad posted </span>
+    Just now
+    </strong>
+    </div>
+    </a>
+    <span class="save-ad listing-save-ad" data-savead="channel:savead-1093081066">
+    <span class="hide-visually">Save this ad</span>
+    <span class="icn-star iconu-m txt-quaternary" aria-hidden="true"></span>
+    </span>
+    </article>
+    </li>
+    <li>
+    <article class="listing-maxi" itemscope="" itemtype="http://schema.org/Product" id="ad-featured-1093081046">
+    <a class="listing-link" href="/p/toyota/2001-toyota-yaris-3-door-1-litre-2-former-keepers-service-history-warranted-miles/1093081046" itemprop="url">
+    <div class="listing-side">
+    <div class="listing-thumbnail ">
+    <img src="{{ asset('bundles/acmedemo/images/result/_26_014.JPG') }}" data-lazy="http://i.ebayimg.com/00/s/NzY4WDEwMjQ=/z/kgMAAOSwAL9Ujsie/$_26.JPG" alt="" itemprop="image" class="hide-fully-no-js">
+    <noscript>
+    <img src="http://i.ebayimg.com/00/s/NzY4WDEwMjQ=/z/kgMAAOSwAL9Ujsie/$_26.JPG" alt="" itemprop="image"/>
+    </noscript>
+    </div>
+    <div class="listing-meta">
+    <ul class="inline-list txt-center">
+    <li>9<span class="hide-visually"> images</span>
+    <span class="icn-camera txt-quaternary" aria-hidden="true"></span>
+    </li>
+    </ul>
+    </div>
+    </div>
+    <div class="listing-content">
+    <h2 class="listing-title" itemprop="name">
+    2001 - Toyota Yaris - 3 Door - 1 Litre - 2 former keepers - service history - warranted miles
+    </h2>
+    <p class="listing-description truncate-paragraph
+    hide-fully-to-m" itemprop="description">
+    2001 Toyota Yaris - 3 Door - 1 Litre - with 2 former keepers
+    4 months mot - can put on 1 year mot if 730 is paid
+    Part service history with service history book
+    few service receipts are there aswell
+    Engine sound sweet
+    gear box, clu
+    </p>
+    <ul class="listing-attributes inline-list hide-fully-to-m">
+    <li>
+    <span class="hide-visually">Year</span><span itemprop="releaseDate">2001</span>
+    </li>
+    <li>
+    <span class="hide-visually">Mileage</span><span itemprop="vehicleMileage">86,000 miles</span>
+    </li>
+    <li>
+    <span class="hide-visually">Engine size</span><span itemprop="vehicleEngineSize">998 cc</span>
+    </li>
+    <li>
+    <span class="hide-visually">Fuel type</span><span itemprop="vehicleFuelType">Petrol</span>
+    </li>
+    <li>
+    <span class="hide-visually">Seller type</span><span>Trade</span>
+    </li>
+    </ul>
+    <div class="listing-location" itemscope="" itemtype="http://schema.org/Place">
+    <span class="truncate-line" itemprop="name">
+    Ashton-under-Lyne, Manchester
+    </span>
+    </div>
+    <strong class="listing-price txt-emphasis" itemprop="price">£650</strong>
+    <strong class="listing-posted-date txt-normal truncate-line" itemprop="adAge">
+    <span class="hide-visually">Ad posted </span>
+    Just now
+    </strong>
+    </div>
+    </a>
+    <span class="save-ad listing-save-ad" data-savead="channel:savead-1093081046">
+    <span class="hide-visually">Save this ad</span>
+    <span class="icn-star iconu-m txt-quaternary" aria-hidden="true"></span>
+    </span>
+    </article>
+    </li>
+    <li>
+    <article class="listing-maxi" itemscope="" itemtype="http://schema.org/Product" id="ad-featured-1093081018">
+    <a class="listing-link" href="/p/toyota/2-toyota-yaris-for-sale-03-04/1093081018" itemprop="url">
+    <div class="listing-side">
+    <div class="listing-thumbnail ">
+    <img src="{{ asset('bundles/acmedemo/images/result/_26_019.JPG') }}" data-lazy="http://i.ebayimg.com/00/s/NzIwWDk2MA==/z/-J8AAOSwuMFUjshy/$_26.JPG" alt="" itemprop="image" class="hide-fully-no-js">
+    <noscript>
+    <img src="http://i.ebayimg.com/00/s/NzIwWDk2MA==/z/-J8AAOSwuMFUjshy/$_26.JPG" alt="" itemprop="image"/>
+    </noscript>
+    </div>
+    <div class="listing-meta">
+    <ul class="inline-list txt-center">
+    <li>3<span class="hide-visually"> images</span>
+    <span class="icn-camera txt-quaternary" aria-hidden="true"></span>
+    </li>
+    </ul>
+    </div>
+    </div>
+    <div class="listing-content">
+    <h2 class="listing-title" itemprop="name">
+    2 TOYOTA YARIS FOR SALE 03/04
+    </h2>
+    <p class="listing-description truncate-paragraph
+    hide-fully-to-m" itemprop="description">
+    2004 toyota yaris sliver moted to jan 15,
+    1.4 d4d cheap to run and insure,
+    5 door, drives well 111,000miles,
+    all good trye's, cd player/radio,
+    eletric windows, central locking,
+    30 a year road tax, priced to sell @ £1650ono
+    2003 TOYOTA YARIS
+    </p>
+    <ul class="listing-attributes inline-list hide-fully-to-m">
+    <li>
+    <span class="hide-visually">Year</span><span itemprop="releaseDate">2003</span>
+    </li>
+    <li>
+    <span class="hide-visually">Mileage</span><span itemprop="vehicleMileage">80 miles</span>
+    </li>
+    <li>
+    <span class="hide-visually">Engine size</span><span itemprop="vehicleEngineSize">998 cc</span>
+    </li>
+    <li>
+    <span class="hide-visually">Fuel type</span><span itemprop="vehicleFuelType">Petrol</span>
+    </li>
+    </ul>
+    <div class="listing-location" itemscope="" itemtype="http://schema.org/Place">
+    <span class="truncate-line" itemprop="name">
+    Newry, County Down
+    </span>
+    </div>
+    <strong class="listing-price txt-emphasis" itemprop="price">£1,000</strong>
+    <strong class="listing-posted-date txt-normal truncate-line" itemprop="adAge">
+    <span class="hide-visually">Ad posted </span>
+    Just now
+    </strong>
+    </div>
+    </a>
+    <span class="save-ad listing-save-ad" data-savead="channel:savead-1093081018">
+    <span class="hide-visually">Save this ad</span>
+    <span class="icn-star iconu-m txt-quaternary" aria-hidden="true"></span>
+    </span>
+    </article>
+    </li>
+    <li>
+    <article class="listing-maxi" itemscope="" itemtype="http://schema.org/Product" id="ad-featured-1093080924">
+    <a class="listing-link" href="/p/toyota/2006-06-toyota-corolla-t2-vvti-1.6-petrol-silver-low-mileage-62k/1093080924" itemprop="url">
+    <div class="listing-side">
+    <div class="listing-thumbnail ">
+    <img src="{{ asset('bundles/acmedemo/images/result/_26_026.JPG') }}" data-lazy="http://i.ebayimg.com/00/s/NzY4WDEwMjQ=/z/QO4AAOSwD0lUjsiU/$_26.JPG" alt="" itemprop="image" class="hide-fully-no-js">
+    <noscript>
+    <img src="http://i.ebayimg.com/00/s/NzY4WDEwMjQ=/z/QO4AAOSwD0lUjsiU/$_26.JPG" alt="" itemprop="image"/>
+    </noscript>
+    </div>
+    <div class="listing-meta">
+    <ul class="inline-list txt-center">
+    <li>9<span class="hide-visually"> images</span>
+    <span class="icn-camera txt-quaternary" aria-hidden="true"></span>
+    </li>
+    </ul>
+    </div>
+    </div>
+    <div class="listing-content">
+    <h2 class="listing-title" itemprop="name">
+    2006 (06) Toyota Corolla T2 VVTI 1.6 Petrol Silver Low Mileage 62k
+    </h2>
+    <p class="listing-description truncate-paragraph
+    hide-fully-to-m" itemprop="description">
+    2006 (06) Toyota Corolla T2 VVTI 1.6 Petrol Silver
+    Low Warranted Mileage 62,211
+    2 Owners
+    5 door hatchback
+    E/W, E/M, A/C, Radio, CD
+    Vehicle comes with:
+    Full years MOT
+    Full Service
+    Warranty
+    Call and come and see us for a test drive, we a
+    </p>
+    <ul class="listing-attributes inline-list hide-fully-to-m">
+    <li>
+    <span class="hide-visually">Year</span><span itemprop="releaseDate">2006</span>
+    </li>
+    <li>
+    <span class="hide-visually">Mileage</span><span itemprop="vehicleMileage">62,211 miles</span>
+    </li>
+    <li>
+    <span class="hide-visually">Engine size</span><span itemprop="vehicleEngineSize">1,598 cc</span>
+    </li>
+    <li>
+    <span class="hide-visually">Fuel type</span><span itemprop="vehicleFuelType">Petrol</span>
+    </li>
+    <li>
+    <span class="hide-visually">Seller type</span><span>Trade</span>
+    </li>
+    </ul>
+    <div class="listing-location" itemscope="" itemtype="http://schema.org/Place">
+    <span class="truncate-line" itemprop="name">
+    Tiverton, Devon
+    </span>
+    </div>
+    <strong class="listing-price txt-emphasis" itemprop="price">£3,895</strong>
+    <strong class="listing-posted-date txt-normal truncate-line" itemprop="adAge">
+    <span class="hide-visually">Ad posted </span>
+    Just now
+    </strong>
+    </div>
+    </a>
+    <span class="save-ad listing-save-ad" data-savead="channel:savead-1093080924">
+    <span class="hide-visually">Save this ad</span>
+    <span class="icn-star iconu-m txt-quaternary" aria-hidden="true"></span>
+    </span>
+    </article>
+    </li>
+    <li>
+    <div class="ad-integrated-display">
+    <div id="integratedMpu" data-display-ad=""><div style="border: 0pt none;" id="google_ads_iframe_/5144/gtr.cars/cars_7__container__"><iframe src="javascript:&quot;<html><body style='background:transparent'></body></html>&quot;" style="border: 0px none; vertical-align: bottom;" marginheight="0" marginwidth="0" scrolling="no" name="google_ads_iframe_/5144/gtr.cars/cars_7" id="google_ads_iframe_/5144/gtr.cars/cars_7" frameborder="0" height="250" width="300"></iframe></div><iframe src="javascript:&quot;<html><body style='background:transparent'></body></html>&quot;" style="border: 0px none; vertical-align: bottom; visibility: hidden; display: none;" marginheight="0" marginwidth="0" scrolling="no" name="google_ads_iframe_/5144/gtr.cars/cars_7__hidden__" id="google_ads_iframe_/5144/gtr.cars/cars_7__hidden__" frameborder="0" height="0" width="0"></iframe></div>
+    </div>
+    </li>
+    <li>
+    <article class="listing-maxi" itemscope="" itemtype="http://schema.org/Product" id="ad-featured-1093080861">
+    <a class="listing-link" href="/p/toyota/-bargain-2007-57-toyota-avensis-t-spirit-diesel-1-keepr-ftsh-satnav-leather-cruise-ctrl.../1093080861" itemprop="url">
+    <div class="listing-side">
+    <div class="listing-thumbnail ">
+    <img src="{{ asset('bundles/acmedemo/images/result/_26_008.JPG') }}" data-lazy="http://i.ebayimg.com/00/s/NzY4WDEwMjQ=/z/OnUAAOSwD0lUjshB/$_26.JPG" alt="" itemprop="image" class="hide-fully-no-js">
+    <noscript>
+    <img src="http://i.ebayimg.com/00/s/NzY4WDEwMjQ=/z/OnUAAOSwD0lUjshB/$_26.JPG" alt="" itemprop="image"/>
+    </noscript>
+    </div>
+    <div class="listing-meta">
+    <ul class="inline-list txt-center">
+    <li>9<span class="hide-visually"> images</span>
+    <span class="icn-camera txt-quaternary" aria-hidden="true"></span>
+    </li>
+    </ul>
+    </div>
+    </div>
+    <div class="listing-content">
+    <h2 class="listing-title" itemprop="name">
+    !BARGAIN! 2007 (57) TOYOTA AVENSIS "T-SPIRIT" DIESEL, 1 KEEPR, FTSH, SATNAV, LEATHER, CRUISE CTRL...
+    </h2>
+    <p class="listing-description truncate-paragraph
+    hide-fully-to-m" itemprop="description">
+    REDUCED FROM 4495 TO 3995. FIXED PRICE.
+    VERY DESIRABLE! IMMACULATE! TOP OF THE RANGE, FULLY LOADED!! (SATNAV, FULL LEATHER SEATS, ELECTRIC SEATS...)
+    -"1 Keeper" Only. These D-4D engines are fitted with TIMING CHAIN, no timing belt, so no hass
+    </p>
+    <ul class="listing-attributes inline-list hide-fully-to-m">
+    <li>
+    <span class="hide-visually">Year</span><span itemprop="releaseDate">2007</span>
+    </li>
+    <li>
+    <span class="hide-visually">Mileage</span><span itemprop="vehicleMileage">87,000 miles</span>
+    </li>
+    <li>
+    <span class="hide-visually">Engine size</span><span itemprop="vehicleEngineSize">2,231 cc</span>
+    </li>
+    <li>
+    <span class="hide-visually">Fuel type</span><span itemprop="vehicleFuelType">Diesel</span>
+    </li>
+    <li>
+    <span class="hide-visually">Seller type</span><span>Trade</span>
+    </li>
+    </ul>
+    <div class="listing-location" itemscope="" itemtype="http://schema.org/Place">
+    <span class="truncate-line" itemprop="name">
+    Dundee
+    </span>
+    </div>
+    <strong class="listing-price txt-emphasis" itemprop="price">£3,995</strong>
+    <strong class="listing-posted-date txt-normal truncate-line" itemprop="adAge">
+    <span class="hide-visually">Ad posted </span>
+    Just now
+    </strong>
+    </div>
+    </a>
+    <span class="save-ad listing-save-ad" data-savead="channel:savead-1093080861">
+    <span class="hide-visually">Save this ad</span>
+    <span class="icn-star iconu-m txt-quaternary" aria-hidden="true"></span>
+    </span>
+    </article>
+    </li>
+    <li>
+    <article class="listing-maxi" itemscope="" itemtype="http://schema.org/Product" id="ad-featured-1093080850">
+    <a class="listing-link" href="/p/toyota/-bargain-2007-57-toyota-avensis-t-spirit-diesel-1-keepr-ftsh-satnav-leather-cruise-ctrl.../1093080850" itemprop="url">
+    <div class="listing-side">
+    <div class="listing-thumbnail ">
+    <img src="{{ asset('bundles/acmedemo/images/result/_26_022.JPG') }}" data-lazy="http://i.ebayimg.com/00/s/NzY4WDEwMjQ=/z/VHcAAOSw2XFUjsgC/$_26.JPG" alt="" itemprop="image" class="hide-fully-no-js">
+    <noscript>
+    <img src="http://i.ebayimg.com/00/s/NzY4WDEwMjQ=/z/VHcAAOSw2XFUjsgC/$_26.JPG" alt="" itemprop="image"/>
+    </noscript>
+    </div>
+    <div class="listing-meta">
+    <ul class="inline-list txt-center">
+    <li>9<span class="hide-visually"> images</span>
+    <span class="icn-camera txt-quaternary" aria-hidden="true"></span>
+    </li>
+    </ul>
+    </div>
+    </div>
+    <div class="listing-content">
+    <h2 class="listing-title" itemprop="name">
+    !BARGAIN! 2007 (57) TOYOTA AVENSIS "T-SPIRIT" DIESEL, 1 KEEPR, FTSH, SATNAV, LEATHER, CRUISE CTRL...
+    </h2>
+    <p class="listing-description truncate-paragraph
+    hide-fully-to-m" itemprop="description">
+    REDUCED FROM 4495 TO 3995. FIXED PRICE.
+    VERY DESIRABLE! IMMACULATE! TOP OF THE RANGE, FULLY LOADED!! (SATNAV, FULL LEATHER SEATS, ELECTRIC SEATS...)
+    -"1 Keeper" Only. These D-4D engines are fitted with TIMING CHAIN, no timing belt, so no hass
+    </p>
+    <ul class="listing-attributes inline-list hide-fully-to-m">
+    <li>
+    <span class="hide-visually">Year</span><span itemprop="releaseDate">2007</span>
+    </li>
+    <li>
+    <span class="hide-visually">Mileage</span><span itemprop="vehicleMileage">87,000 miles</span>
+    </li>
+    <li>
+    <span class="hide-visually">Engine size</span><span itemprop="vehicleEngineSize">2,231 cc</span>
+    </li>
+    <li>
+    <span class="hide-visually">Fuel type</span><span itemprop="vehicleFuelType">Diesel</span>
+    </li>
+    <li>
+    <span class="hide-visually">Seller type</span><span>Trade</span>
+    </li>
+    </ul>
+    <div class="listing-location" itemscope="" itemtype="http://schema.org/Place">
+    <span class="truncate-line" itemprop="name">
+    Inverness, Highland
+    </span>
+    </div>
+    <strong class="listing-price txt-emphasis" itemprop="price">£3,995</strong>
+    <strong class="listing-posted-date txt-normal truncate-line" itemprop="adAge">
+    <span class="hide-visually">Ad posted </span>
+    Just now
+    </strong>
+    </div>
+    </a>
+    <span class="save-ad listing-save-ad" data-savead="channel:savead-1093080850">
+    <span class="hide-visually">Save this ad</span>
+    <span class="icn-star iconu-m txt-quaternary" aria-hidden="true"></span>
+    </span>
+    </article>
+    </li>
+    <li>
+    <article class="listing-maxi" itemscope="" itemtype="http://schema.org/Product" id="ad-featured-1093080840">
+    <a class="listing-link" href="/p/toyota/-bargain-2007-57-toyota-avensis-t-spirit-diesel-1-keepr-ftsh-satnav-leather-cruise-ctrl.../1093080840" itemprop="url">
+    <div class="listing-side">
+    <div class="listing-thumbnail ">
+    <img src="{{ asset('bundles/acmedemo/images/result/_26_023.JPG') }}" data-lazy="http://i.ebayimg.com/00/s/NzY4WDEwMjQ=/z/Um8AAOSw7ThUjsf6/$_26.JPG" alt="" itemprop="image" class="hide-fully-no-js">
+    <noscript>
+    <img src="http://i.ebayimg.com/00/s/NzY4WDEwMjQ=/z/Um8AAOSw7ThUjsf6/$_26.JPG" alt="" itemprop="image"/>
+    </noscript>
+    </div>
+    <div class="listing-meta">
+    <ul class="inline-list txt-center">
+    <li>9<span class="hide-visually"> images</span>
+    <span class="icn-camera txt-quaternary" aria-hidden="true"></span>
+    </li>
+    </ul>
+    </div>
+    </div>
+    <div class="listing-content">
+    <h2 class="listing-title" itemprop="name">
+    !BARGAIN! 2007 (57) TOYOTA AVENSIS "T-SPIRIT" DIESEL, 1 KEEPR, FTSH, SATNAV, LEATHER, CRUISE CTRL...
+    </h2>
+    <p class="listing-description truncate-paragraph
+    hide-fully-to-m" itemprop="description">
+    REDUCED FROM 4495 TO 3995. FIXED PRICE.
+    VERY DESIRABLE! IMMACULATE! TOP OF THE RANGE, FULLY LOADED!! (SATNAV, FULL LEATHER SEATS, ELECTRIC SEATS...)
+    -"1 Keeper" Only. These D-4D engines are fitted with TIMING CHAIN, no timing belt, so no hass
+    </p>
+    <ul class="listing-attributes inline-list hide-fully-to-m">
+    <li>
+    <span class="hide-visually">Year</span><span itemprop="releaseDate">2007</span>
+    </li>
+    <li>
+    <span class="hide-visually">Mileage</span><span itemprop="vehicleMileage">87,000 miles</span>
+    </li>
+    <li>
+    <span class="hide-visually">Engine size</span><span itemprop="vehicleEngineSize">2,231 cc</span>
+    </li>
+    <li>
+    <span class="hide-visually">Fuel type</span><span itemprop="vehicleFuelType">Diesel</span>
+    </li>
+    <li>
+    <span class="hide-visually">Seller type</span><span>Trade</span>
+    </li>
+    </ul>
+    <div class="listing-location" itemscope="" itemtype="http://schema.org/Place">
+    <span class="truncate-line" itemprop="name">
+    Aberdeen
+    </span>
+    </div>
+    <strong class="listing-price txt-emphasis" itemprop="price">£3,995</strong>
+    <strong class="listing-posted-date txt-normal truncate-line" itemprop="adAge">
+    <span class="hide-visually">Ad posted </span>
+    Just now
+    </strong>
+    </div>
+    </a>
+    <span class="save-ad listing-save-ad" data-savead="channel:savead-1093080840">
+    <span class="hide-visually">Save this ad</span>
+    <span class="icn-star iconu-m txt-quaternary" aria-hidden="true"></span>
+    </span>
+    </article>
+    </li>
+    <li>
+    <article class="listing-maxi" itemscope="" itemtype="http://schema.org/Product" id="ad-featured-1093080826">
+    <a class="listing-link" href="/p/toyota/-bargain-2007-57-toyota-avensis-t-spirit-diesel-1-keepr-ftsh-satnav-leather-cruise-ctrl.../1093080826" itemprop="url">
+    <div class="listing-side">
+    <div class="listing-thumbnail ">
+    <img src="{{ asset('bundles/acmedemo/images/result/_26_013.JPG') }}" data-lazy="http://i.ebayimg.com/00/s/NzY4WDEwMjQ=/z/7FYAAOSwkNZUjse9/$_26.JPG" alt="" itemprop="image" class="hide-fully-no-js">
+    <noscript>
+    <img src="http://i.ebayimg.com/00/s/NzY4WDEwMjQ=/z/7FYAAOSwkNZUjse9/$_26.JPG" alt="" itemprop="image"/>
+    </noscript>
+    </div>
+    <div class="listing-meta">
+    <ul class="inline-list txt-center">
+    <li>9<span class="hide-visually"> images</span>
+    <span class="icn-camera txt-quaternary" aria-hidden="true"></span>
+    </li>
+    </ul>
+    </div>
+    </div>
+    <div class="listing-content">
+    <h2 class="listing-title" itemprop="name">
+    !BARGAIN! 2007 (57) TOYOTA AVENSIS "T-SPIRIT" DIESEL, 1 KEEPR, FTSH, SATNAV, LEATHER, CRUISE CTRL...
+    </h2>
+    <p class="listing-description truncate-paragraph
+    hide-fully-to-m" itemprop="description">
+    REDUCED FROM 4495 TO 3995. FIXED PRICE.
+    VERY DESIRABLE! IMMACULATE! TOP OF THE RANGE, FULLY LOADED!! (SATNAV, FULL LEATHER SEATS, ELECTRIC SEATS...)
+    -"1 Keeper" Only. These D-4D engines are fitted with TIMING CHAIN, no timing belt, so no hass
+    </p>
+    <ul class="listing-attributes inline-list hide-fully-to-m">
+    <li>
+    <span class="hide-visually">Year</span><span itemprop="releaseDate">2007</span>
+    </li>
+    <li>
+    <span class="hide-visually">Mileage</span><span itemprop="vehicleMileage">87,000 miles</span>
+    </li>
+    <li>
+    <span class="hide-visually">Engine size</span><span itemprop="vehicleEngineSize">2,231 cc</span>
+    </li>
+    <li>
+    <span class="hide-visually">Fuel type</span><span itemprop="vehicleFuelType">Diesel</span>
+    </li>
+    <li>
+    <span class="hide-visually">Seller type</span><span>Trade</span>
+    </li>
+    </ul>
+    <div class="listing-location" itemscope="" itemtype="http://schema.org/Place">
+    <span class="truncate-line" itemprop="name">
+    Southside, Edinburgh
+    </span>
+    </div>
+    <strong class="listing-price txt-emphasis" itemprop="price">£3,995</strong>
+    <strong class="listing-posted-date txt-normal truncate-line" itemprop="adAge">
+    <span class="hide-visually">Ad posted </span>
+    Just now
+    </strong>
+    </div>
+    </a>
+    <span class="save-ad listing-save-ad" data-savead="channel:savead-1093080826">
+    <span class="hide-visually">Save this ad</span>
+    <span class="icn-star iconu-m txt-quaternary" aria-hidden="true"></span>
+    </span>
+    </article>
+    </li>
+    <li>
+    <article class="listing-maxi" itemscope="" itemtype="http://schema.org/Product" id="ad-featured-1093080811">
+    <a class="listing-link" href="/p/toyota/-bargain-2007-57-toyota-avensis-t-spirit-diesel-1-keepr-ftsh-satnav-leather-cruise-ctrl.../1093080811" itemprop="url">
+    <div class="listing-side">
+    <div class="listing-thumbnail ">
+    <img src="{{ asset('bundles/acmedemo/images/result/_26_027.JPG') }}" data-lazy="http://i.ebayimg.com/00/s/NzY4WDEwMjQ=/z/eLQAAOSwAL9Ujsdl/$_26.JPG" alt="" itemprop="image" class="hide-fully-no-js">
+    <noscript>
+    <img src="http://i.ebayimg.com/00/s/NzY4WDEwMjQ=/z/eLQAAOSwAL9Ujsdl/$_26.JPG" alt="" itemprop="image"/>
+    </noscript>
+    </div>
+    <div class="listing-meta">
+    <ul class="inline-list txt-center">
+    <li>9<span class="hide-visually"> images</span>
+    <span class="icn-camera txt-quaternary" aria-hidden="true"></span>
+    </li>
+    </ul>
+    </div>
+    </div>
+    <div class="listing-content">
+    <h2 class="listing-title" itemprop="name">
+    !BARGAIN! 2007 (57) TOYOTA AVENSIS "T-SPIRIT" DIESEL, 1 KEEPR, FTSH, SATNAV, LEATHER, CRUISE CTRL...
+    </h2>
+    <p class="listing-description truncate-paragraph
+    hide-fully-to-m" itemprop="description">
+    REDUCED FROM 4495 TO 3995. FIXED PRICE.
+    VERY DESIRABLE! IMMACULATE! TOP OF THE RANGE, FULLY LOADED!! (SATNAV, FULL LEATHER SEATS, ELECTRIC SEATS...)
+    -"1 Keeper" Only. These D-4D engines are fitted with TIMING CHAIN, no timing belt, so no hass
+    </p>
+    <ul class="listing-attributes inline-list hide-fully-to-m">
+    <li>
+    <span class="hide-visually">Year</span><span itemprop="releaseDate">2007</span>
+    </li>
+    <li>
+    <span class="hide-visually">Mileage</span><span itemprop="vehicleMileage">87,000 miles</span>
+    </li>
+    <li>
+    <span class="hide-visually">Engine size</span><span itemprop="vehicleEngineSize">2,231 cc</span>
+    </li>
+    <li>
+    <span class="hide-visually">Fuel type</span><span itemprop="vehicleFuelType">Diesel</span>
+    </li>
+    <li>
+    <span class="hide-visually">Seller type</span><span>Trade</span>
+    </li>
+    </ul>
+    <div class="listing-location" itemscope="" itemtype="http://schema.org/Place">
+    <span class="truncate-line" itemprop="name">
+    East End, Glasgow
+    </span>
+    </div>
+    <strong class="listing-price txt-emphasis" itemprop="price">£3,995</strong>
+    <strong class="listing-posted-date txt-normal truncate-line" itemprop="adAge">
+    <span class="hide-visually">Ad posted </span>
+    Just now
+    </strong>
+    </div>
+    </a>
+    <span class="save-ad listing-save-ad" data-savead="channel:savead-1093080811">
+    <span class="hide-visually">Save this ad</span>
+    <span class="icn-star iconu-m txt-quaternary" aria-hidden="true"></span>
+    </span>
+    </article>
+    </li>
+    <li>
+    <article class="listing-maxi" itemscope="" itemtype="http://schema.org/Product" id="ad-featured-1093080801">
+    <a class="listing-link" href="/p/toyota/-bargain-2007-57-toyota-avensis-t-spirit-diesel-1-keepr-ftsh-satnav-leather-cruise-ctrl.../1093080801" itemprop="url">
+    <div class="listing-side">
+    <div class="listing-thumbnail ">
+    <img src="{{ asset('bundles/acmedemo/images/result/_26_021.JPG') }}" data-lazy="http://i.ebayimg.com/00/s/NzY4WDEwMjQ=/z/HoAAAOSwD0lUjscJ/$_26.JPG" alt="" itemprop="image" class="hide-fully-no-js">
+    <noscript>
+    <img src="http://i.ebayimg.com/00/s/NzY4WDEwMjQ=/z/HoAAAOSwD0lUjscJ/$_26.JPG" alt="" itemprop="image"/>
+    </noscript>
+    </div>
+    <div class="listing-meta">
+    <ul class="inline-list txt-center">
+    <li>9<span class="hide-visually"> images</span>
+    <span class="icn-camera txt-quaternary" aria-hidden="true"></span>
+    </li>
+    </ul>
+    </div>
+    </div>
+    <div class="listing-content">
+    <h2 class="listing-title" itemprop="name">
+    !BARGAIN! 2007 (57) TOYOTA AVENSIS "T-SPIRIT" DIESEL, 1 KEEPR, FTSH, SATNAV, LEATHER, CRUISE CTRL...
+    </h2>
+    <p class="listing-description truncate-paragraph
+    hide-fully-to-m" itemprop="description">
+    REDUCED FROM 4495 TO 3995. FIXED PRICE.
+    VERY DESIRABLE! IMMACULATE! TOP OF THE RANGE, FULLY LOADED!! (SATNAV, FULL LEATHER SEATS, ELECTRIC SEATS...)
+    -"1 Keeper" Only. These D-4D engines are fitted with TIMING CHAIN, no timing belt, so no hass
+    </p>
+    <ul class="listing-attributes inline-list hide-fully-to-m">
+    <li>
+    <span class="hide-visually">Year</span><span itemprop="releaseDate">2007</span>
+    </li>
+    <li>
+    <span class="hide-visually">Mileage</span><span itemprop="vehicleMileage">87,000 miles</span>
+    </li>
+    <li>
+    <span class="hide-visually">Engine size</span><span itemprop="vehicleEngineSize">2,231 cc</span>
+    </li>
+    <li>
+    <span class="hide-visually">Fuel type</span><span itemprop="vehicleFuelType">Diesel</span>
+    </li>
+    <li>
+    <span class="hide-visually">Seller type</span><span>Trade</span>
+    </li>
+    </ul>
+    <div class="listing-location" itemscope="" itemtype="http://schema.org/Place">
+    <span class="truncate-line" itemprop="name">
+    Stirling
+    </span>
+    </div>
+    <strong class="listing-price txt-emphasis" itemprop="price">£3,995</strong>
+    <strong class="listing-posted-date txt-normal truncate-line" itemprop="adAge">
+    <span class="hide-visually">Ad posted </span>
+    Just now
+    </strong>
+    </div>
+    </a>
+    <span class="save-ad listing-save-ad" data-savead="channel:savead-1093080801">
+    <span class="hide-visually">Save this ad</span>
+    <span class="icn-star iconu-m txt-quaternary" aria-hidden="true"></span>
+    </span>
+    </article>
+    </li>
+    <li>
+    <article class="listing-maxi" itemscope="" itemtype="http://schema.org/Product" id="ad-featured-1093080796">
+    <a class="listing-link" href="/p/toyota/toyota-avensis-1.8-t3-x-5dr-genuine-low-mileage-2003/1093080796" itemprop="url">
+    <div class="listing-side">
+    <div class="listing-thumbnail ">
+    <img src="{{ asset('bundles/acmedemo/images/result/_26_011.JPG') }}" data-lazy="http://i.ebayimg.com/00/s/NDgwWDY0MA==/z/jMwAAOSwAL9UjshW/$_26.JPG" alt="" itemprop="image" class="hide-fully-no-js">
+    <noscript>
+    <img src="http://i.ebayimg.com/00/s/NDgwWDY0MA==/z/jMwAAOSwAL9UjshW/$_26.JPG" alt="" itemprop="image"/>
+    </noscript>
+    </div>
+    <div class="listing-meta">
+    <ul class="inline-list txt-center">
+    <li>9<span class="hide-visually"> images</span>
+    <span class="icn-camera txt-quaternary" aria-hidden="true"></span>
+    </li>
+    </ul>
+    </div>
+    </div>
+    <div class="listing-content">
+    <h2 class="listing-title" itemprop="name">
+    Toyota Avensis 1.8 T3-X 5dr GENUINE LOW MILEAGE 2003
+    </h2>
+    <p class="listing-description truncate-paragraph
+    hide-fully-to-m" itemprop="description">
+    SILVER, 1 FORMER KEEPER, 12 MONTHS MOT, FULL SERVICE HISTORY, 9 STAMPS 
+    IN BOOK, HPI CLEAR WITH REPORT,, Adjustable Steering Column/Wheel, Air 
+    Bag Driver, Air Bag Knee, Air Bag Passenger, Air Bag Side, Alarm, Alloy 
+    Wheels, Central Door Locking, Climat
+    </p>
+    <ul class="listing-attributes inline-list hide-fully-to-m">
+    <li>
+    <span class="hide-visually">Year</span><span itemprop="releaseDate">2003</span>
+    </li>
+    <li>
+    <span class="hide-visually">Mileage</span><span itemprop="vehicleMileage">60,000 miles</span>
+    </li>
+    <li>
+    <span class="hide-visually">Engine size</span><span itemprop="vehicleEngineSize">1,794 cc</span>
+    </li>
+    <li>
+    <span class="hide-visually">Fuel type</span><span itemprop="vehicleFuelType">Petrol</span>
+    </li>
+    <li>
+    <span class="hide-visually">Seller type</span><span>Trade</span>
+    </li>
+    </ul>
+    <div class="listing-location" itemscope="" itemtype="http://schema.org/Place">
+    <span class="truncate-line" itemprop="name">
+    Birmingham, West Midlands
+    </span>
+    </div>
+    <strong class="listing-price txt-emphasis" itemprop="price">£2,499</strong>
+    <strong class="listing-posted-date txt-normal truncate-line" itemprop="adAge">
+    <span class="hide-visually">Ad posted </span>
+    Just now
+    </strong>
+    </div>
+    </a>
+    <span class="save-ad listing-save-ad" data-savead="channel:savead-1093080796">
+    <span class="hide-visually">Save this ad</span>
+    <span class="icn-star iconu-m txt-quaternary" aria-hidden="true"></span>
+    </span>
+    </article>
+    </li>
+    <li>
+    <article class="listing-maxi" itemscope="" itemtype="http://schema.org/Product" id="ad-featured-1093080520">
+    <a class="listing-link" href="/p/toyota/toyota-yaris-1.0-vvt-i-t2-3dr/1093080520" itemprop="url">
+    <div class="listing-side">
+    <div class="listing-thumbnail ">
+    <img src="{{ asset('bundles/acmedemo/images/result/_26_009.JPG') }}" data-lazy="http://i.ebayimg.com/00/s/NzY3WDEwMjQ=/z/eUIAAOSwAL9Ujsds/$_26.JPG" alt="" itemprop="image" class="hide-fully-no-js">
+    <noscript>
+    <img src="http://i.ebayimg.com/00/s/NzY3WDEwMjQ=/z/eUIAAOSwAL9Ujsds/$_26.JPG" alt="" itemprop="image"/>
+    </noscript>
+    </div>
+    <div class="listing-meta">
+    <ul class="inline-list txt-center">
+    <li>9<span class="hide-visually"> images</span>
+    <span class="icn-camera txt-quaternary" aria-hidden="true"></span>
+    </li>
+    </ul>
+    </div>
+    </div>
+    <div class="listing-content">
+    <h2 class="listing-title" itemprop="name">
+    Toyota Yaris 1.0 VVT-i T2 3dr
+    </h2>
+    <p class="listing-description truncate-paragraph
+    hide-fully-to-m" itemprop="description">
+    FULL MOT
+    2005 (05 reg), Hatchback
+    92,600 miles
+    Manual
+    1000cc
+    Petrol
+    Silver, VERY NICE AND CLEAN CAR, 12 months MOT, Excellent bodywork, 
+    Interior - Excellent Condition, Tyre condition Excellent, Stepless tilt 
+    adjustable steering column, Am/fm st
+    </p>
+    <ul class="listing-attributes inline-list hide-fully-to-m">
+    <li>
+    <span class="hide-visually">Year</span><span itemprop="releaseDate">2005</span>
+    </li>
+    <li>
+    <span class="hide-visually">Mileage</span><span itemprop="vehicleMileage">92,600 miles</span>
+    </li>
+    <li>
+    <span class="hide-visually">Engine size</span><span itemprop="vehicleEngineSize">998 cc</span>
+    </li>
+    <li>
+    <span class="hide-visually">Fuel type</span><span itemprop="vehicleFuelType">Petrol</span>
+    </li>
+    <li>
+    <span class="hide-visually">Seller type</span><span>Trade</span>
+    </li>
+    </ul>
+    <div class="listing-location" itemscope="" itemtype="http://schema.org/Place">
+    <span class="truncate-line" itemprop="name">
+    Leicester, Leicestershire
+    </span>
+    </div>
+    <strong class="listing-price txt-emphasis" itemprop="price">£1,695</strong>
+    <strong class="listing-posted-date txt-normal truncate-line" itemprop="adAge">
+    <span class="hide-visually">Ad posted </span>
+    6 mins ago
+    </strong>
+    </div>
+    </a>
+    <span class="save-ad listing-save-ad" data-savead="channel:savead-1093080520">
+    <span class="hide-visually">Save this ad</span>
+    <span class="icn-star iconu-m txt-quaternary" aria-hidden="true"></span>
+    </span>
+    </article>
+    </li>
+    <li>
+    <article class="listing-maxi" itemscope="" itemtype="http://schema.org/Product" id="ad-featured-1093080345">
+    <a class="listing-link" href="/p/toyota/bargain-%C2%A32495-2004-54-reg-toyota-avensis-1.8-vvt-i-t2-only-48000mls-mot-24-09-15/1093080345" itemprop="url">
+    <div class="listing-side">
+    <div class="listing-thumbnail ">
+    <img src="{{ asset('bundles/acmedemo/images/result/_26_005.JPG') }}" data-lazy="http://i.ebayimg.com/00/s/NDUyWDgwMA==/z/9eQAAOSwGvhUIZ0r/$_26.JPG" alt="" itemprop="image" class="hide-fully-no-js">
+    <noscript>
+    <img src="http://i.ebayimg.com/00/s/NDUyWDgwMA==/z/9eQAAOSwGvhUIZ0r/$_26.JPG" alt="" itemprop="image"/>
+    </noscript>
+    </div>
+    <div class="listing-meta">
+    <ul class="inline-list txt-center">
+    <li>8<span class="hide-visually"> images</span>
+    <span class="icn-camera txt-quaternary" aria-hidden="true"></span>
+    </li>
+    </ul>
+    </div>
+    </div>
+    <div class="listing-content">
+    <h2 class="listing-title" itemprop="name">
+    BARGAIN@£2495 2004 54 REG Toyota Avensis 1.8 VVT-i T2 ONLY 48000MLS MOT 24/09/15
+    </h2>
+    <p class="listing-description truncate-paragraph
+    hide-fully-to-m" itemprop="description">
+    Phone:0783 4754753
+    Silver GREY, ONLY 2 PREVIOUS OWNERS, MEGA LOW MILEAGE ONLY 48000MLS, MOT
+     24/09/2015, FULL SERVICE HISTORY, Metallic paint, ON BOARD TRIP 
+    COMPUTER, ABS, PAS, REAR LOAD COVER, REAR HEADRESTS, 2 KEYS, SPLIT FOLD 
+    REAR SEAT, 5 SPEED, 3
+    </p>
+    <ul class="listing-attributes inline-list hide-fully-to-m">
+    <li>
+    <span class="hide-visually">Year</span><span itemprop="releaseDate">2004</span>
+    </li>
+    <li>
+    <span class="hide-visually">Mileage</span><span itemprop="vehicleMileage">48,000 miles</span>
+    </li>
+    <li>
+    <span class="hide-visually">Engine size</span><span itemprop="vehicleEngineSize">1,794 cc</span>
+    </li>
+    <li>
+    <span class="hide-visually">Fuel type</span><span itemprop="vehicleFuelType">Petrol</span>
+    </li>
+    <li>
+    <span class="hide-visually">Seller type</span><span>Trade</span>
+    </li>
+    </ul>
+    <div class="listing-location" itemscope="" itemtype="http://schema.org/Place">
+    <span class="truncate-line" itemprop="name">
+    Southside, Glasgow
+    </span>
+    </div>
+    <strong class="listing-price txt-emphasis" itemprop="price">£2,495</strong>
+    <strong class="listing-posted-date txt-normal truncate-line" itemprop="adAge">
+    <span class="hide-visually">Ad posted </span>
+    7 mins ago
+    </strong>
+    </div>
+    </a>
+    <span class="save-ad listing-save-ad" data-savead="channel:savead-1093080345">
+    <span class="hide-visually">Save this ad</span>
+    <span class="icn-star iconu-m txt-quaternary" aria-hidden="true"></span>
+    </span>
+    </article>
+    </li>
+    <li>
+    <article class="listing-maxi" itemscope="" itemtype="http://schema.org/Product" id="ad-featured-1093079979">
+    <a class="listing-link" href="/p/toyota/toyota-avensis-2.0d4d-2004-spares-or-repairs-ideal-export/1093079979" itemprop="url">
+    <div class="listing-side">
+    <div class="listing-thumbnail ">
+    <img src="{{ asset('bundles/acmedemo/images/result/_26_012.JPG') }}" data-lazy="http://i.ebayimg.com/00/s/NjAwWDgwMA==/z/REUAAOSw2XFUjsb4/$_26.JPG" alt="" itemprop="image" class="hide-fully-no-js">
+    <noscript>
+    <img src="http://i.ebayimg.com/00/s/NjAwWDgwMA==/z/REUAAOSw2XFUjsb4/$_26.JPG" alt="" itemprop="image"/>
+    </noscript>
+    </div>
+    <div class="listing-meta">
+    <ul class="inline-list txt-center">
+    <li>9<span class="hide-visually"> images</span>
+    <span class="icn-camera txt-quaternary" aria-hidden="true"></span>
+    </li>
+    </ul>
+    </div>
+    </div>
+    <div class="listing-content">
+    <h2 class="listing-title" itemprop="name">
+    TOYOTA AVENSIS 2.0D4D 2004 SPARES OR REPAIRS + IDEAL EXPORT
+    </h2>
+    <p class="listing-description truncate-paragraph
+    hide-fully-to-m" itemprop="description">
+    2004 53 REG
+    TOYOTA AVENSIS 2.0 D4D
+    5 DOOR HATCHBACK
+    METALLIC GREY
+    MOT 27TH FEBRUARY 2015
+    SPARES OR REPAIRS OR EXPORT.
+    1. NO FITH GEAR + REAR SHOCKERS WEAK.
+    STARTS AND DRIVES GOOD FOR AGE AND 171k MILES. 3 OWNERS FROM NEW LAST OWNER
+    </p>
+    <ul class="listing-attributes inline-list hide-fully-to-m">
+    <li>
+    <span class="hide-visually">Year</span><span itemprop="releaseDate">2004</span>
+    </li>
+    <li>
+    <span class="hide-visually">Mileage</span><span itemprop="vehicleMileage">171,123 miles</span>
+    </li>
+    <li>
+    <span class="hide-visually">Engine size</span><span itemprop="vehicleEngineSize">1,998 cc</span>
+    </li>
+    <li>
+    <span class="hide-visually">Fuel type</span><span itemprop="vehicleFuelType">Diesel</span>
+    </li>
+    <li>
+    <span class="hide-visually">Seller type</span><span>Trade</span>
+    </li>
+    </ul>
+    <div class="listing-location" itemscope="" itemtype="http://schema.org/Place">
+    <span class="truncate-line" itemprop="name">
+    Tyseley, West Midlands
+    </span>
+    </div>
+    <strong class="listing-price txt-emphasis" itemprop="price">£800</strong>
+    <strong class="listing-posted-date txt-normal truncate-line" itemprop="adAge">
+    <span class="hide-visually">Ad posted </span>
+    10 mins ago
+    </strong>
+    </div>
+    </a>
+    <span class="save-ad listing-save-ad" data-savead="channel:savead-1093079979">
+    <span class="hide-visually">Save this ad</span>
+    <span class="icn-star iconu-m txt-quaternary" aria-hidden="true"></span>
+    </span>
+    </article>
+    </li>
+    <li>
+    <div class="ad-integrated-display">
+    <div id="integratedListing" data-display-ad=""><div style="border: 0pt none;" id="google_ads_iframe_/5144/gtr.cars/cars_6__container__"><iframe src="javascript:&quot;<html><body style='background:transparent'></body></html>&quot;" style="border: 0px none; vertical-align: bottom;" marginheight="0" marginwidth="0" scrolling="no" name="google_ads_iframe_/5144/gtr.cars/cars_6" id="google_ads_iframe_/5144/gtr.cars/cars_6" frameborder="0" height="250" width="300"></iframe></div><iframe src="javascript:&quot;<html><body style='background:transparent'></body></html>&quot;" style="border: 0px none; vertical-align: bottom; visibility: hidden; display: none;" marginheight="0" marginwidth="0" scrolling="no" name="google_ads_iframe_/5144/gtr.cars/cars_6__hidden__" id="google_ads_iframe_/5144/gtr.cars/cars_6__hidden__" frameborder="0" height="0" width="0"></iframe></div>
+    </div>
+    </li>
+    <li>
+    <article class="listing-maxi" itemscope="" itemtype="http://schema.org/Product" id="ad-featured-1093079670">
+    <a class="listing-link" href="/p/toyota/1998-toyota-land-cruiser-colorado-3.4-automatic-with-lpg-only-64p-l-8-seater-f.s.h/1093079670" itemprop="url">
+    <div class="listing-side">
+    <div class="listing-thumbnail ">
+    <img src="{{ asset('bundles/acmedemo/images/result/_26_004.JPG') }}" data-lazy="http://i.ebayimg.com/00/s/NTc2WDEwMjQ=/z/x1MAAOSwuMFUjsVj/$_26.JPG" alt="" itemprop="image" class="hide-fully-no-js">
+    <noscript>
+    <img src="http://i.ebayimg.com/00/s/NTc2WDEwMjQ=/z/x1MAAOSwuMFUjsVj/$_26.JPG" alt="" itemprop="image"/>
+    </noscript>
+    </div>
+    <div class="listing-meta">
+    <ul class="inline-list txt-center">
+    <li>9<span class="hide-visually"> images</span>
+    <span class="icn-camera txt-quaternary" aria-hidden="true"></span>
+    </li>
+    </ul>
+    </div>
+    </div>
+    <div class="listing-content">
+    <h2 class="listing-title" itemprop="name">
+    1998 TOYOTA LAND CRUISER COLORADO 3.4 AUTOMATIC WITH LPG ONLY 64p/L 8 SEATER F.S.H
+    </h2>
+    <p class="listing-description truncate-paragraph
+    hide-fully-to-m" itemprop="description">
+    TOYOTA LAND CRUISER COLORADO 3.4 FOR SALE WITH
+    PERFECT 178bhp ENGINE
+    PERFECT AUTO GEARBOX ( smooth change in all gear )
+    NEW TYRES ,GOOD ALLOY'S, A1 BREAKS AND SUSPENSIONS
+    THE BODY IS NOT IN BAD CONDITION FEW SCRATCHES BUT NOTHING MAJOR
+    </p>
+    <ul class="listing-attributes inline-list hide-fully-to-m">
+    <li>
+    <span class="hide-visually">Year</span><span itemprop="releaseDate">1998</span>
+    </li>
+    <li>
+    <span class="hide-visually">Mileage</span><span itemprop="vehicleMileage">137,000 miles</span>
+    </li>
+    <li>
+    <span class="hide-visually">Engine size</span><span itemprop="vehicleEngineSize">3,378 cc</span>
+    </li>
+    <li>
+    <span class="hide-visually">Fuel type</span><span itemprop="vehicleFuelType">Petrol</span>
+    </li>
+    </ul>
+    <div class="listing-location" itemscope="" itemtype="http://schema.org/Place">
+    <span class="truncate-line" itemprop="name">
+    Newham, London
+    </span>
+    </div>
+    <strong class="listing-price txt-emphasis" itemprop="price">£2,500</strong>
+    <strong class="listing-posted-date txt-normal truncate-line" itemprop="adAge">
+    <span class="hide-visually">Ad posted </span>
+    11 mins ago
+    </strong>
+    </div>
+    </a>
+    <span class="save-ad listing-save-ad" data-savead="channel:savead-1093079670">
+    <span class="hide-visually">Save this ad</span>
+    <span class="icn-star iconu-m txt-quaternary" aria-hidden="true"></span>
+    </span>
+    </article>
+    </li>
+    <li>
+    <article class="listing-maxi" itemscope="" itemtype="http://schema.org/Product" id="ad-featured-1093079749">
+    <a class="listing-link" href="/p/toyota/2007-toyota-yaris-sr-car-finance-obtainable-for-everyone/1093079749" itemprop="url">
+    <div class="listing-side">
+    <div class="listing-thumbnail ">
+    <img src="{{ asset('bundles/acmedemo/images/result/_26_003.JPG') }}" data-lazy="http://i.ebayimg.com/00/s/MzM4WDM3OQ==/z/kG8AAOSw0vBUjsYo/$_26.JPG" alt="" itemprop="image" class="hide-fully-no-js">
+    <noscript>
+    <img src="http://i.ebayimg.com/00/s/MzM4WDM3OQ==/z/kG8AAOSw0vBUjsYo/$_26.JPG" alt="" itemprop="image"/>
+    </noscript>
+    </div>
+    <div class="listing-meta">
+    <ul class="inline-list txt-center">
+    <li>6<span class="hide-visually"> images</span>
+    <span class="icn-camera txt-quaternary" aria-hidden="true"></span>
+    </li>
+    <li>1<span class="hide-visually"> videos</span>
+    <span class="icn-video txt-quaternary" aria-hidden="true"></span>
+    </li>
+    </ul>
+    </div>
+    </div>
+    <div class="listing-content">
+    <h2 class="listing-title" itemprop="name">
+    2007 , Toyota, YARIS SR – Car Finance, Obtainable for Everyone
+    </h2>
+    <p class="listing-description truncate-paragraph
+    hide-fully-to-m" itemprop="description">
+    You can purchase this vehicle with a deposit of only £700 – No credit 
+    scoring no problem. CCJs, defaults, arrears or bad credit history, No 
+    problem. Same day approval
+    Apply for finance at www. clchillingdon. co. uk
+    How does it work?
+    CHOOSE Y
+    </p>
+    <ul class="listing-attributes inline-list hide-fully-to-m">
+    <li>
+    <span class="hide-visually">Year</span><span itemprop="releaseDate">2007</span>
+    </li>
+    <li>
+    <span class="hide-visually">Mileage</span><span itemprop="vehicleMileage">61,049 miles</span>
+    </li>
+    <li>
+    <span class="hide-visually">Engine size</span><span itemprop="vehicleEngineSize">1,798 cc</span>
+    </li>
+    <li>
+    <span class="hide-visually">Fuel type</span><span itemprop="vehicleFuelType">Petrol</span>
+    </li>
+    <li>
+    <span class="hide-visually">Seller type</span><span>Trade</span>
+    </li>
+    </ul>
+    <div class="listing-location" itemscope="" itemtype="http://schema.org/Place">
+    <span class="truncate-line" itemprop="name">
+    Iver, Buckinghamshire
+    </span>
+    </div>
+    <strong class="listing-price txt-emphasis" itemprop="price">£700</strong>
+    <strong class="listing-posted-date txt-normal truncate-line" itemprop="adAge">
+    <span class="hide-visually">Ad posted </span>
+    12 mins ago
+    </strong>
+    </div>
+    </a>
+    <span class="save-ad listing-save-ad" data-savead="channel:savead-1093079749">
+    <span class="hide-visually">Save this ad</span>
+    <span class="icn-star iconu-m txt-quaternary" aria-hidden="true"></span>
+    </span>
+    </article>
+    </li>
+    <li>
+    <article class="listing-maxi" itemscope="" itemtype="http://schema.org/Product" id="ad-featured-1081506350">
+    <a class="listing-link" href="/p/toyota/rare-5-door-toyota-corolla-1.8-t-sport-190-bhp-new-mot-new-front-tyres-drives-perfect/1081506350" itemprop="url">
+    <div class="listing-side">
+    <div class="listing-thumbnail ">
+    <img src="{{ asset('bundles/acmedemo/images/result/_26_025.JPG') }}" data-lazy="http://i.ebayimg.com/00/s/NzY4WDEwMjQ=/z/VhEAAOSwQItUGsWp/$_26.JPG" alt="" itemprop="image" class="hide-fully-no-js">
+    <noscript>
+    <img src="http://i.ebayimg.com/00/s/NzY4WDEwMjQ=/z/VhEAAOSwQItUGsWp/$_26.JPG" alt="" itemprop="image"/>
+    </noscript>
+    </div>
+    <div class="listing-meta">
+    <ul class="inline-list txt-center">
+    <li>6<span class="hide-visually"> images</span>
+    <span class="icn-camera txt-quaternary" aria-hidden="true"></span>
+    </li>
+    </ul>
+    </div>
+    </div>
+    <div class="listing-content">
+    <h2 class="listing-title" itemprop="name">
+    Rare 5 Door Toyota Corolla 1.8 T Sport 190 bhp New MOT New front tyres drives perfect
+    </h2>
+    <p class="listing-description truncate-paragraph
+    hide-fully-to-m" itemprop="description">
+    Rare 5-Door Toyota TSport VVTLI 190 bhp So please check your INSURANCE 
+    only 2 previous owners from New MoT for 1 year 83K recent new clutch a 
+    few marks here and there in keeping with age nothing serious drives A1. I
+     teach in the evenings now after
+    </p>
+    <ul class="listing-attributes inline-list hide-fully-to-m">
+    <li>
+    <span class="hide-visually">Year</span><span itemprop="releaseDate">2003</span>
+    </li>
+    <li>
+    <span class="hide-visually">Mileage</span><span itemprop="vehicleMileage">83,000 miles</span>
+    </li>
+    <li>
+    <span class="hide-visually">Engine size</span><span itemprop="vehicleEngineSize">1,796 cc</span>
+    </li>
+    <li>
+    <span class="hide-visually">Fuel type</span><span itemprop="vehicleFuelType">Petrol</span>
+    </li>
+    </ul>
+    <div class="listing-location" itemscope="" itemtype="http://schema.org/Place">
+    <span class="truncate-line" itemprop="name">
+    Gravesend, Kent
+    </span>
+    </div>
+    <strong class="listing-price txt-emphasis" itemprop="price">£1,750</strong>
+    <strong class="listing-posted-date txt-normal truncate-line" itemprop="adAge">
+    <span class="hide-visually">Ad posted </span>
+    14 mins ago
+    </strong>
+    </div>
+    </a>
+    <span class="save-ad listing-save-ad" data-savead="channel:savead-1081506350">
+    <span class="hide-visually">Save this ad</span>
+    <span class="icn-star iconu-m txt-quaternary" aria-hidden="true"></span>
+    </span>
+    </article>
+    </li>
+    <li>
+    <article class="listing-maxi" itemscope="" itemtype="http://schema.org/Product" id="ad-featured-1093079331">
+    <a class="listing-link" href="/p/toyota/2008-toyota-aygo-vvt-i-semi-automatic-mot-october-2015-no-advisories/1093079331" itemprop="url">
+    <div class="listing-side">
+    <div class="listing-thumbnail ">
+    <img src="{{ asset('bundles/acmedemo/images/result/_26_018.JPG') }}" data-lazy="http://i.ebayimg.com/00/s/NzY4WDEwMjQ=/z/ukYAAOSwkNZUjsVJ/$_26.JPG" alt="" itemprop="image" class="hide-fully-no-js">
+    <noscript>
+    <img src="http://i.ebayimg.com/00/s/NzY4WDEwMjQ=/z/ukYAAOSwkNZUjsVJ/$_26.JPG" alt="" itemprop="image"/>
+    </noscript>
+    </div>
+    <div class="listing-meta">
+    <ul class="inline-list txt-center">
+    <li>9<span class="hide-visually"> images</span>
+    <span class="icn-camera txt-quaternary" aria-hidden="true"></span>
+    </li>
+    </ul>
+    </div>
+    </div>
+    <div class="listing-content">
+    <h2 class="listing-title" itemprop="name">
+    2008 TOYOTA AYGO VVT-I SEMI AUTOMATIC - MOT OCTOBER 2015 NO ADVISORIES
+    </h2>
+    <p class="listing-description truncate-paragraph
+    hide-fully-to-m" itemprop="description">
+    2008 Toyota Aygo 1.0 VVT-i Semi Automatic
+    MOT 28th October 2015
+    Tax is only £20 a year!
+    HPI Clear (Report Included)
+    Extremely economical to run (65 MPG according to Toyota)
+    This car has had 2 company owners since new so although I
+    </p>
+    <ul class="listing-attributes inline-list hide-fully-to-m">
+    <li>
+    <span class="hide-visually">Year</span><span itemprop="releaseDate">2008</span>
+    </li>
+    <li>
+    <span class="hide-visually">Mileage</span><span itemprop="vehicleMileage">97,000 miles</span>
+    </li>
+    <li>
+    <span class="hide-visually">Engine size</span><span itemprop="vehicleEngineSize">998 cc</span>
+    </li>
+    <li>
+    <span class="hide-visually">Fuel type</span><span itemprop="vehicleFuelType">Petrol</span>
+    </li>
+    <li>
+    <span class="hide-visually">Seller type</span><span>Trade</span>
+    </li>
+    </ul>
+    <div class="listing-location" itemscope="" itemtype="http://schema.org/Place">
+    <span class="truncate-line" itemprop="name">
+    Blandford Forum, Dorset
+    </span>
+    </div>
+    <strong class="listing-price txt-emphasis" itemprop="price">£2,195</strong>
+    <strong class="listing-posted-date txt-normal truncate-line" itemprop="adAge">
+    <span class="hide-visually">Ad posted </span>
+    15 mins ago
+    </strong>
+    </div>
+    </a>
+    <span class="save-ad listing-save-ad" data-savead="channel:savead-1093079331">
+    <span class="hide-visually">Save this ad</span>
+    <span class="icn-star iconu-m txt-quaternary" aria-hidden="true"></span>
+    </span>
+    </article>
+    </li>
+    <li>
+    <article class="listing-maxi" itemscope="" itemtype="http://schema.org/Product" id="ad-featured-1093079329">
+    <a class="listing-link" href="/p/toyota/toyota-yaris-1.3-gls-5dr-1-former-owner-fsh/1093079329" itemprop="url">
+    <div class="listing-side">
+    <div class="listing-thumbnail ">
+    <img src="{{ asset('bundles/acmedemo/images/result/_26_017.JPG') }}" data-lazy="http://i.ebayimg.com/00/s/NzY4WDEwMjQ=/z/6XQAAOSwiCRUjsV7/$_26.JPG" alt="" itemprop="image" class="hide-fully-no-js">
+    <noscript>
+    <img src="http://i.ebayimg.com/00/s/NzY4WDEwMjQ=/z/6XQAAOSwiCRUjsV7/$_26.JPG" alt="" itemprop="image"/>
+    </noscript>
+    </div>
+    <div class="listing-meta">
+    <ul class="inline-list txt-center">
+    <li>9<span class="hide-visually"> images</span>
+    <span class="icn-camera txt-quaternary" aria-hidden="true"></span>
+    </li>
+    </ul>
+    </div>
+    </div>
+    <div class="listing-content">
+    <h2 class="listing-title" itemprop="name">
+    Toyota Yaris 1.3 GLS 5dr 1 FORMER OWNER FSH
+    </h2>
+    <p class="listing-description truncate-paragraph
+    hide-fully-to-m" itemprop="description">
+    SILVER, 1 FORMER KEEPER, 12 MONTHS MOT, FULL SERVICE HISTORY, 11 STAMPS 
+    IN BOOK, GENUINE MILEAGE,, Adjustable Steering Column/Wheel, Air Bag 
+    Driver, Air Bag Passenger, Air-Conditioning, Central Door Locking, 
+    Computer, Electric Windows, Head Restraint
+    </p>
+    <ul class="listing-attributes inline-list hide-fully-to-m">
+    <li>
+    <span class="hide-visually">Year</span><span itemprop="releaseDate">2002</span>
+    </li>
+    <li>
+    <span class="hide-visually">Mileage</span><span itemprop="vehicleMileage">82,000 miles</span>
+    </li>
+    <li>
+    <span class="hide-visually">Engine size</span><span itemprop="vehicleEngineSize">1,299 cc</span>
+    </li>
+    <li>
+    <span class="hide-visually">Fuel type</span><span itemprop="vehicleFuelType">Petrol</span>
+    </li>
+    <li>
+    <span class="hide-visually">Seller type</span><span>Trade</span>
+    </li>
+    </ul>
+    <div class="listing-location" itemscope="" itemtype="http://schema.org/Place">
+    <span class="truncate-line" itemprop="name">
+    Birmingham, West Midlands
+    </span>
+    </div>
+    <strong class="listing-price txt-emphasis" itemprop="price">£1,499</strong>
+    <strong class="listing-posted-date txt-normal truncate-line" itemprop="adAge">
+    <span class="hide-visually">Ad posted </span>
+    15 mins ago
+    </strong>
+    </div>
+    </a>
+    <span class="save-ad listing-save-ad" data-savead="channel:savead-1093079329">
+    <span class="hide-visually">Save this ad</span>
+    <span class="icn-star iconu-m txt-quaternary" aria-hidden="true"></span>
+    </span>
+    </article>
+    </li>
+    <li>
+    <article class="listing-maxi" itemscope="" itemtype="http://schema.org/Product" id="ad-featured-1093078938">
+    <a class="listing-link" href="/p/toyota/2007-toyota-yaris-1.3-tr-1-owner-8-stamp-full-history-vgc/1093078938" itemprop="url">
+    <div class="listing-side">
+    <div class="listing-thumbnail ">
+    <img src="{{ asset('bundles/acmedemo/images/result/_26_030.JPG') }}" data-lazy="http://i.ebayimg.com/00/s/NDUwWDYwMA==/z/-NYAAOSwD0lUjsUj/$_26.JPG" alt="" itemprop="image" class="hide-fully-no-js">
+    <noscript>
+    <img src="http://i.ebayimg.com/00/s/NDUwWDYwMA==/z/-NYAAOSwD0lUjsUj/$_26.JPG" alt="" itemprop="image"/>
+    </noscript>
+    </div>
+    <div class="listing-meta">
+    <ul class="inline-list txt-center">
+    <li>8<span class="hide-visually"> images</span>
+    <span class="icn-camera txt-quaternary" aria-hidden="true"></span>
+    </li>
+    </ul>
+    </div>
+    </div>
+    <div class="listing-content">
+    <h2 class="listing-title" itemprop="name">
+    2007 TOYOTA YARIS 1.3 TR **1 OWNER** 8 STAMP FULL HISTORY VGC
+    </h2>
+    <p class="listing-description truncate-paragraph
+    hide-fully-to-m" itemprop="description">
+    ADDRESS: CHAPMAN STREET E1 2PH SHADWELL DLR OR TUBE
+    -------------------------------------------------------------------------
+    2007 TOYOTA YARIS COLOUR COLLECTION
+    1.3cc
+    5 door hatchback
+    5 speed manual
+    1 owner
+    78K genuine mileage
+    8
+    </p>
+    <ul class="listing-attributes inline-list hide-fully-to-m">
+    <li>
+    <span class="hide-visually">Year</span><span itemprop="releaseDate">2007</span>
+    </li>
+    <li>
+    <span class="hide-visually">Mileage</span><span itemprop="vehicleMileage">78,000 miles</span>
+    </li>
+    <li>
+    <span class="hide-visually">Engine size</span><span itemprop="vehicleEngineSize">1,296 cc</span>
+    </li>
+    <li>
+    <span class="hide-visually">Fuel type</span><span itemprop="vehicleFuelType">Petrol</span>
+    </li>
+    </ul>
+    <div class="listing-location" itemscope="" itemtype="http://schema.org/Place">
+    <span class="truncate-line" itemprop="name">
+    Docklands, London
+    </span>
+    </div>
+    <strong class="listing-price txt-emphasis" itemprop="price">£3,695</strong>
+    <strong class="listing-posted-date txt-normal truncate-line" itemprop="adAge">
+    <span class="hide-visually">Ad posted </span>
+    18 mins ago
+    </strong>
+    </div>
+    </a>
+    <span class="save-ad listing-save-ad" data-savead="channel:savead-1093078938">
+    <span class="hide-visually">Save this ad</span>
+    <span class="icn-star iconu-m txt-quaternary" aria-hidden="true"></span>
+    </span>
+    </article>
+    </li>
+    <li>
+    <article class="listing-maxi" itemscope="" itemtype="http://schema.org/Product" id="ad-featured-1093078817">
+    <a class="listing-link" href="/p/toyota/59-toyota-coroll-averso-tr-d4-d-diesel-7-seater-1-owner-from-new-/1093078817" itemprop="url">
+    <div class="listing-side">
+    <div class="listing-thumbnail ">
+    <img src="{{ asset('bundles/acmedemo/images/result/_26_024.JPG') }}" data-lazy="http://i.ebayimg.com/00/s/NDUwWDYwMA==/z/HbcAAOSw2XFUjsTP/$_26.JPG" alt="" itemprop="image" class="hide-fully-no-js">
+    <noscript>
+    <img src="http://i.ebayimg.com/00/s/NDUwWDYwMA==/z/HbcAAOSw2XFUjsTP/$_26.JPG" alt="" itemprop="image"/>
+    </noscript>
+    </div>
+    <div class="listing-meta">
+    <ul class="inline-list txt-center">
+    <li>9<span class="hide-visually"> images</span>
+    <span class="icn-camera txt-quaternary" aria-hidden="true"></span>
+    </li>
+    </ul>
+    </div>
+    </div>
+    <div class="listing-content">
+    <h2 class="listing-title" itemprop="name">
+    59 TOYOTA COROLL AVERSO TR D4-D DIESEL 7 SEATER 1 OWNER FROM NEW***
+    </h2>
+    <p class="listing-description truncate-paragraph
+    hide-fully-to-m" itemprop="description">
+    ADDRESS: CHAPMAN STREET E1 2PH SHADWELL DLR OR TUBE
+    -------------------------------------------------------------------------
+    59 plate toyota corolla verso TR d4-d
+    metallic blue
+    7 seater /mpv /manual
+    1 owner from brand new
+    genuine mil
+    </p>
+    <ul class="listing-attributes inline-list hide-fully-to-m">
+    <li>
+    <span class="hide-visually">Year</span><span itemprop="releaseDate">2009</span>
+    </li>
+    <li>
+    <span class="hide-visually">Mileage</span><span itemprop="vehicleMileage">89,000 miles</span>
+    </li>
+    <li>
+    <span class="hide-visually">Engine size</span><span itemprop="vehicleEngineSize">1,998 cc</span>
+    </li>
+    <li>
+    <span class="hide-visually">Fuel type</span><span itemprop="vehicleFuelType">Diesel</span>
+    </li>
+    </ul>
+    <div class="listing-location" itemscope="" itemtype="http://schema.org/Place">
+    <span class="truncate-line" itemprop="name">
+    Docklands, London
+    </span>
+    </div>
+    <strong class="listing-price txt-emphasis" itemprop="price">£6,795</strong>
+    <strong class="listing-posted-date txt-normal truncate-line" itemprop="adAge">
+    <span class="hide-visually">Ad posted </span>
+    19 mins ago
+    </strong>
+    </div>
+    </a>
+    <span class="save-ad listing-save-ad" data-savead="channel:savead-1093078817">
+    <span class="hide-visually">Save this ad</span>
+    <span class="icn-star iconu-m txt-quaternary" aria-hidden="true"></span>
+    </span>
+    </article>
+    </li>
+    <li>
+    <article class="listing-maxi" itemscope="" itemtype="http://schema.org/Product" id="ad-featured-1093078661">
+    <a class="listing-link" href="/p/toyota/2005-toyota-yaris-colour-collection-998-litre-great-little-car/1093078661" itemprop="url">
+    <div class="listing-side">
+    <div class="listing-thumbnail ">
+    <img src="{{ asset('bundles/acmedemo/images/result/_26_010.JPG') }}" data-lazy="http://i.ebayimg.com/00/s/NDUwWDYwMA==/z/P3YAAOSwAL9UjsSW/$_26.JPG" alt="" itemprop="image" class="hide-fully-no-js">
+    <noscript>
+    <img src="http://i.ebayimg.com/00/s/NDUwWDYwMA==/z/P3YAAOSwAL9UjsSW/$_26.JPG" alt="" itemprop="image"/>
+    </noscript>
+    </div>
+    <div class="listing-meta">
+    <ul class="inline-list txt-center">
+    <li>8<span class="hide-visually"> images</span>
+    <span class="icn-camera txt-quaternary" aria-hidden="true"></span>
+    </li>
+    </ul>
+    </div>
+    </div>
+    <div class="listing-content">
+    <h2 class="listing-title" itemprop="name">
+    2005 TOYOTA YARIS COLOUR COLLECTION 998 LITRE GREAT LITTLE CAR
+    </h2>
+    <p class="listing-description truncate-paragraph
+    hide-fully-to-m" itemprop="description">
+    ADDRESS: CHAPMAN STREET E1 2PH SHADWELL DLR OR TUBE
+    -------------------------------------------------------------------------
+    2005 toyota yaris colour collection
+    998 cc
+    60K MILEAGE WARRANTED
+    ALL PREVIOUS MOT'S
+    5 speed manual
+    5 door
+    </p>
+    <ul class="listing-attributes inline-list hide-fully-to-m">
+    <li>
+    <span class="hide-visually">Year</span><span itemprop="releaseDate">2005</span>
+    </li>
+    <li>
+    <span class="hide-visually">Mileage</span><span itemprop="vehicleMileage">60,000 miles</span>
+    </li>
+    <li>
+    <span class="hide-visually">Engine size</span><span itemprop="vehicleEngineSize">998 cc</span>
+    </li>
+    <li>
+    <span class="hide-visually">Fuel type</span><span itemprop="vehicleFuelType">Petrol</span>
+    </li>
+    </ul>
+    <div class="listing-location" itemscope="" itemtype="http://schema.org/Place">
+    <span class="truncate-line" itemprop="name">
+    Docklands, London
+    </span>
+    </div>
+    <strong class="listing-price txt-emphasis" itemprop="price">£1,895</strong>
+    <strong class="listing-posted-date txt-normal truncate-line" itemprop="adAge">
+    <span class="hide-visually">Ad posted </span>
+    20 mins ago
+    </strong>
+    </div>
+    </a>
+    <span class="save-ad listing-save-ad" data-savead="channel:savead-1093078661">
+    <span class="hide-visually">Save this ad</span>
+    <span class="icn-star iconu-m txt-quaternary" aria-hidden="true"></span>
+    </span>
+    </article>
+    </li>
+    <li>
+    <article class="listing-maxi" itemscope="" itemtype="http://schema.org/Product" id="ad-featured-1079029225">
+    <a class="listing-link" href="/p/toyota/-fantastic-1.2-fabia-silverline-full-service-history-/1079029225" itemprop="url">
+    <div class="listing-side">
+    <div class="listing-thumbnail ">
+    <img src="{{ asset('bundles/acmedemo/images/result/_26_020.JPG') }}" data-lazy="http://i.ebayimg.com/00/s/NzY4WDEwMjQ=/z/kCwAAOSwF1dUPqG8/$_26.JPG" alt="" itemprop="image" class="hide-fully-no-js">
+    <noscript>
+    <img src="http://i.ebayimg.com/00/s/NzY4WDEwMjQ=/z/kCwAAOSwF1dUPqG8/$_26.JPG" alt="" itemprop="image"/>
+    </noscript>
+    </div>
+    <div class="listing-meta">
+    <ul class="inline-list txt-center">
+    <li>9<span class="hide-visually"> images</span>
+    <span class="icn-camera txt-quaternary" aria-hidden="true"></span>
+    </li>
+    </ul>
+    </div>
+    </div>
+    <div class="listing-content">
+    <h2 class="listing-title" itemprop="name">
+    **FANTASTIC 1.2 FABIA SILVERLINE - FULL SERVICE HISTORY**
+    </h2>
+    <p class="listing-description truncate-paragraph
+    hide-fully-to-m" itemprop="description">
+    EXCELLENT CONDITION INSIDE/OUT AND DRIVES SUPERB. INSURANCE GROUP 2, IT 
+    HAS MOT AND FULL SERVICE HISTORY (10K, 21K, 29K, 40K, 50K, 58K, 70K, 
+    78K, 80K, 91K) AND HAS THE EXTREMELY ECONOMICAL VOLKSWAGEN 1198CC 
+    ENGINE. Alloy wheels, Electric windows, Po
+    </p>
+    <ul class="listing-attributes inline-list hide-fully-to-m">
+    <li>
+    <span class="hide-visually">Year</span><span itemprop="releaseDate">2003</span>
+    </li>
+    <li>
+    <span class="hide-visually">Mileage</span><span itemprop="vehicleMileage">95,250 miles</span>
+    </li>
+    <li>
+    <span class="hide-visually">Engine size</span><span itemprop="vehicleEngineSize">1,198 cc</span>
+    </li>
+    <li>
+    <span class="hide-visually">Fuel type</span><span itemprop="vehicleFuelType">Petrol</span>
+    </li>
+    </ul>
+    <div class="listing-location" itemscope="" itemtype="http://schema.org/Place">
+    <span class="truncate-line" itemprop="name">
+    Luton, Bedfordshire
+    </span>
+    </div>
+    <strong class="listing-price txt-emphasis" itemprop="price">£1,275</strong>
+    <strong class="listing-posted-date txt-normal truncate-line" itemprop="adAge">
+    <span class="hide-visually">Ad posted </span>
+    21 mins ago
+    </strong>
+    </div>
+    </a>
+    <span class="save-ad listing-save-ad" data-savead="channel:savead-1079029225">
+    <span class="hide-visually">Save this ad</span>
+    <span class="icn-star iconu-m txt-quaternary" aria-hidden="true"></span>
+    </span>
+    </article>
+    </li>
+    <li>
+    <article class="listing-maxi" itemscope="" itemtype="http://schema.org/Product" id="ad-featured-1093078604">
+    <a class="listing-link" href="/p/toyota/toyota-yaris-1.3i-blue-54-reg-52000-miles-2-lady-owners/1093078604" itemprop="url">
+    <div class="listing-side">
+    <div class="listing-thumbnail ">
+    <img src="{{ asset('bundles/acmedemo/images/result/_26_015.JPG') }}" data-lazy="http://i.ebayimg.com/00/s/NjgyWDEwMjQ=/z/BKQAAOSw7ThUjsQN/$_26.JPG" alt="" itemprop="image" class="hide-fully-no-js">
+    <noscript>
+    <img src="http://i.ebayimg.com/00/s/NjgyWDEwMjQ=/z/BKQAAOSw7ThUjsQN/$_26.JPG" alt="" itemprop="image"/>
+    </noscript>
+    </div>
+    <div class="listing-meta">
+    <ul class="inline-list txt-center">
+    <li>7<span class="hide-visually"> images</span>
+    <span class="icn-camera txt-quaternary" aria-hidden="true"></span>
+    </li>
+    </ul>
+    </div>
+    </div>
+    <div class="listing-content">
+    <h2 class="listing-title" itemprop="name">
+    Toyota Yaris 1.3i Blue , 54-Reg , ---- 52000 Miles ---- , 2 Lady Owners
+    </h2>
+    <p class="listing-description truncate-paragraph
+    hide-fully-to-m" itemprop="description">
+    TOYOTA YARIS 1.3i BLUE , 54-Reg ,
+    LOW MILEAGE OF 52000 MILES ,
+    2 LADY OWNERS FROM NEW ,
+    Power Steering
+    Remote Central Locking with Spare Keys
+    Electric Windows
+    ABS
+    Alloy Wheels
+    MOT November 2015
+    CD Stereo
+    Immaculate Condition T
+    </p>
+    <ul class="listing-attributes inline-list hide-fully-to-m">
+    <li>
+    <span class="hide-visually">Year</span><span itemprop="releaseDate">2004</span>
+    </li>
+    <li>
+    <span class="hide-visually">Mileage</span><span itemprop="vehicleMileage">52,000 miles</span>
+    </li>
+    <li>
+    <span class="hide-visually">Engine size</span><span itemprop="vehicleEngineSize">1,299 cc</span>
+    </li>
+    <li>
+    <span class="hide-visually">Fuel type</span><span itemprop="vehicleFuelType">Petrol</span>
+    </li>
+    </ul>
+    <div class="listing-location" itemscope="" itemtype="http://schema.org/Place">
+    <span class="truncate-line" itemprop="name">
+    Cumbernauld, Glasgow
+    </span>
+    </div>
+    <strong class="listing-price txt-emphasis" itemprop="price">£1,950</strong>
+    <strong class="listing-posted-date txt-normal truncate-line" itemprop="adAge">
+    <span class="hide-visually">Ad posted </span>
+    21 mins ago
+    </strong>
+    </div>
+    </a>
+    <span class="save-ad listing-save-ad" data-savead="channel:savead-1093078604">
+    <span class="hide-visually">Save this ad</span>
+    <span class="icn-star iconu-m txt-quaternary" aria-hidden="true"></span>
+    </span>
+    </article>
+    </li>
+    </ul>
+    </div>
+    <div class="grid-col-12 grid-col-m-7 grid-col-xl-12 ecn-display-block" role="complementary">
+    <h3 class="sponsored-title">Sponsored Links</h3>
+    <div>
+    <div id="slot15"></div>
+    </div>
+    </div>
+    <aside class="grid-col-m-5 hide-fully-to-m hide-fully-from-xl space-phn
+    srp-mpu-btm" role="complementary">
+    <div class="txt-right srp-mpu space-mbs" id="baseMpu" data-display-ad=""></div>
+    </aside>
+    <div class="grid-col-12">
+    <nav class="pagination txt-center " data-pagination="pagination-main-srp-1">
+    <ul class="btn-group">
+    <li class="page-first hide-fully-to-l is-active">
+    <a href="/cars/uk/toyota" class="page">
+    1
+    </a>
+    </li>
+    <li class="dots hide-fully-from-l">
+    <form action="" class="to-select-wrapper" name="frm-pagination-sel-1" data-form-master="refine-panel" novalidate="">
+    Page:
+    <span class="transparent-select">
+    <a href="#" class="page btn-more with-sel" data-broadcast="pagination-main-srp-1
+    .formOpen">1 <span class="icn-dropdown iconu-xs" aria-hidden="true"></span></a>
+    </span>of 184
+    </form>
+    </li>
+    <li class="hide-fully-to-l">
+    <a href="/cars/uk/toyota/page2" class="page">
+    2
+    </a>
+    </li>
+    <li class="hide-fully-to-l">
+    <a href="/cars/uk/toyota/page3" class="page">
+    3
+    </a>
+    </li>
+    <li class="hide-fully-to-l">
+    <a href="/cars/uk/toyota/page4" class="page">
+    4
+    </a>
+    </li>
+    <li class="hide-fully-to-l">
+    <a href="/cars/uk/toyota/page5" class="page">
+    5
+    </a>
+    </li>
+    <li class="hide-fully-to-l">
+    <a href="/cars/uk/toyota/page6" class="page">
+    6
+    </a>
+    </li>
+    <li class="dots hide-fully-to-l">
+    <form action="" class="to-select-wrapper" name="frm-pagination-2-1" data-form-master="refine-panel" novalidate="">
+    <span class="transparent-select">
+    <a href="#" class="page btn-more" data-broadcast="pagination-main-srp-1.formOpen">...</a>
+    </span>
+    </form>
+    </li>
+    <li class="page-last hide-fully-to-l">
+    <a href="/cars/uk/toyota/page184" class="page">
+    184
+    </a>
+    </li>
+    <li class="next"><a href="/cars/uk/toyota/page2" class="btn-secondary" title="Next page">Next
+    <span class="icn-chevron-r iconu-s" aria-hidden="true"></span></a></li>
+    <li class="frm-more" aria-hidden="true" data-pagiantion="pagination-main-srp-1">
+    <form method="get" action="" name="frm-goto-1" class="frm-goto" novalidate="" data-form-master="refine-panel">
+    <div class="form-element">
+    <label for="fld-pagenumber">Go to</label>
+    <input id="fld-pagenumber" pattern="[0-9]*" inputmode="numeric" min="1" max="184" value="1" data-clearinput="false" name="page" class="only-integers" title="Enter page number" data-number-of-pages="184" autofocus="" required="" data-validation-rules="isInRange isNotEmpty" data-validation-isnotempty-error="&lt;span class='set-left'&gt;Please enter a page&nbsp;
+    &lt;/span&gt;&lt;span class='set-left'&gt;between 1 and 184&lt;/span&gt;" data-validation-isinrange-error="&lt;span class='set-left'&gt;Please enter a page&nbsp;
+    &lt;/span&gt;&lt;span class='set-left'&gt;between 1 and 184&lt;/span&gt;" type="number">
+    of <b>184</b>
+    <button type="submit" class="go">Go</button>
+    <button type="button" class="btn btn-cancel" data-broadcast="pagination-main-srp-1.formClose" title="Cancel">
+    <span class="icn-clear" aria-hidden="true"></span></button>
+    </div>
+    </form>
+    </li>
+    </ul>
+    </nav> </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <aside class="grid-col-12">
+    <div class="ad-text-link space-mbxs" id="textLinkBase" data-display-ad=""><div style="border: 0pt none;" id="google_ads_iframe_/5144/gtr.cars/cars_4__container__"><iframe src="javascript:&quot;<html><body style='background:transparent'></body></html>&quot;" style="border: 0px none; vertical-align: bottom;" marginheight="0" marginwidth="0" scrolling="no" name="google_ads_iframe_/5144/gtr.cars/cars_4" id="google_ads_iframe_/5144/gtr.cars/cars_4" frameborder="0" height="35" width="665"></iframe></div><iframe src="javascript:&quot;<html><body style='background:transparent'></body></html>&quot;" style="border: 0px none; vertical-align: bottom; visibility: hidden; display: none;" marginheight="0" marginwidth="0" scrolling="no" name="google_ads_iframe_/5144/gtr.cars/cars_4__hidden__" id="google_ads_iframe_/5144/gtr.cars/cars_4__hidden__" frameborder="0" height="0" width="0"></iframe></div>
+    </aside>
+    </div>
     </main>
-</div>
+    </section>
+    <div class="grid-container space-mvm">
+    <div class="tabs-triggers">
+    <ul class="grid-row">
+    <li class="grid-col-4 grid-col-m-3">
+    <a href="#" class="space-pvxs txt-center txt-primary txt-emphasis is-open" data-radiotoggle="channel:top-links,primary:top-links-top-searches,selfBroadcast:true" aria-haspopup="true" aria-controls="top-links-top-searches">
+    <span class="icn-magnifying-glass txt-highlight" aria-hidden="true"></span>
+    <span class="hide-fully-to-m"> Top Searches</span>
+    </a>
+    </li>
+    <li class="grid-col-4 grid-col-m-3">
+    <a href="#" class=" space-pvxs txt-center txt-primary txt-emphasis" data-radiotoggle="channel:top-links,primary:top-links-locations,selfBroadcast:true" aria-haspopup="true" aria-controls="seo-link-locations">
+    <span class="icn-beacon txt-highlight" aria-hidden="true"></span>
+    <span class="hide-fully-to-m"> Top Locations</span>
+    </a>
+    </li>
+    </ul>
+    </div>
+    <div class="tabs-content space-phs space-pts">
+    <div id="top-links-top-searches" class="radio-toggle-panel is-open" data-radiotoggle="channel:top-links,primary:top-links-top-searches" aria-expanded="true">
+    <div class="space-pbs">
+    <div class="grid-row">
+    <ol class="column-list truncate-list grid-col-6 grid-col-s-4
+    grid-col-l-3
+    grid-col-xl-2">
+    <li class="li-lt10"><a href="/cars/uk/4x4">4x4</a></li>
+    <li class="li-lt10"><a href="/cars/uk/bmw">bmw</a></li>
+    <li class="li-lt10"><a href="/cars/uk/diesel">diesel</a></li>
+    <li class="li-lt10"><a href="/cars/uk/golf">golf</a></li>
+    </ol>
+    <ol start="5" class="column-list truncate-list grid-col-6 grid-col-s-4 grid-col-l-3 grid-col-xl-2">
+    <li class="li-lt10"><a href="/cars/uk/corsa">corsa</a></li>
+    <li class="li-lt10"><a href="/cars/uk/automatic">automatic</a></li>
+    <li class="li-lt10"><a href="/cars/uk/vauxhall+corsa">vauxhall corsa</a></li>
+    <li class="li-lt10"><a href="/cars/uk/left+hand+drive">left hand drive</a></li>
+    </ol>
+    <ol start="9" class="column-list truncate-list hide-fully-to-s grid-col-s-4 grid-col-l-3
+    grid-col-xl-2">
+    <li class="li-lt10"><a href="/cars/uk/ford+fiesta">ford fiesta</a></li>
+    <li><a href="/cars/uk/ford+focus">ford focus</a></li>
+    <li><a href="/cars/uk/7+seater">7 seater</a></li>
+    <li><a href="/cars/uk/mercedes">mercedes</a></li>
+    </ol>
+    <ol start="13" class="column-list truncate-list hide-fully-to-l grid-col-l-3 grid-col-xl-2">
+    <li><a href="/cars/uk/astra">astra</a></li>
+    <li><a href="/cars/uk/range+rover">range rover</a></li>
+    <li><a href="/cars/uk/audi+a3">audi a3</a></li>
+    <li><a href="/cars/uk/polo">polo</a></li>
+    </ol>
+    <ol start="17" class="column-list truncate-list hide-fully-to-xl grid-col-xl-2">
+    <li><a href="/cars/uk/vw+golf">vw golf</a></li>
+    <li><a href="/cars/uk/fiesta">fiesta</a></li>
+    <li><a href="/cars/uk/vauxhall+astra">vauxhall astra</a></li>
+    <li><a href="/cars/uk/audi+a4">audi a4</a></li>
+    </ol>
+    <ol start="21" class="column-list truncate-list hide-fully-to-xl grid-col-xl-2">
+    <li><a href="/cars/uk/mini">mini</a></li>
+    <li><a href="/cars/uk/honda+civic">honda civic</a></li>
+    <li><a href="/cars/uk/spares+or+repair">spares or repair</a></li>
+    <li><a href="/cars/uk/passat">passat</a></li>
+    </ol>
+    </div>
+    </div>
+    </div>
+    <div id="seo-link-locations" class="radio-toggle-panel space-pam" data-radiotoggle="channel:top-links,primary:top-links-locations" aria-expanded="false">
+    <ul class="bare-list comma-list">
+    <li><a href="/cars/belfast">Belfast</a></li>
+    <li><a href="/cars/birmingham">Birmingham</a></li>
+    <li><a href="/cars/brighton">Brighton</a></li>
+    <li><a href="/cars/bristol">Bristol</a></li>
+    <li><a href="/cars/cardiff">Cardiff</a></li>
+    <li><a href="/cars/edinburgh">Edinburgh</a></li>
+    <li><a href="/cars/glasgow">Glasgow</a></li>
+    <li><a href="/cars/leeds">Leeds</a></li>
+    <li><a href="/cars/liverpool">Liverpool</a></li>
+    <li><a href="/cars/london">London</a></li>
+    <li><a href="/cars/manchester">Manchester</a></li>
+    <li><a href="/cars/sheffield">Sheffield</a></li>
+    </ul>
+    </div>
+    </div>
+    </div>
+
 {% endblock %}
 
 {% block content_footer %}
     {% include "AcmeDemoBundle:Welcome:footer.html.twig" %}
 {% endblock %}
+
+{% block content_js %}
+    {{ parent() }}
+    <script type="text/javascript">
+    // Set the device
+    Gum.device = "desktop";
+
+    Gum.ads.display.slots["tBanner"] = {
+    "defaultDims": [728,90],
+    "mapping": [{screenSize: ['m'],adSize: [728, 90]},{screenSize: ['l','xl','xxl'],adSize: [[728, 90],[970,90],[970,250]]}],
+    "slotId": "tBanner"
+    , "targeting": {
+    'pos': 'top'
+    }
+    };
+    Gum.ads.display.slots["textLink"] = {
+    "defaultDims": [330,75],
+    "mapping": [{screenSize: ['xs','s'],adSize: [330,75]},{screenSize: ['m','l','xl','xxl'],adSize: [665,35]}],
+    "slotId": "textLink"
+    , "targeting": {
+    'pos': 'top'
+    }
+    };
+    Gum.ads.display.slots["rSkyT"] = {
+    "defaultDims": [160,600],
+    "mapping": [{screenSize: ['xl'],adSize: [160, 600]}, {screenSize: ['xxl'],adSize: [[300, 250],[300,600],[300,1050]]}],
+    "slotId": "rSkyT"
+    , "targeting": {
+    'pos': 'top'
+    }
+    };
+    Gum.ads.display.slots["lSkyT"] = {
+    "defaultDims": [160,600],
+    "mapping": [{screenSize: ['l','xl','xxl'],adSize: [160, 600]}],
+    "slotId": "lSkyT"
+    , "targeting": {
+    'pos': 'middle'
+    }
+    };
+    Gum.ads.display.slots["textLinkBase"] = {
+    "defaultDims": [330,75],
+    "mapping": [{screenSize: ['xs','s'],adSize: [330,75]},{screenSize: ['m','l','xl','xxl'],adSize: [665,35]}],
+    "slotId": "textLinkBase"
+    , "targeting": {
+    'pos': 'bottom'
+    }
+    };
+    Gum.ads.display.slots["lSkyB"] = {
+    "defaultDims": [160,600],
+    "mapping": [{screenSize: ['l','xl','xxl'],adSize: [160, 600]}],
+    "slotId": "lSkyB"
+    , "targeting": {
+    'pos': 'bottom'
+    }
+    };
+    Gum.ads.display.slots["integratedListing"] = {
+    "defaultDims": [300,250],
+    "mapping": [{screenSize: ['xs','s'],adSize: [[320,50],[300,250]]},{screenSize: ['m','l','xl','xxl'],adSize: [[300,250],[728,90]]}],
+    "slotId": "integratedListing"
+    , "targeting": {
+    'pos': 'middle2'
+    }
+    };
+    Gum.ads.display.slots["baseMpu"] = {
+    "defaultDims": [300,250],
+    "mapping": [{screenSize: ['m','l'],adSize: [[300, 250],[300,600]]}],
+    "slotId": "baseMpu"
+    , "targeting": {
+    'pos': 'bottom'
+    }
+    };
+    Gum.ads.display.slots["integratedMpu"] = {
+    "defaultDims": [300,250],
+    "mapping": [{screenSize: ['xs','s'],adSize: [[320,50],[300,250]]},{screenSize: ['m','l','xl','xxl'],adSize: [[300,250],[728,90]]}],
+    "slotId": "integratedMpu"
+    , "targeting": {
+    'pos': 'middle1'
+    }
+    };
+    Gum.ads.display.config = {
+    "name": '/5144/gtr.cars/cars',
+    "targeting": {
+    'device': '-computer',
+    'site': 'responsive',
+    'kw': 'toyota',
+    'page_type': 'search',
+    'platform': '-computer',
+    'env': 'live'
+    }};
+    Gum.ads.adsense.config = {
+    'pubId': 'gumtree-com',
+    'query': 'toyota Motors Cars uk',
+    'adtest': 'off',
+    'adPage': 1,
+    'numRepeated': 3,
+    'channel': 'RW_MOBILE_SRP+null_cars_ol+united kingdom+%channel%-srp-c'
+    };
+    Gum.ads.adsense.slots['slot12'] = {
+    'container': 'slot12',
+    'maxTop': 3,
+    'colorAdBorder': '#d6d6d6'
+    };
+    Gum.ads.adsense.slots['slot15'] = {
+    'container': 'slot15',
+    'number': 4,
+    'colorAdBorder': '#d6d6d6'
+    };
+    </script>
+{% endblock %} 
