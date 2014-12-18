@@ -5,7 +5,7 @@ namespace Acme\DemoBundle\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\JsonResponse;
-
+use Symfony\Component\HttpFoundation\Request;
 class AjaxController extends Controller
 {
 
@@ -14,17 +14,15 @@ class AjaxController extends Controller
      */
     public function locationDropdownAction()
     {
+        $em = $this->getDoctrine()->getEntityManager();
+        $locations = $em->getRepository('Acme\DemoBundle\Entity\Location')->findBy(array('level'=> 1));
+        $result = array();
+        $result[] = array("id"=>0,"name"=>"All Locations","seoName"=>"all","children"=>false,"selected"=>true,"childrenItems"=>array(),"drilled"=>false);
+        foreach ($locations as $location) {
+            $result[]= array("id"=>$location->getId(),"name"=>$location->getName(),"seoName"=>$location->getSlug(),"children"=>true,"selected"=>false,"childrenItems"=>array(),"drilled"=>false);
+        }
         $response = new JsonResponse(array(
-                "categories" => array(
-                    array("id"=>1,"name"=>"All Categories","seoName"=>"all","children"=>false,"selected"=>true,"childrenItems"=>array(),"drilled"=>false),
-                    array("id"=>2551,"name"=>"Motors","seoName"=>"cars-vans-motorbikes","children"=>true,"selected"=>false,"childrenItems"=>array(),"drilled"=>false),
-                    array("id"=>2549,"name"=>"For Sale","seoName"=>"for-sale","children"=>true,"selected"=>false,"childrenItems"=>array(),"drilled"=>false),
-                    array("id"=>10201,"name"=>"Property","seoName"=>"flats-houses","children"=>true,"selected"=>false,"childrenItems"=>array(),"drilled"=>false),
-                    array("id"=>2553,"name"=>"Jobs","seoName"=>"jobs","children"=>true,"selected"=>false,"childrenItems"=>array(),"drilled"=>false),
-                    array("id"=>2554,"name"=>"Services","seoName"=>"business-services","children"=>true,"selected"=>false,"childrenItems"=>array(),"drilled"=>false),
-                    array("id"=>2550,"name"=>"Community","seoName"=>"community","children"=>true,"selected"=>false,"childrenItems"=>array(),"drilled"=>false),
-                    array("id"=>2526,"name"=>"Pets","seoName"=>"pets","children"=>true,"selected"=>false,"childrenItems"=>array(),"drilled"=>false)
-                ), 
+                "categories" => $result, 
                 "depth" => 0));
         return $response;
     } 
@@ -32,17 +30,20 @@ class AjaxController extends Controller
     /**
      * @Route("/location/children", name="ajax_classified_location_children")
      */
-    public function locationChildrenAction()
+    public function locationChildrenAction(Request $request)
     {
-        $response = new JsonResponse(array(
-                array("id"=>9311,"name"=>"Cars","seoName"=>"cars","children"=>true,"selected"=>false,"childrenItems"=>array(),"drilled"=>false),
-                array("id"=>9314,"name"=>"Car Parts & Accessories","seoName"=>"car-parts-accessories","children"=>true,"selected"=>false,"childrenItems"=>array(),"drilled"=>false),
-                array("id"=>10013,"name"=>"Campervans & Caravans","seoName"=>"campervans-caravans","children"=>true,"selected"=>false,"childrenItems"=>array(),"drilled"=>false),
-                array("id"=>10442,"name"=>"Motorbikes & Scooters","seoName"=>"motorbikes-scooters","children"=>true,"selected"=>false,"childrenItems"=>array(),"drilled"=>false),
-                array("id"=>10016,"name"=>"Motorbike Parts & Accessories","seoName"=>"motorbike-parts-accessories","children"=>true,"selected"=>false,"childrenItems"=>array(),"drilled"=>false),
-                array("id"=>9312,"name"=>"Vans, Trucks & Plant","seoName"=>"vans-trucks-plant","children"=>true,"selected"=>false,"childrenItems"=>array(),"drilled"=>false),
-                array("id"=>10301,"name"=>"Wanted","seoName"=>"cars-wanted","children"=>false,"selected"=>false,"childrenItems"=>array(),"drilled"=>false)
-            ));
+        $em = $this->getDoctrine()->getEntityManager();
+        $parent = $request->query->get('input');
+        $loc = $em->getRepository('Acme\DemoBundle\Entity\Location')->find($parent);
+        $locations = $em->getRepository('Acme\DemoBundle\Entity\Location')->findBy(array('level'=> 3, 'parent' => $loc), 
+             array('name' => 'ASC'));
+        $result = array();
+
+        foreach ($locations as $location) {
+            $result[]= array("id"=>$location->getId(),"name"=>$location->getName(),"seoName"=>$location->getSlug(),"children"=>false,"selected"=>false,"childrenItems"=>array(),"drilled"=>false);
+        }  
+        
+        $response = new JsonResponse($result);
         return $response;
     }        
 
@@ -51,17 +52,21 @@ class AjaxController extends Controller
      */
     public function categoryDropdownAction()
     {
+        $em = $this->getDoctrine()->getEntityManager();
+        $categories = $em->getRepository('Acme\DemoBundle\Entity\Category')->findBy(array('level'=> 1));
+        $result = array();
+        $result[] = array("id"=>0,"name"=>"All Categories","seoName"=>"all","children"=>false,"selected"=>true,"childrenItems"=>array(),"drilled"=>false);
+        foreach ($categories as $category) {
+            $result[]= array("id"=>$category->getId(),"name"=>$category->getName(),"seoName"=>$category->getSlug(),"children"=>true,"selected"=>false,"childrenItems"=>array(),"drilled"=>false);
+        }
+        /*$locations = $em->getRepository('Acme\DemoBundle\Entity\Location')->findBy(array('level'=> 1));
+        $result = array();
+        $result[] = array("id"=>0,"name"=>"All Locations","seoName"=>"all","children"=>false,"selected"=>true,"childrenItems"=>array(),"drilled"=>false);
+        foreach ($locations as $location) {
+            $result[]= array("id"=>$location->getId(),"name"=>$location->getName(),"seoName"=>$location->getSlug(),"children"=>true,"selected"=>false,"childrenItems"=>array(),"drilled"=>false);
+        }      */
         $response = new JsonResponse(array(
-                "categories" => array(
-                    array("id"=>1,"name"=>"All Categories","seoName"=>"all","children"=>false,"selected"=>true,"childrenItems"=>array(),"drilled"=>false),
-                    array("id"=>2551,"name"=>"Motors","seoName"=>"cars-vans-motorbikes","children"=>true,"selected"=>false,"childrenItems"=>array(),"drilled"=>false),
-                    array("id"=>2549,"name"=>"For Sale","seoName"=>"for-sale","children"=>true,"selected"=>false,"childrenItems"=>array(),"drilled"=>false),
-                    array("id"=>10201,"name"=>"Property","seoName"=>"flats-houses","children"=>true,"selected"=>false,"childrenItems"=>array(),"drilled"=>false),
-                    array("id"=>2553,"name"=>"Jobs","seoName"=>"jobs","children"=>true,"selected"=>false,"childrenItems"=>array(),"drilled"=>false),
-                    array("id"=>2554,"name"=>"Services","seoName"=>"business-services","children"=>true,"selected"=>false,"childrenItems"=>array(),"drilled"=>false),
-                    array("id"=>2550,"name"=>"Community","seoName"=>"community","children"=>true,"selected"=>false,"childrenItems"=>array(),"drilled"=>false),
-                    array("id"=>2526,"name"=>"Pets","seoName"=>"pets","children"=>true,"selected"=>false,"childrenItems"=>array(),"drilled"=>false)
-                ), 
+                "categories" => $result, 
                 "depth" => 0));
         return $response;
     } 
@@ -69,17 +74,19 @@ class AjaxController extends Controller
     /**
      * @Route("/category/children", name="ajax_classified_category_children")
      */
-    public function categoryChildrenAction()
+    public function categoryChildrenAction(Request $request)
     {
-        $response = new JsonResponse(array(
-                array("id"=>9311,"name"=>"Cars","seoName"=>"cars","children"=>true,"selected"=>false,"childrenItems"=>array(),"drilled"=>false),
-                array("id"=>9314,"name"=>"Car Parts & Accessories","seoName"=>"car-parts-accessories","children"=>true,"selected"=>false,"childrenItems"=>array(),"drilled"=>false),
-                array("id"=>10013,"name"=>"Campervans & Caravans","seoName"=>"campervans-caravans","children"=>true,"selected"=>false,"childrenItems"=>array(),"drilled"=>false),
-                array("id"=>10442,"name"=>"Motorbikes & Scooters","seoName"=>"motorbikes-scooters","children"=>true,"selected"=>false,"childrenItems"=>array(),"drilled"=>false),
-                array("id"=>10016,"name"=>"Motorbike Parts & Accessories","seoName"=>"motorbike-parts-accessories","children"=>true,"selected"=>false,"childrenItems"=>array(),"drilled"=>false),
-                array("id"=>9312,"name"=>"Vans, Trucks & Plant","seoName"=>"vans-trucks-plant","children"=>true,"selected"=>false,"childrenItems"=>array(),"drilled"=>false),
-                array("id"=>10301,"name"=>"Wanted","seoName"=>"cars-wanted","children"=>false,"selected"=>false,"childrenItems"=>array(),"drilled"=>false)
-            ));
+        $em = $this->getDoctrine()->getEntityManager();
+        $parent = $request->query->get('input');
+        $cat = $em->getRepository('Acme\DemoBundle\Entity\Category')->find($parent);
+        $categories = $em->getRepository('Acme\DemoBundle\Entity\Category')->findBy(array('level'=> 2, 'parent' => $cat));
+        $result = array();
+
+        foreach ($categories as $category) {
+            $result[]= array("id"=>$category->getId(),"name"=>$category->getName(),"seoName"=>$category->getSlug(),"children"=>false,"selected"=>false,"childrenItems"=>array(),"drilled"=>false);
+        }  
+        
+        $response = new JsonResponse($result);
         return $response;
     }    
 }

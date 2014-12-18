@@ -7996,18 +7996,18 @@ function() {
         Name: "LocationSelector",
         selector: "[data-location-selector]",
         options: {
-            defaultCategory: "All Locationss",
-            defaultCategoryValue: "all"
+            defaultLocation: "All Locations",
+            defaultLocationValue: "all"
         },
         value: "",
-        url: Gum.domain.buyer + "/ajax/category/children",
-        fullUrl: Gum.domain.buyer + "/ajax/category/dropdown",
+        url: Gum.domain.buyer + "/ajax/location/children",
+        fullUrl: Gum.domain.buyer + "/ajax/location/dropdown",
         fullModel: null,
         timeout: 1e3,
         template: "tmpl-location-dropdown.html",
         fullTemplate: "tmpl-location-dropdown-full.html",
         init: function() {
-            this._super(), this.selector = this.el.getElementsByClassName("location-selector")[0], this.selectorOptions = this.selector.getElementsByTagName("li"), this.level1Categories = this.selector.getElementsByClassName("location-level-1"), this.level2Categories = this.selector.getElementsByClassName("location-level-2"), this.level3Categories = this.selector.getElementsByClassName("location-level-3"), this.level4Categories = this.selector.getElementsByClassName("location-level-4"), this.level5Categories = this.selector.getElementsByClassName("location-level-5"), this.defaultOption = this.selector.getElementsByClassName("categories-all"), this.text = this.el.getElementsByClassName("text-only")[0], this.field = this.el.getElementsByTagName("input")[0], this.headerBottom = document.getElementById("header-bottom"), this.initView(), this.addEvents(), this.model.RADIO.on("success", this.view.render), this.fullModel.RADIO.on("success", this.view.renderFull), Gum.RADIO.on("dropdown.close", this.close), Gum.RADIO.on("toggle-search", this.close)
+            this._super(), this.selector = this.el.getElementsByClassName("location-selector")[0], this.selectorOptions = this.selector.getElementsByTagName("li"), this.level1Categories = this.selector.getElementsByClassName("location-level-1"), this.level2Categories = this.selector.getElementsByClassName("location-level-2"), this.level3Categories = this.selector.getElementsByClassName("location-level-3"), this.level4Categories = this.selector.getElementsByClassName("location-level-4"), this.level5Categories = this.selector.getElementsByClassName("location-level-5"), this.defaultOption = this.selector.getElementsByClassName("locations-all"), this.text = this.el.getElementsByClassName("text-only")[0], this.field = this.el.getElementsByTagName("input")[0], this.headerBottom = document.getElementById("header-bottom"), this.initView(), this.addEvents(), this.model.RADIO.on("success", this.view.render), this.fullModel.RADIO.on("success", this.view.renderFull), Gum.RADIO.on("dropdown.close", this.close), Gum.RADIO.on("toggle-search", this.close)
         },
         initModel: function() {
             this.model = new Gum.LocationSelectorModel({
@@ -8036,10 +8036,10 @@ function() {
             Gum.util.isElementInViewport(this.el) || window.scrollTo(0, 0)
         },
         close: function() {
-            this.isOpen && (Gum.native.removeClass(this.selector, "is-showing"), Gum.native.removeClass(this.headerBottom, "typeahead-open"), Gum.native.removeClass(Gum.body, "is-showing-category"), this.view.removeHeight(), this.isOpen = !1, Gum.native.removeEventListener(document, "click", this.close))
+            this.isOpen && (Gum.native.removeClass(this.selector, "is-showing"), Gum.native.removeClass(this.headerBottom, "typeahead-open"), Gum.native.removeClass(Gum.body, "is-showing-location"), this.view.removeHeight(), this.isOpen = !1, Gum.native.removeEventListener(document, "click", this.close))
         },
         open: function(e) {
-            e && (e.preventDefault ? (e.preventDefault(), e.stopPropagation()) : (e.returnValue = !1, e.cancelBubble = !0), e.gesture && (e.gesture.stopPropagation(), e.gesture.preventDefault())), this.update(), this.position(), Gum.native.addClass(this.headerBottom, "typeahead-open"), Gum.native.addClass(this.selector, "is-showing"), Gum.native.addClass(Gum.body, "is-showing-category"), this.view.setHeight(), Gum.native.addEventListener(this.selectorOptions, "click", this.select), Gum.native.addEventListener(document, "click", this.close), this.isOpen = !0
+            e && (e.preventDefault ? (e.preventDefault(), e.stopPropagation()) : (e.returnValue = !1, e.cancelBubble = !0), e.gesture && (e.gesture.stopPropagation(), e.gesture.preventDefault())), this.update(), this.position(), Gum.native.addClass(this.headerBottom, "typeahead-open"), Gum.native.addClass(this.selector, "is-showing"), Gum.native.addClass(Gum.body, "is-showing-location"), this.view.setHeight(), Gum.native.addEventListener(this.selectorOptions, "click", this.select), Gum.native.addEventListener(document, "click", this.close), this.isOpen = !0
         },
         update: function() {
             var e = $('[data-q="header-location-select"] .is-selected'),
@@ -8056,7 +8056,7 @@ function() {
                 if (Gum.native.hasClass(t, "locations-loading")) return;
                 e.preventDefault ? (e.preventDefault(), e.stopPropagation()) : (e.returnValue = !1, e.cancelBubble = !0), e.gesture && (e.gesture.stopPropagation(), e.gesture.preventDefault());
                 var n = Gum.native.getDataSet(t, "categoryId");
-                this.depth = parseInt(Gum.native.getDataSet(t, "categoryDepth"), 10), this.currentCategory = {
+                this.depth = parseInt(Gum.native.getDataSet(t, "categoryDepth"), 10), this.currentLocation = {
                     seoName: Gum.native.getDataSet(t, "categoryUrl"),
                     name: Gum.native.getDataSet(t, "categoryName"),
                     id: Gum.native.getDataSet(t, "categoryid")
@@ -8100,7 +8100,7 @@ function() {
             Gum.native.removeClass(this.selectorOptions, "is-selected"), Gum.native.addClass(e, "is-selected"), this.text.innerHTML = Gum.native.getDataSet(e, "category-name"), Gum.native.setDataSet(this.text, "categoryUrl", Gum.native.getDataSet(e, "category-url")), this.field.value = Gum.native.getDataSet(e, "category-url"), this.close()
         },
         setDefaults: function() {
-            Gum.native.addClass(this.defaultOption, "is-selected"), this.text.innerHTML = this.options.defaultCategory, this.field.value = this.options.defaultCategoryValue
+            Gum.native.addClass(this.defaultOption, "is-selected"), this.text.innerHTML = this.options.defaultLocation, this.field.value = this.options.defaultLocationValue
         },
         position: function() {
             this.selector.style.top = this.el.clientHeight + this.options.topBuffer + "px", this.options.width && (this.selector.style.width = this.options.width + "px")
@@ -8127,7 +8127,7 @@ function() {
             var t = this.template({
                 categories: e,
                 position: this.controller.depth + 1,
-                current: this.controller.currentCategory
+                current: this.controller.currentLocation
             });
             $(this.appendEl).append(t), this.setHeight(), this.controller.addEvents()
         },
@@ -9660,7 +9660,7 @@ function() {
                 if (this.results.suggestions !== undefined) {
                     var n = this.results.suggestions[t],
                         r = n.categoryId !== undefined;
-                    if (r) $('input[name="search_category"] ').val(n.categorySeoName), $("[data-category-selector] .text-only ").html(n.categoryName);
+                    if (r) $('input[name="search_category"] ').val(n.categoryId), $("[data-category-selector] .text-only ").html(n.categoryName);
                     else {
                         var i = $('input[name="search_category"] '),
                             s = $("[data-category-selector] .text-only ");
@@ -9673,7 +9673,7 @@ function() {
                 if (this.results.suggestions !== undefined) {
                     var n = this.results.suggestions[t],
                         r = n.categoryId !== undefined;
-                    if (r) $('input[name="search_location"] ').val(n.locationSeoName), $("[data-location-selector] .text-only ").html(n.categoryName);
+                    if (r) $('input[name="search_location"] ').val(n.locationId), $("[data-location-selector] .text-only ").html(n.categoryName);
                     else {
                         var i = $('input[name="search_location"] '),
                             s = $("[data-location-selector] .text-only ");
