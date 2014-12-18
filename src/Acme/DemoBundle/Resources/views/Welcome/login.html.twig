@@ -10,7 +10,16 @@
 {% endblock %}
 
 {% block content_header %}
-    {% include "AcmeDemoBundle:Welcome:header.html.twig" %}
+    <header class="header" role="banner">
+        {% include "AcmeDemoBundle:Welcome:header_nav.html.twig" %}
+        <div id="header-bottom" class="header-bottom">
+            <div class="grid-container-from-m">
+                <div class="header-inner">
+                     {% include "AcmeDemoBundle:Welcome:header_form.html.twig" %}       
+                </div>
+            </div>
+        </div>
+    </header>     
 {% endblock %}
 
 {% block content_nav %}

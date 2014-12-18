@@ -1,0 +1,62 @@
+                <nav class="site-search grid-container" id="site-search" role="navigation">
+                    <form role="search" name="header-search-form" action="{{ path('result_classified') }}">
+                        <ul class="clearfix-to-m">
+                            <li class="keyword-search set-left">
+                                <span class="multi-input">
+                                    <span class="clear-input-wrapper">
+                                        <input type="search" name="q" id="header-search-q" title="Recherche par mots clés" autocomplete="off" placeholder="Je cherche ..." value="" aria-autocomplete="list" aria-owns="header-search-q" data-type-ahead="channel:search">
+                                        <span class="icn-clear txt-quaternary clear-input"></span>
+                                    </span>
+                                    <span class="select-wrapper select-wrapper-borderless" data-category-selector="topBuffer:2">
+                                        <input type="hidden" name="search_category" data-current-category="all" value="all">
+                                        <span class="text-only" data-current-category-name="All Categories">All Categories</span>
+                                        <div data-q="header-category-select-container" class="category-selector is-dropdown ">
+                                            <ul data-q="header-category-select">
+                                                <li class="categories-loading space-phs space-pvxs">Loading categories</li>
+                                            </ul>
+                                        </div>
+                                    </span>
+                                </span>
+                            </li>
+
+                            <li class="location-search set-left">
+                                <label class="hide-fully-to-m"><span class="hide-visually">Search </span>in<span class="hide-visually"> location:</span></label>
+                                <span class="multi-input">
+                                    <!--<span class="clear-input-wrapper">
+                                        <input type="search" name="search_location" placeholder="Postcode or location" title="Location" id="header-search-location" autocomplete="off" data-type-ahead="channel:location" aria-autocomplete="list" aria-owns="header-search-location-type-ahead" value="">
+                                        <span class="icn-clear txt-quaternary clear-input"></span>
+                                    </span>-->
+                                    <span class="select-wrapper select-wrapper-borderless" data-location-selector="topBuffer:2">
+                                        <input type="hidden" name="search_location" data-current-location="all" value="all">
+                                        <span class="text-only" data-current-location-name="All Locations">All Locations</span>
+                                        <div data-q="header-location-select-container" class="location-selector is-dropdown ">
+                                            <ul data-q="header-location-select">
+                                                <li class="locations-loading space-phs space-pvxs">Loading locations</li>
+                                            </ul>
+                                        </div>
+                                    </span>                                    
+                                    <span class="multi-wrapper">
+                                        <span class="select-wrapper select-wrapper-borderless">
+                                            <select title="Select distance from search location (optional)" name="distance">
+                                                <option value="0.0001" selected="">
+                                                    + 0 km</option>
+                                                <option value="10">
+                                                    + 10 km</option>
+                                                <option value="25">
+                                                    + 25 km</option>
+                                                <option value="50">
+                                                    + 50 km</option>
+                                                <option value="100">
+                                                    + 100 km</option>
+                                            </select>
+                                        </span>
+                                    </span>
+                                </span>
+                            </li>
+                        </ul>
+                        <button type="submit" class="btn-primary btn-icon submit-search" name="search-soukjdid" data-submit-ignore="">
+                            <span class="hide-visually">Submit search</span>
+                            <span class="icn-magnifying-glass" aria-hidden="true"></span>
+                        </button>
+                    </form>
+                </nav>
